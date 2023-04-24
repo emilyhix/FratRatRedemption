@@ -2,10 +2,10 @@
  > As you complete each section you **must** remove the prompt text. Every *turnin* of this project includes points for formatting of this README so keep it clean and keep it up to date. 
  > Prompt text is any lines beginning with "\>"
  > Replace anything between \<...\> with your project specifics and remove angle brackets. For example, you need to name your project and replace the header right below this line with that title (no angle brackets). 
-# \<Project title\>
+# Frat Rat Redemption
  > Your author list below should include links to all members GitHub (remove existing author).
  
- > Authors: \<[Jeffrey McDaniel](https://github.com/jmcda001)\>
+ > Authors: [Glider Mapalad](https://github.com/gmapa002)
 
  > You will be forming a group of **FOUR** students and working on an interesting project. The project has 4 phases, each one with specific requirements. A list of proposed project ideas that have been successful in previous quarters is listed in the project specifications document on Canvas. You can select an idea from the list and start thinking about the features you will implement. If you want to propose your own original idea, you will have to contact your instructor to discuss the project and obtain written permission before you submit your project proposal (Phase 1). The project work should be divided almost equally among team members. You can of course help each other, but it needs to be clear who will be responsible for which features. Additionally, you are expected to follow Scrum patterns, specifically the use of a Scrum (Project) board, Sprints, and Scrum meetings.
 
@@ -17,6 +17,15 @@
 > * All project phases are to be submitted to this GitHub repository. You should modify this README file to reflect the different phases of the project. In addition, you should regularly hold sprint meetings with your group. You will need to hold two to three scrum/check-in meetings with your lab TA/reader at different times in addition to the final demo.
 
 ## Project Description
+**General Description:**
+
+_You did it! You bore through all the hazing and made it into Χαζος, the fraternity that will let you live your dream college life! Frat life is just how you imagined it back in high school, things couldn't get any better!_
+
+_However, a challenge is placed before you that you never expected! You are at your first party, but notice something strange. Your frat brothers are all doing it... and they say its fine, but how could this possibly be fine?! They are all manipulating people to date them! But you don't wanna do anything like that!!!_
+
+_Do you have what it takes to fight evil?! Find out in Frat Rat Redemption, the "frat boy tries not to manipulate their significant other" RPG simulator game! Customize your character! Balance your dating morals with your frat reputation! Resist the temptation and try your very hardest NOT to manipulate your significant other! What kind of frat boy will you become? Find out in "FRAT RAT REDEMPTION!"_
+
+
  > Your project description should summarize the project you are proposing. Be sure to include:
  > * Why is it important or interesting to you?
  > * What languages/tools/technologies do you plan to use? (This list may change over the course of the project)
