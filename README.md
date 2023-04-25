@@ -31,6 +31,14 @@ Frat Rat Redemption is a terminal-based RPG in which the user plays as a newly i
 
 This project is important for our group because we all enjoy a good laugh. This project is meant to have a comedic tone to it, a tone which we hope to produce in the gameplay. The environment and characters are based on the experiences we get from being on campus and interacting with its people during our daily lives. Making this game can alleviate the stress from interacting with the people on campus that make us just a tad-bit annoyed. By channeling our animosity into the creation of this game, we aim to create a more relatable in-game environment which students and faculty alike can also have a laugh at, helping to shed some light on the stresses of our academic lives through comedy, just like how the creation of the game did for our group. 
 
+**Languages/Tools/Techonologies:**
+
+**Program inputs/outputs:"
+Inputs - The game will be controlled via keyboard inputs. First, the user will choose from different presets which reflect the type of frat boy their character will be. Examples include Nerdy, Athletic, Apathetic, and/or Leader. After choosing their character attributes, the user will be able to move around an ascii-based environment using the arrow keys. When interacting with an NPC, the user will be prompted to type words perfectly without making an error. This will be done seamlessly without the need to press “enter” after each prompt. 
+
+Outputs - First, the user will be put on a character customization screen in which they can choose their attributes. The user will be presented with an ascii-based level in which they are able to use the keyboard to navigate. The level will be populated with NPCs with their own movement behaviors. When the user interacts with an NPC, an interaction screen will appear with the typing prompts for the user outputted in a text-box.
+
+
  > Your project description should summarize the project you are proposing. Be sure to include:
  > * Why is it important or interesting to you?
  > * What languages/tools/technologies do you plan to use? (This list may change over the course of the project)
