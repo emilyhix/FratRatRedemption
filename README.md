@@ -25,7 +25,7 @@ Languages - primarily C++, possibly Inform
 
 Tools - _story boards_ to help us organize our thoughts/ideas/aspects we want to consider for the RPG, _written/typed documents_ to keep track of storyline and major events
 
-Technologies - possibly _Inform_ (software meant for creating text games), _visiual studio code_ to write and test our code, _github_ version control system to allow for collaborative program development and a project board to keep track of product backlog and task progress
+Technologies - possibly _Inform_ (software meant for creating text games), _Visiual Studio Code_ to write and test our code, _Github_ version control system to allow for collaborative program development and a project board to keep track of product backlog and task progress, _Git_, _CMake_ to compile C++ our code, _Google Test Framework_ tools to help test our code
 
 **Program inputs/outputs:**
 
