@@ -33,7 +33,7 @@ This project is important for our group because we all enjoy a good laugh. This 
 
 **Languages/Tools/Techonologies:**
 
-**Program inputs/outputs:"
+**Program inputs/outputs:**
 Inputs - The game will be controlled via keyboard inputs. First, the user will choose from different presets which reflect the type of frat boy their character will be. Examples include Nerdy, Athletic, Apathetic, and/or Leader. After choosing their character attributes, the user will be able to move around an ascii-based environment using the arrow keys. When interacting with an NPC, the user will be prompted to type words perfectly without making an error. This will be done seamlessly without the need to press “enter” after each prompt. 
 
 Outputs - First, the user will be put on a character customization screen in which they can choose their attributes. The user will be presented with an ascii-based level in which they are able to use the keyboard to navigate. The level will be populated with NPCs with their own movement behaviors. When the user interacts with an NPC, an interaction screen will appear with the typing prompts for the user outputted in a text-box.
