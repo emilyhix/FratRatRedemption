@@ -20,7 +20,11 @@ Frat Rat Redemption is a terminal-based RPG in which the user plays as a newly i
 This project is important for our group because we all enjoy a good laugh. This project is meant to have a comedic tone to it, a tone which we hope to produce in the gameplay. The environment and characters are based on the experiences we get from being on campus and interacting with its people during our daily lives. Making this game can alleviate the stress from interacting with the people on campus that make us just a tad-bit annoyed. By channeling our animosity into the creation of this game, we aim to create a more relatable in-game environment which students and faculty alike can also have a laugh at, helping to shed some light on the stresses of our academic lives through comedy, just like how the creation of the game did for our group. 
 
 **Languages/Tools/Techonologies:**
-//THIS PART MUST STILL BE DONE
+Languages - primarily C++, possibly Inform
+
+Tools - _story boards_ to help us organize our thoughts/ideas/aspects we want to consider for the RPG, _written/typed documents_ to keep track of storyline and major events
+
+Technologies - possibly _Inform_ (software meant for creating text games)
 
 **Program inputs/outputs:**
 
