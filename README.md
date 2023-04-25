@@ -2,7 +2,7 @@
  
 # Frat Rat Redemption
  
- > Authors: [Glider Mapalad](https://github.com/gmapa002), [Emily Hix](https://github.com/emilyhix), [Emily Clark](https://github.com/eclar022)
+ > Authors: [Glider Mapalad](https://github.com/gmapa002), [Emily Hix](https://github.com/emilyhix), [Emily Clark](https://github.com/eclar022), [Sabaipon Phimmala](https://github.com/bphimmala)
 
 ## Project Description
 **General Description:**
