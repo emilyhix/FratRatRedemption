@@ -4,7 +4,7 @@
  
  > Authors: [Glider Mapalad](https://github.com/gmapa002), [Emily Hix](https://github.com/emilyhix)
 
-## Phase I - Project Description
+## Project Description
 **General Description:**
 
 _You did it! You bore through all the hazing and made it into Χαζος, the fraternity that will let you live your dream college life! Frat life is just how you imagined it back in high school, things couldn't get any better!_
@@ -41,17 +41,6 @@ NPC Interactions - When the user “bumps” into an NPC (which will each be rep
 Morality/Reputation system - Morality starts at 10 and you lose one morality for every misspelled word that the user enters. Since there is live character input, the user will not be able to backspace, meaning that if one character strays from what is prompted, the interaction screen will be exited and the user will lose one morality. The user will try their hardest to keep morality above 0.  Reputation starts at 0 and it represents your character’s standing with the fraternity. You get reputation by interacting with NPCs (does not have to be a successful interaction with no spelling errors). 
 
 Ending screen - there will be an exit door in the ascii-based level which the user can leave through at any time. Depending on your morality and reputation stats when you leave, there will be different endings which will be output based on developer-discussed ratios. 
-
-
-
- > Your project description should summarize the project you are proposing. Be sure to include:
- > * Why is it important or interesting to you?
- > * What languages/tools/technologies do you plan to use? (This list may change over the course of the project)
- > * What will be the input/output of your project?
- > * What are the features that the project provides?
- > This description should be in enough detail that the TA/instructor can determine the complexity of the project and if it is sufficient for the team members to complete in the time allotted. 
- > 
- > You also need to set up an empty project board using GitHub projects (board view). Make sure you add the board under your project repository. You should also have a Product Backlog and In testing columns added.
  
  > ## Phase II
  > In addition to completing the "User Interface Specification" and "Class Diagram" sections below, you will need to:
