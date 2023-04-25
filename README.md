@@ -32,11 +32,28 @@ Frat Rat Redemption is a terminal-based RPG in which the user plays as a newly i
 This project is important for our group because we all enjoy a good laugh. This project is meant to have a comedic tone to it, a tone which we hope to produce in the gameplay. The environment and characters are based on the experiences we get from being on campus and interacting with its people during our daily lives. Making this game can alleviate the stress from interacting with the people on campus that make us just a tad-bit annoyed. By channeling our animosity into the creation of this game, we aim to create a more relatable in-game environment which students and faculty alike can also have a laugh at, helping to shed some light on the stresses of our academic lives through comedy, just like how the creation of the game did for our group. 
 
 **Languages/Tools/Techonologies:**
+//THIS PART MUST STILL BE DONE
 
 **Program inputs/outputs:**
+
 Inputs - The game will be controlled via keyboard inputs. First, the user will choose from different presets which reflect the type of frat boy their character will be. Examples include Nerdy, Athletic, Apathetic, and/or Leader. After choosing their character attributes, the user will be able to move around an ascii-based environment using the arrow keys. When interacting with an NPC, the user will be prompted to type words perfectly without making an error. This will be done seamlessly without the need to press “enter” after each prompt. 
 
 Outputs - First, the user will be put on a character customization screen in which they can choose their attributes. The user will be presented with an ascii-based level in which they are able to use the keyboard to navigate. The level will be populated with NPCs with their own movement behaviors. When the user interacts with an NPC, an interaction screen will appear with the typing prompts for the user outputted in a text-box.
+
+**Features:**
+
+Live Character Inputs Without Waiting For “Enter” Press - The game will take keyboard inputs without waiting for the user to press “Enter.” That means that movement throughout the different character customization, ascii-based level, and dialogue screens will happen without needing the user to press “Enter” in between inputs
+
+Character select/customization screen - Have user input name and choose the type of frat boy that they want. Different frat boy types have different attributes which gives the user different advantages/disadvantages in the game.
+
+Ascii-based Level - The user will be able to navigate through an ascii level populated with moving NPCs and non-passable walls. 
+
+NPC Interactions - When the user “bumps” into an NPC (which will each be represented by an ascii character), they will be transferred to an interaction screen. In this screen, the user must type words which have good moral connotations (there will be a large list of words which have nice connotations that we will randomly choose from). The user must type this word perfectly without making ANY spelling errors. If you do, your morality will go down. 
+
+Morality/Reputation system - Morality starts at 10 and you lose one morality for every misspelled word that the user enters. Since there is live character input, the user will not be able to backspace, meaning that if one character strays from what is prompted, the interaction screen will be exited and the user will lose one morality. The user will try their hardest to keep morality above 0.  Reputation starts at 0 and it represents your character’s standing with the fraternity. You get reputation by interacting with NPCs (does not have to be a successful interaction with no spelling errors). 
+
+Ending screen - there will be an exit door in the ascii-based level which the user can leave through at any time. Depending on your morality and reputation stats when you leave, there will be different endings which will be output based on developer-discussed ratios. 
+
 
 
  > Your project description should summarize the project you are proposing. Be sure to include:
