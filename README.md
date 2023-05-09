@@ -65,7 +65,7 @@ Ending screen - there will be an exit door in the ascii-based level which the us
 > Draw a diagram illustrating how the user can navigate from one screen to another. Here is an [example](https://creately.com/diagram/example/ikfqudv82/user-navigation-diagram-classic?r=v). It can be useful to label each symbol that represents a screen so that you can reference the screens in the next section or the rest of the document if necessary. Give a brief description of what the diagram represents.
 
 ### Screen Layouts
-> Include the layout of each of your screens. The layout should describe the screen’s major components such as menus and prompts for user inputs, expected output, and buttons (if applicable). Explain what is on the layout, and the purpose of each menu item, button, etc. If many screens share the same layout, start by describing the general layout and then list the screens that will be using that layout and the differences between each of them.
+[SCREEN LAYOUTS POWER POINT](https://github.com/cs100/final-project-ehix001-sphim001-gmapa002-eclar022/files/11427281/FratRatRedemption_ScreenLayouts.pdf)
 
 ## Class Diagram
 ![PROJECT_UML_0 1 drawio](https://user-images.githubusercontent.com/130017121/236984562-91c396d2-bed7-437b-9d97-bdf430d75fa7.png)
