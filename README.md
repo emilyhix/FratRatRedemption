@@ -62,7 +62,7 @@ Ending screen - there will be an exit door in the ascii-based level which the us
  > Include a navigation diagram for your screens and the layout of each of those screens as desribed below. For all the layouts/diagrams, you can use any tool such as PowerPoint or a drawing program. (Specification requirement is adapted from [this template](https://redirect.cs.umbc.edu/~mgrass2/cmsc345/Template_UI.doc))
 
 ### Navigation Diagram
-> Draw a diagram illustrating how the user can navigate from one screen to another. Here is an [example](https://creately.com/diagram/example/ikfqudv82/user-navigation-diagram-classic?r=v). It can be useful to label each symbol that represents a screen so that you can reference the screens in the next section or the rest of the document if necessary. Give a brief description of what the diagram represents.
+[NAVIGATION DIAGRAM POWER POINT](https://github.com/cs100/final-project-ehix001-sphim001-gmapa002-eclar022/files/11427333/FratRatRedemption_NavigationDiagram.pdf)
 
 ### Screen Layouts
 [SCREEN LAYOUTS POWER POINT](https://github.com/cs100/final-project-ehix001-sphim001-gmapa002-eclar022/files/11427281/FratRatRedemption_ScreenLayouts.pdf)
