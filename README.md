@@ -69,6 +69,8 @@ Ending screen - there will be an exit door in the ascii-based level which the us
 
 ## Class Diagram
  > Include a **class diagram(s)** for your project and a **description** of the diagram(s). Your class diagram(s) should include all the main classes you plan for the project. This should be in sufficient detail that another group could pick up the project this point and successfully complete it. Use proper UML notation (as discussed in the course slides).
+
+![PROJECT_UML_0 1 drawio](https://user-images.githubusercontent.com/130017121/236984562-91c396d2-bed7-437b-9d97-bdf430d75fa7.png)
  
  > ## Phase III
  > You will need to schedule a check-in for the second scrum meeting with the same reader you had your first scrum meeting with (using Calendly). Your entire team must be present. This meeting will occur on week 8 during lab time.
