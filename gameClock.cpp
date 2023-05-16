@@ -2,18 +2,32 @@
 #include <chrono>
 #include <thread> 
 
+#include "gameClock.h"
+
 using namespace std::chrono;
 using namespace std::literals::chrono_literals; 
 using namespace std; 
 
-
-
-int main()
-{
-    unsigned tcnt = 0; 
-    while (true) {
-        cout<<tcnt<<"\n"; 
-        tcnt++; 
-        this_thread::sleep_for(std::chrono::milliseconds(100)); // sleep for 100ms
-    }
+gameClock::gameClock(){
+    timerRun = 1;
+    timerFlag = 0; 
+    timerPeriod = 100; 
 }
+
+void gameClock::timerISR(){ 
+    this_thread::sleep_for(std::chrono::milliseconds(timerPeriod)); // sleep for 100ms
+}
+
+void gameClock::timerOn(){
+    timerRun = 1; 
+}
+
+void gameClock::timerOff(){
+    timerRun = 0; 
+}
+
+void gameClock::setTimerPeriod(const int &delayMS){
+    timerPeriod = delayMS; 
+}
+
+
