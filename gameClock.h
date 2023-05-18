@@ -5,12 +5,12 @@ class gameClock{
 
     private:
         unsigned timerPeriod; 
-
+        bool timerRun;
         
 
     public:  
         bool timerFlag; 
-        bool timerRun; 
+        //bool timerRun; 
 
         gameClock();
         //~gameClock(); 
@@ -18,6 +18,7 @@ class gameClock{
         void timerOff();
         void setTimerPeriod(const int &); 
         void timerISR(); 
+        bool getTimerStatus(); 
 
 };
 

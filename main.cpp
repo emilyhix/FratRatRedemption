@@ -2,6 +2,13 @@
 #include <chrono>
 #include <thread> 
 
+#include <cstdlib>
+
+void clearTerminal() {
+    std::system("clear"); // Use "clear" command on Unix-like systems
+}
+
+
 #include "gameClock.h"
 
 using namespace std::chrono;
@@ -10,30 +17,21 @@ using namespace std;
 
 int main()
 {
-    // unsigned tcnt = 0; 
-    // while (true) {
-    //     if(tcnt%10==0){
-    //         cout<<tcnt/10<<"\n";
-    //     }
-        
-    //     tcnt++; 
-    //     this_thread::sleep_for(std::chrono::milliseconds(100)); // sleep for 100ms
-    // }
-
+    clearTerminal(); 
     //gameCLOCK class testing
     gameClock mainClock; 
     unsigned tcnt = 0; 
 
     mainClock.timerOn(); 
 
-    while(mainClock.timerRun == 1){
+    while(mainClock.getTimerStatus() == 1){
 
-        if(tcnt==150){
-            mainClock.timerOff();
+        if(tcnt==600){
+            mainClock.timerOff(); 
         }
 
         if(tcnt%10==0){
-            cout<<tcnt/10<<"\n"; 
+            cout << "\r" << tcnt/10 << flush;
         }
 
         tcnt++; 
@@ -41,5 +39,6 @@ int main()
         mainClock.timerISR(); 
     }
 
+    cout<<"\nITS BEEN ONE MINUTE!\n"; 
     return 0; 
 }

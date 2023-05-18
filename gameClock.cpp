@@ -30,4 +30,7 @@ void gameClock::setTimerPeriod(const int &delayMS){
     timerPeriod = delayMS; 
 }
 
+bool gameClock::getTimerStatus(){
+    return timerRun; 
+}
 
