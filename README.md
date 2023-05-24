@@ -50,7 +50,10 @@ Ending screen - there will be an exit door in the ascii-based level which the us
 ## User Interface Specification
 
 ### Navigation Diagram
-[NAVIGATION DIAGRAM POWER POINT](https://github.com/cs100/final-project-ehix001-sphim001-gmapa002-eclar022/files/11427333/FratRatRedemption_NavigationDiagram.pdf)
+<img width="955" alt="nav1" src="https://github.com/cs100/final-project-ehix001-sphim001-gmapa002-eclar022/assets/114962480/3fc499cf-553f-4cf2-aed1-55b81c29e74a">
+
+This diagram is a state machine of the different screens that the user will be able to see in this program. There are only 4 states. The text next to each arrow represents the condition required to transition to that screen. 
+
 
 ### Screen Layouts
 [SCREEN LAYOUTS POWER POINT](https://github.com/cs100/final-project-ehix001-sphim001-gmapa002-eclar022/files/11427281/FratRatRedemption_ScreenLayouts.pdf)
