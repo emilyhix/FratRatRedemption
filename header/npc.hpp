@@ -1,9 +1,10 @@
 #ifndef NPC_H
 #define NPC_H
 #include <string>
+#include <iostream>
 using namespace std;
 
-class npc : public characters {
+class npc {
     private:
         string dialog[5];
         string responses[4][4];

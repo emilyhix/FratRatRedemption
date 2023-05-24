@@ -8,34 +8,30 @@ npc::npc(int id) {
         npcType = "Jock";
             
         dialog[0] = "";
+        responses[0][0] = "";
         responses[0][1] = "";
         responses[0][2] = "";
         responses[0][3] = "";
-        responses[0][4] = "";
 
         dialog[1] = "";
+        responses[1][0] = "";
         responses[1][1] = "";
         responses[1][2] = "";
         responses[1][3] = "";
-        responses[1][4] = "";
 
         dialog[2] = "";
+        responses[2][0] = "";
         responses[2][1] = "";
         responses[2][2] = "";
         responses[2][3] = "";
-        responses[2][4] = "";
 
         dialog[3] = "";
+        responses[3][0] = "";
         responses[3][1] = "";
         responses[3][2] = "";
         responses[3][3] = "";
-        responses[3][4] = "";
 
         dialog[4] = "";
-        responses[4][1] = "";
-        responses[4][2] = "";
-        responses[4][3] = "";
-        responses[4][4] = "";
     }
     
     // Bethany
@@ -44,34 +40,30 @@ npc::npc(int id) {
         npcType = "Mean Girl";
         
         dialog[0] = "";
+        responses[0][0] = "";
         responses[0][1] = "";
         responses[0][2] = "";
         responses[0][3] = "";
-        responses[0][4] = "";
 
         dialog[1] = "";
+        responses[1][0] = "";
         responses[1][1] = "";
         responses[1][2] = "";
         responses[1][3] = "";
-        responses[1][4] = "";
 
         dialog[2] = "";
+        responses[2][0] = "";
         responses[2][1] = "";
         responses[2][2] = "";
         responses[2][3] = "";
-        responses[2][4] = "";
 
         dialog[3] = "";
+        responses[3][0] = "";
         responses[3][1] = "";
         responses[3][2] = "";
         responses[3][3] = "";
-        responses[3][4] = "";
 
         dialog[4] = "";
-        responses[4][1] = "";
-        responses[4][2] = "";
-        responses[4][3] = "";
-        responses[4][4] = "";
     }
     
     // Veronica
@@ -80,34 +72,30 @@ npc::npc(int id) {
         npcType = "Emo";
         
         dialog[0] = "";
+        responses[0][0] = "";
         responses[0][1] = "";
         responses[0][2] = "";
         responses[0][3] = "";
-        responses[0][4] = "";
 
         dialog[1] = "";
+        responses[1][0] = "";
         responses[1][1] = "";
         responses[1][2] = "";
         responses[1][3] = "";
-        responses[1][4] = "";
 
         dialog[2] = "";
+        responses[2][0] = "";
         responses[2][1] = "";
         responses[2][2] = "";
         responses[2][3] = "";
-        responses[2][4] = "";
 
         dialog[3] = "";
+        responses[3][0] = "";
         responses[3][1] = "";
         responses[3][2] = "";
         responses[3][3] = "";
-        responses[3][4] = "";
 
         dialog[4] = "";
-        responses[4][1] = "";
-        responses[4][2] = "";
-        responses[4][3] = "";
-        responses[4][4] = "";
     }
     
     // Denzel
@@ -116,34 +104,30 @@ npc::npc(int id) {
         npcType = "Kind-Hearted";
         
         dialog[0] = "";
+        responses[0][0] = "";
         responses[0][1] = "";
         responses[0][2] = "";
         responses[0][3] = "";
-        responses[0][4] = "";
 
         dialog[1] = "";
+        responses[1][0] = "";
         responses[1][1] = "";
         responses[1][2] = "";
         responses[1][3] = "";
-        responses[1][4] = "";
 
         dialog[2] = "";
+        responses[2][0] = "";
         responses[2][1] = "";
         responses[2][2] = "";
         responses[2][3] = "";
-        responses[2][4] = "";
 
         dialog[3] = "";
+        responses[3][0] = "";
         responses[3][1] = "";
         responses[3][2] = "";
         responses[3][3] = "";
-        responses[3][4] = "";
 
         dialog[4] = "";
-        responses[4][1] = "";
-        responses[4][2] = "";
-        responses[4][3] = "";
-        responses[4][4] = "";
     }        
     
     // Marcus
@@ -152,70 +136,62 @@ npc::npc(int id) {
         npcType = "Alpha Male";
         
         dialog[0] = "";
+        responses[0][0] = "";
         responses[0][1] = "";
         responses[0][2] = "";
         responses[0][3] = "";
-        responses[0][4] = "";
 
         dialog[1] = "";
+        responses[1][0] = "";
         responses[1][1] = "";
         responses[1][2] = "";
         responses[1][3] = "";
-        responses[1][4] = "";
 
         dialog[2] = "";
+        responses[2][0] = "";
         responses[2][1] = "";
         responses[2][2] = "";
         responses[2][3] = "";
-        responses[2][4] = "";
 
         dialog[3] = "";
+        responses[3][0] = "";
         responses[3][1] = "";
         responses[3][2] = "";
         responses[3][3] = "";
-        responses[3][4] = "";
 
         dialog[4] = "";
-        responses[4][1] = "";
-        responses[4][2] = "";
-        responses[4][3] = "";
-        responses[4][4] = "";
     }
     
-    // Cloud 
+    // Cloud
     if (id == 6) {
         npcName = "Cloud";
         npcType = "Kind-Hearted";
 
         dialog[0] = "";
+        responses[0][0] = "";
         responses[0][1] = "";
         responses[0][2] = "";
         responses[0][3] = "";
-        responses[0][4] = "";
 
         dialog[1] = "";
+        responses[1][0] = "";
         responses[1][1] = "";
         responses[1][2] = "";
         responses[1][3] = "";
-        responses[1][4] = "";
 
         dialog[2] = "";
+        responses[2][0] = "";
         responses[2][1] = "";
         responses[2][2] = "";
         responses[2][3] = "";
-        responses[2][4] = "";
 
         dialog[3] = "";
+        responses[3][0] = "";
         responses[3][1] = "";
         responses[3][2] = "";
         responses[3][3] = "";
-        responses[3][4] = "";
 
         dialog[4] = "";
-        responses[4][1] = "";
-        responses[4][2] = "";
-        responses[4][3] = "";
-        responses[4][4] = "";
     }
     
     // Christina
@@ -224,34 +200,30 @@ npc::npc(int id) {
         npcType = "Nerd";
 
         dialog[0] = "";
+        responses[0][0] = "";
         responses[0][1] = "";
         responses[0][2] = "";
         responses[0][3] = "";
-        responses[0][4] = "";
 
         dialog[1] = "";
+        responses[1][0] = "";
         responses[1][1] = "";
         responses[1][2] = "";
         responses[1][3] = "";
-        responses[1][4] = "";
 
         dialog[2] = "";
+        responses[2][0] = "";
         responses[2][1] = "";
         responses[2][2] = "";
         responses[2][3] = "";
-        responses[2][4] = "";
 
         dialog[3] = "";
+        responses[3][0] = "";
         responses[3][1] = "";
         responses[3][2] = "";
         responses[3][3] = "";
-        responses[3][4] = "";
 
         dialog[4] = "";
-        responses[4][1] = "";
-        responses[4][2] = "";
-        responses[4][3] = "";
-        responses[4][4] = "";
     }
     
     // Trevor
@@ -260,34 +232,30 @@ npc::npc(int id) {
         npcType = "Alpha Male";
              
         dialog[0] = "";
+        responses[0][0] = "";
         responses[0][1] = "";
         responses[0][2] = "";
         responses[0][3] = "";
-        responses[0][4] = "";
 
         dialog[1] = "";
+        responses[1][0] = "";
         responses[1][1] = "";
         responses[1][2] = "";
         responses[1][3] = "";
-        responses[1][4] = "";
 
         dialog[2] = "";
+        responses[2][0] = "";
         responses[2][1] = "";
         responses[2][2] = "";
         responses[2][3] = "";
-        responses[2][4] = "";
 
         dialog[3] = "";
+        responses[3][0] = "";
         responses[3][1] = "";
         responses[3][2] = "";
         responses[3][3] = "";
-        responses[3][4] = "";
 
         dialog[4] = "";
-        responses[4][1] = "";
-        responses[4][2] = "";
-        responses[4][3] = "";
-        responses[4][4] = "";
     }
     
     // Harper
@@ -296,34 +264,30 @@ npc::npc(int id) {
         npcType = "Degenerate";
              
         dialog[0] = "";
+        responses[0][0] = "";
         responses[0][1] = "";
         responses[0][2] = "";
         responses[0][3] = "";
-        responses[0][4] = "";
 
         dialog[1] = "";
+        responses[1][0] = "";
         responses[1][1] = "";
         responses[1][2] = "";
         responses[1][3] = "";
-        responses[1][4] = "";
 
         dialog[2] = "";
+        responses[2][0] = "";
         responses[2][1] = "";
         responses[2][2] = "";
         responses[2][3] = "";
-        responses[2][4] = "";
 
         dialog[3] = "";
+        responses[3][0] = "";
         responses[3][1] = "";
         responses[3][2] = "";
         responses[3][3] = "";
-        responses[3][4] = "";
 
         dialog[4] = "";
-        responses[4][1] = "";
-        responses[4][2] = "";
-        responses[4][3] = "";
-        responses[4][4] = "";
     }
     
     // Isaiah
@@ -332,34 +296,30 @@ npc::npc(int id) {
         npcType = "Mean Girl";
              
         dialog[0] = "";
+        responses[0][0] = "";
         responses[0][1] = "";
         responses[0][2] = "";
         responses[0][3] = "";
-        responses[0][4] = "";
 
         dialog[1] = "";
+        responses[1][0] = "";
         responses[1][1] = "";
         responses[1][2] = "";
         responses[1][3] = "";
-        responses[1][4] = "";
 
         dialog[2] = "";
+        responses[2][0] = "";
         responses[2][1] = "";
         responses[2][2] = "";
         responses[2][3] = "";
-        responses[2][4] = "";
 
         dialog[3] = "";
+        responses[3][0] = "";
         responses[3][1] = "";
         responses[3][2] = "";
         responses[3][3] = "";
-        responses[3][4] = "";
 
         dialog[4] = "";
-        responses[4][1] = "";
-        responses[4][2] = "";
-        responses[4][3] = "";
-        responses[4][4] = "";
     }
 }
 
@@ -371,27 +331,27 @@ string npc::getType() {
     return npcType;
 }
 
-npc::printDialogue() {
+void npc::printDialogue() {
     cout << dialog[0] << endl;
-    for (int i = 0; i < 3, ++i) {
+    for (int i = 0; i < 4; ++i) {
         cout << responses[0][i] << endl;
     }
     // Player Input, passes in npcType
 
     cout << dialog[1] << endl;
-    for (int i = 0; i < 3, ++i) {
+    for (int i = 0; i < 4; ++i) {
         cout << responses[1][i] << endl;
     }
     // Player Input, passes in npcType
 
     cout << dialog[2] << endl;
-    for (int i = 0; i < 3, ++i) {
+    for (int i = 0; i < 4; ++i) {
         cout << responses[2][i] << endl;
     }
     // Player Input, passes in npcType
 
     cout << dialog[3] << endl;
-    for (int i = 0; i < 3, ++i) {
+    for (int i = 0; i < 4; ++i) {
         cout << responses[3][i] << endl;
     }
     // Player Input, passes in npcType
