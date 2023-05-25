@@ -4,8 +4,13 @@ npc::npc(int id) {
     
     // Chad & Thad
     if (id == 1) {
+        
         npcName = "Chad & Thad";
         npcType = "Popular";
+
+        introduction = "You see two identical, muscular, blond haired men standing by the speaker. 
+                        They're wearing fitted t-shirts, shorts, and flip flops. They're laughing 
+                        and looking at a phone."
             
         dialogue[0] = "Hey bro, we're Chad and Thad! How are you liking the party?";
         responses[0][0] = "It's really fun! The frat seems really cool.";
@@ -38,7 +43,11 @@ npc::npc(int id) {
     if (id == 2) {
         npcName = "Bethany";
         npcType = "Popular";
-        
+
+        introduction = "A platinum blonde girl is mean muggin' the rest of the party from the snack table. She seems to be 
+                        scanning the crowd of people, judging everyone who passes her field of vision. 
+                        Though she does smile at a few people here and there. You decide to approach her."
+
         dialogue[0] = "What are you looking at?";
         responses[0][0] = "I just wanted to say 'hi'! You're very pretty. What's your name?";
         responses[0][1] = "I'm sorry. I was just admiring you. What's your name?";
@@ -70,6 +79,10 @@ npc::npc(int id) {
     if (id == 3) {
         npcName = "Veronica";
         npcType = "Outcast";
+
+        introduction = "You see a person wearing all black standing at the edge of the party. She has tall black boots, 
+                        thick black eyeliner, and a lot of piercings. They seem to really hate it here and like they're 
+                        looking for someone.";
         
         dialogue[0] = "Look what the cat dragged in…";
         responses[0][0] = "Hi! I really like your style. What's your name?";
@@ -103,6 +116,10 @@ npc::npc(int id) {
         npcName = "Denzel";
         npcType = "Normie";
         
+        introduction = "A tall, dark, and handsome man flashes you a smile. He's wearing a letterman jacket, 
+                        dark jeans, and sneakers. He seems very friendly and like he wants to say something 
+                        to you."
+
         dialogue[0] = "Hi! I'm Denzel, frat president and host of this party. Are you enjoying yourself?";
         responses[0][0] = "I am! I'm really liking it here. Everyone is so nice.";
         responses[0][1] = "Yeah, it's pretty cool here.";
@@ -135,6 +152,10 @@ npc::npc(int id) {
         npcName = "Marcus";
         npcType = "Alpha Male";
         
+        introduction = "There's some random guy side-eyeing every girl he sees. He seems like he wants to talk to a lot of people, 
+                        but there is quite literally 5 feet between him and any person around him. It's a little embarassing honestly. 
+                        You feel bad, so you go talk to him.";
+
         dialogue[0] = "Oh hey. Can't believe there are so many girls here. They should be in their homes, cleaning like good women should be.";
         responses[0][0] = "I know right! Can't believe it. Women, am I right?";
         responses[0][1] = "Haha. Yeah, I guess so.";
@@ -167,6 +188,11 @@ npc::npc(int id) {
         npcName = "Cloud";
         npcType = "Normie";
 
+        introduction = "There's a super hyper and eccentric person you see walking around. They say 'hi' to everyone
+                        they run into and seem to have a genuine smile on their face when they do so. They're wearing 
+                        a sage green dress with a flower pattern all over. They have patchwork tattoos covering their 
+                        arms."
+        
         dialogue[0] = "Hiii, you're looking a little lonely. I'm Cloud! How are you?";
         responses[0][0] = "Heyyy, I'm doing good. You seem really cool!";
         responses[0][1] = "Hi! I'm doing good.";
@@ -199,6 +225,10 @@ npc::npc(int id) {
         npcName = "Christina";
         npcType = "Outcast";
 
+        introduction = "Near the entrance to the bathroom, you see a doe-eyed girl wearing some casual clothes, though 
+                        she seems fearful and like she doesn't want to be here. She's clutching her tote bag and staring 
+                        at her sneakers. You decide to walk over to her."
+
         dialogue[0] = "Oh, excuse me, sorry I didn't mean to get in your way.";
         responses[0][0] = "Oh! I actually wanted to talk to you! You seem interesting.";
         responses[0][1] = "No worries, you're not in the way.";
@@ -230,6 +260,10 @@ npc::npc(int id) {
     if (id == 8) {
         npcName = "Trevor";
         npcType = "Normie";
+
+        introduction = "There's a scrawny, goofy kid that is walking away from a few frat guys. From what you heard, you think 
+                        they were yelling at him, but he still seems to be upbeat and happy. He seems intriguing enough to catch 
+                        your attention.";
              
         dialogue[0] = "Oh, hey! I'm Trevor!";
         responses[0][0] = "Hi! I've seen you run for the track team!";
@@ -262,6 +296,10 @@ npc::npc(int id) {
     if (id == 9) {
         npcName = "Harper";
         npcType = "Outcast";
+
+        introduction = "There's a girl staring off into the abyss on the couch. She seems to be in her own 
+                        little world. You can't tell if she has no thoughts or all the thoughts in that pretty 
+                        head of hers'. You decide to approach her to get an answer."
              
         dialogue[0] = "Heyyy, you're pretty. I'm Harper.";
         responses[0][0] = "Oh, thank you! Are you okay? You seem a little... not here.";
@@ -294,6 +332,11 @@ npc::npc(int id) {
     if (id == 10) {
          npcName = "Isaiah";
         npcType = "Popular";
+
+        introduction = "In the center of the house, there's a very handsome fella. They're wearing 
+                        a very well fitted blazer and dress shirt. His shoes match the accents on 
+                        their blazer and his skin looks flawless. You're so entranced by his beauty, 
+                        so you walk up to them.";
              
         dialogue[0] = "Wooow, I love your 'fit, where'd you get it..?!";
         responses[0][0] = "Oh my gooood, stoooop! Your outfit is amazing!";
@@ -331,7 +374,7 @@ string npc::getType() {
     return npcType;
 }
 
-void npc::printdialogue() {
+void npc::printDialogue() {
     cout << dialogue[0] << endl;
     for (int i = 0; i < 4; ++i) {
         cout << responses[0][i] << endl;
@@ -357,4 +400,8 @@ void npc::printdialogue() {
     // Player Input, passes in npcType
 
     cout << dialogue[4] << endl;
+}
+
+void printIntroduction() {
+    cout << introduction << endl;
 }
