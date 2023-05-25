@@ -48,12 +48,12 @@ short userInput::getInputMode() const {
 }
 
 void userInput::flushInputBuffer(){
-    char c;
+    char c = 0;
     while ((c = getchar()) != '\n' && c != EOF) {}
 }
 
 char userInput::getUserInput(){
-    char ch;
+    char ch = 0;
 
     read(STDIN_FILENO, &ch, 1);
 
