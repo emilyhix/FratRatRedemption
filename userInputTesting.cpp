@@ -29,7 +29,7 @@ int main()
 
     mainClock.timerOn(); 
     mainClock.setTimerPeriod(10); 
-    x.setInputMode(2); 
+    x.setInputMode(1); 
 
 
     char ch;
@@ -38,11 +38,16 @@ int main()
 
         ch = x.getUserInput(); 
          if (ch > 0) {
+            if(ch == 27){
+                break; 
+            }
             // Process the key press
             cout << "Key pressed: " << ch << std::endl;
         }
 
-        if(tcnt==1200){
+        
+
+        if(tcnt==12000){
             mainClock.timerOff(); 
         }
 
@@ -57,6 +62,6 @@ int main()
 
     x.setInputMode(0); 
 
-    cout<<"\nITS BEEN ONE MINUTE!\n"; 
+    cout<<"\nDONE!\n"; 
     return 0; 
 }

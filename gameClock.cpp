@@ -6,6 +6,7 @@
 
 using namespace std::chrono;
 using namespace std::literals::chrono_literals; 
+using namespace std::this_thread; 
 using namespace std; 
 
 gameClock::gameClock(){
@@ -15,7 +16,7 @@ gameClock::gameClock(){
 }
 
 void gameClock::timerISR(){ 
-    this_thread::sleep_for(std::chrono::milliseconds(timerPeriod)); // sleep for 100ms
+    sleep_for(milliseconds(timerPeriod)); // sleep for 100ms
 }
 
 void gameClock::timerOn(){
@@ -33,4 +34,3 @@ void gameClock::setTimerPeriod(const int &delayMS){
 bool gameClock::getTimerStatus(){
     return timerRun; 
 }
-

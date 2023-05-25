@@ -32,7 +32,7 @@ void userInput::setInputMode(const short &newMode){
 
         break;
 
-        case 2:
+        case 2: //map
             flags = fcntl(STDIN_FILENO, F_GETFL, 0);
             fcntl(STDIN_FILENO, F_SETFL, flags | O_NONBLOCK);
             flush = 1; 
@@ -54,7 +54,6 @@ void userInput::flushInputBuffer(){
 
 char userInput::getUserInput(){
     char ch;
-    bool quit = false;
 
     read(STDIN_FILENO, &ch, 1);
 
