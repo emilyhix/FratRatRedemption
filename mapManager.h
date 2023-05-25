@@ -15,26 +15,4 @@ class mapManager{
         void initializeMap(const string &); 
 };
 
-// class gameClock{
-
-//     private:
-//         unsigned timerPeriod; 
-//         bool timerRun;
-        
-
-//     public:  
-//         bool timerFlag; 
-//         //bool timerRun; 
-
-//         gameClock();
-//         //~gameClock(); 
-//         void timerOn();
-//         void timerOff();
-//         void setTimerPeriod(const int &); 
-//         void timerISR(); 
-//         bool getTimerStatus(); 
-
-// };
-
-
 #endif

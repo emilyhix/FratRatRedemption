@@ -7,7 +7,7 @@ using namespace std;
 
 class coord{
     private:
-        char character; 
+        
         string color;
 
     public: 
@@ -16,6 +16,7 @@ class coord{
         void setCoordCharacter(const char &); 
         char getCoordCharacter();
         string getCoordColor();
+        char character; 
 };
 
 

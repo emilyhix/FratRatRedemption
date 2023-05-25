@@ -18,6 +18,7 @@ void printBoldText(const std::string& text) {
 
 #include "gameClock.h"
 #include "userInput.h"
+#include "mapManager.h"
 
 using namespace std::chrono;
 using namespace std::literals::chrono_literals; 
@@ -29,7 +30,10 @@ int main()
     //gameCLOCK class testing
     gameClock mainClock; 
     userInput inputGetter; 
+    mapManager map; 
     unsigned tcnt = 0; 
+
+    map.initializeMap("map.txt"); 
 
     mainClock.timerOn(); 
     mainClock.setTimerPeriod(100); 
@@ -66,12 +70,19 @@ int main()
                 default:
                 break; 
             }
-            //clearTerminal(); 
+            clearTerminal(); 
+        for(int i = 0; i<23;i++){
+            for(int j = 0; j <100; j++){
+                cout<<map.getXYCoord(j,i).getCoordCharacter(); 
+            }
+        cout<<"\n";
+    }
+
             cout<< "\033[31m"<<"\rCOORDINATE(x,y): ( "<<x<<" , "<<y<<" )\n"<< "\033[0m"; 
         }
 
         }
-        if(keyboardInput=='0'){
+        if(keyboardInput==27){
             mainClock.timerOff(); 
         }
        tcnt++; 
