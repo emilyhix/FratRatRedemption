@@ -7,7 +7,7 @@
 
 userInput::userInput(){
     inputMode = 0; 
-    flush = 0; 
+    toggleFlush= 0; 
     // Set terminal attributes
     tcgetattr(STDIN_FILENO, &termSettings);
     termSettings.c_lflag &= ~(ICANON | ECHO);
@@ -21,21 +21,21 @@ void userInput::setInputMode(const short &newMode){
         case 0: //off
             termSettings.c_lflag |= (ICANON | ECHO);
             tcsetattr(STDIN_FILENO, TCSANOW, &termSettings);
-            flush = 0; 
+            toggleFlush= 0; 
             flushInputBuffer();
         break;
 
         case 1: //write
             flags = fcntl(STDIN_FILENO, F_GETFL, 0);
             fcntl(STDIN_FILENO, F_SETFL, flags | O_NONBLOCK);
-            flush = 0; 
+            toggleFlush= 0; 
 
         break;
 
         case 2: //map
             flags = fcntl(STDIN_FILENO, F_GETFL, 0);
             fcntl(STDIN_FILENO, F_SETFL, flags | O_NONBLOCK);
-            flush = 1; 
+            toggleFlush= 1; 
 
 
         default:
@@ -57,7 +57,7 @@ char userInput::getUserInput(){
 
     read(STDIN_FILENO, &ch, 1);
 
-    if(flush){
+    if(toggleFlush){
         flushInputBuffer();
     }
     

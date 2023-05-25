@@ -13,7 +13,7 @@ class userInput{
         //TERMIOS VARIABLES
         struct termios termSettings;
         int flags;
-        bool flush; 
+        bool toggleFlush; 
         
     public:
         userInput();  
