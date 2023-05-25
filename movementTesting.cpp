@@ -67,7 +67,7 @@ int main()
                 break; 
             }
             //clearTerminal(); 
-            cout<<"\rCOORDINATE(x,y): ( "<<x<<" , "<<y<<" )\n"<<flush; 
+            cout<< "\033[31m"<<"\rCOORDINATE(x,y): ( "<<x<<" , "<<y<<" )\n"<< "\033[0m"; 
         }
 
         }
