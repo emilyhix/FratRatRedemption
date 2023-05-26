@@ -61,7 +61,7 @@ This diagram is a state machine of the different screens that the user will be a
  
 <img width="400" alt="screen3" src="https://github.com/cs100/final-project-ehix001-sphim001-gmapa002-eclar022/assets/130163307/fe0fd9f2-c77c-4bb0-a707-cfeda5a51bfe"> <img width="400" alt="screen4" src="https://github.com/cs100/final-project-ehix001-sphim001-gmapa002-eclar022/assets/130163307/68557473-b95f-4028-b67c-94d3020a054c">
 
-These are the anticipated screen layouts that will be output onto the terminal as the player progresses through the program.
+These are the different sections that will be present on the screen when being played. The map and the interaction portions will pivot to an "inactive" state while the other is active so as not to mess with the input of either. This is because WASD is being used for movement.
 
 ## Class Diagram
 ![CS100 PROJECT UML DIAGRAM VERSION 2](https://github.com/cs100/final-project-ehix001-sphim001-gmapa002-eclar022/assets/114962480/bef5c40f-ccbc-4d9f-b15e-fd8e6fc327f6)
