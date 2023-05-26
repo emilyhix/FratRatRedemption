@@ -12,10 +12,10 @@ class npc {
         string npcName;
         string introduction;
     public:
-     npc(int id);
-     string getName();
-     string getType();
-     void printDialogue();
-     void printIntroduction();
+        npc(int id);
+        string getName();
+        string getType();
+        void printDialogue();
+        void printIntroduction();
 };
 #endif
