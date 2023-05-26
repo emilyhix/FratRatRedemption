@@ -14,10 +14,10 @@ void coord::setCoordColor(const string & newColor){
     color = newColor; 
 }
 
-char coord::getCoordCharacter(){
+char coord::getCoordCharacter()const{
     return character; 
 }
 
-string coord::getCoordColor(){
+string coord::getCoordColor()const{
     return color; 
 }

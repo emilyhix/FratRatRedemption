@@ -15,8 +15,8 @@ class coord{
         coord(); 
         void setCoordColor(const string &); 
         void setCoordCharacter(const char &); 
-        char getCoordCharacter();
-        std::string getCoordColor();
+        char getCoordCharacter() const;
+        std::string getCoordColor() const;
         
 };
 

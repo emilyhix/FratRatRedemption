@@ -101,10 +101,10 @@ int main()
             mainClock.timerOff(); 
         }
 
-        if(tcnt==100){
-            cout<<"it has been 10 seconds"<<endl; 
-            break; 
-        }
+        // if(tcnt==100){
+        //     cout<<"it has been 10 seconds"<<endl; 
+        //     break; 
+        // }
 
        tcnt++; 
         mainClock.timerISR(); 
