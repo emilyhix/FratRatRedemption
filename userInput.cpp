@@ -5,6 +5,7 @@
 
 #include "userInput.h"
 
+//Constructor
 userInput::userInput(){
     inputMode = 0; 
     toggleFlush= 0; 
@@ -14,6 +15,7 @@ userInput::userInput(){
     tcsetattr(STDIN_FILENO, TCSANOW, &termSettings);
 } 
 
+//Keyboard input buffer settings
 void userInput::setInputMode(const short &newMode){
     inputMode = newMode;
 
@@ -43,15 +45,16 @@ void userInput::setInputMode(const short &newMode){
     }
 }
 
-short userInput::getInputMode() const {
-    return inputMode; 
-}
-
 void userInput::flushInputBuffer(){
     char c = 0;
     while ((c = getchar()) != '\n' && c != EOF) {}
 }
 
+short userInput::getInputMode() const {
+    return inputMode; 
+}
+
+//Function which gets user input
 char userInput::getUserInput(){
     char ch = 0;
 

@@ -7,19 +7,27 @@
 
 class userInput{
     private:
+        //Keyboard input buffer settings
         short inputMode; //0 = off; 1 = write; 2 = map
         void flushInputBuffer(); 
     
-        //TERMIOS VARIABLES
+        //termios library variables
         struct termios termSettings;
         int flags;
         bool toggleFlush; 
         
     public:
-        userInput();  
-        char getUserInput(); 
+        //Constructor
+        userInput();
+
+         //keyboard input settings
         void setInputMode(const short &);
         short getInputMode() const;    
+
+        //returns the char of keyboard presses
+        char getUserInput(); 
+
+       
 };
 
 #endif
