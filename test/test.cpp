@@ -8,13 +8,13 @@ int main(){
 
     int id;
     cin >> id;
-    npc womp(id);
+    npc currNPC(id);
 
-    cout << womp.getName() << endl;
-    cout << womp.getType() << endl;
+    cout << currNPC.getName() << endl;
+    cout << currNPC.getType() << endl;
 
-    womp.printIntroduction();
-    womp.printDialogue();
+    currNPC.printIntroduction();
+    currNPC.printDialogue();
 
     return 0;
 
