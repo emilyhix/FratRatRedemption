@@ -28,3 +28,13 @@ void mapManager::initializeMap(const string & mapFile){
         }
     }
 }
+
+void mapManager::initializePlayer(const int & initialXPos, const int & initialYPos){
+    mapXY[initialYPos][initialXPos].setCoordCharacter('@'); 
+}
+
+void mapManager::movePlayer(const int & newXPos, const int & newYPos){
+    if(mapXY[newYPos][newXPos].getCoordCharacter()==' '){
+        mapXY[newYPos][newXPos].setCoordCharacter('@');
+    }
+}

@@ -7,18 +7,14 @@
 using namespace std::chrono;
 using namespace std::literals::chrono_literals; 
 using namespace std::this_thread; 
-using namespace std; 
 
+//Constructor
 gameClock::gameClock(){
     timerRun = 1;
-    timerFlag = 0; 
     timerPeriod = 100; 
 }
 
-void gameClock::timerISR(){ 
-    sleep_for(milliseconds(timerPeriod)); // sleep for 100ms
-}
-
+//Timer control functions
 void gameClock::timerOn(){
     timerRun = 1; 
 }
@@ -33,4 +29,9 @@ void gameClock::setTimerPeriod(const int &delayMS){
 
 bool gameClock::getTimerStatus(){
     return timerRun; 
+}
+
+//Interrupt Service Routine: pauses program for *timerPeriod* amount of time (ms)
+void gameClock::timerISR(){ 
+    sleep_for(milliseconds(timerPeriod));
 }

@@ -13,6 +13,8 @@ class mapManager{
         ~mapManager(); 
         coord getXYCoord(const int &, const int &); 
         void initializeMap(const string &); 
+        void initializePlayer(const int &, const int &); 
+        void movePlayer(const int &, const int &); 
 };
 
 #endif

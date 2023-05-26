@@ -5,22 +5,22 @@ class gameClock{
 
     private:
         unsigned timerPeriod; 
+        //1 if timer on, 0 if timer off
         bool timerRun;
-        
 
     public:  
-        bool timerFlag; 
-        //bool timerRun; 
-
+        //Constructor
         gameClock();
-        //~gameClock(); 
-        void timerOn();
+
+        //Timer control functions
+        void timerOn(); 
         void timerOff();
-        void setTimerPeriod(const int &); 
-        void timerISR(); 
         bool getTimerStatus(); 
+        void setTimerPeriod(const int &);
 
+        //Interrupt Service Routine (temporarily pauses program)
+        void timerISR(); 
+        
 };
-
 
 #endif
