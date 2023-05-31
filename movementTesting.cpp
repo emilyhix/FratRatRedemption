@@ -50,6 +50,13 @@ int main()
     char keyboardInput=0;
     //int x = 0; 
     //int y = 0; 
+        clear(); 
+        for(int i = 0; i<23;i++){
+            for(int j = 0; j <100; j++){
+                cout<<map.getXYCoord(j,i).getCoordCharacter(); 
+            }
+        cout<<"\n";
+        }
 
     while(mainClock.getTimerStatus() == 1){ //MAIN CLOCK
         if(tcnt%1==0){
