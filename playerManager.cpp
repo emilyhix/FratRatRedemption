@@ -1,6 +1,6 @@
 #include "playerManager.h"
 
-using namespace std;
+//using namespace std;
 
 playerManager::playerManager(){
     xpos = 62; 
@@ -23,18 +23,25 @@ void playerManager::setYPos(const int & newYPos){
     ypos = newYPos;
 }
 
-void playerManager::moveUp(){
-    ypos--;
-}
+void playerManager::movePlayerPosition(const int & directionOfMovement){
+    switch(directionOfMovement){
+        case 0: // up
+            ypos--;
+        break;
 
-void playerManager::moveDown(){
-    ypos++;
-}
+        case 1: // right
+            xpos++; 
+        break;
 
-void playerManager::moveLeft(){
-    xpos--;
-}
+        case 2: // down
+            ypos++;
+        break;
 
-void playerManager::moveRight(){
-    xpos++; 
+        case 3: // left
+            xpos--;
+        break;
+
+        default:
+        break;
+    }
 }

@@ -11,10 +11,12 @@ class mapManager{
     public:
         mapManager();
         ~mapManager(); 
-        coord getXYCoord(const int &, const int &); 
+        coord getXYCoord(const int &, const int &) const; 
         void initializeMap(const string &); 
         void initializePlayer(const int &, const int &); 
         void movePlayer(const int &, const int &); 
+        void removePlayer(const int &, const int &); 
+        void printMap() const; 
 };
 
 #endif

@@ -12,10 +12,7 @@ class playerManager{
         int getYPos() const;
         void setXPos(const int &);
         void setYPos(const int &); 
-        void moveLeft();
-        void moveRight();
-        void moveUp(); 
-        void moveDown(); 
+        void movePlayerPosition(const int &);  
 
 };
 

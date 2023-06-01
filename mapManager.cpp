@@ -11,7 +11,7 @@ mapManager::~mapManager(){
 
 }
 
-coord mapManager::getXYCoord(const int & xPos, const int & yPos){
+coord mapManager::getXYCoord(const int & xPos, const int & yPos) const{
     return mapXY[yPos][xPos]; 
 }
 
@@ -25,16 +25,29 @@ void mapManager::initializeMap(const string & mapFile){
         getline(inFS,read);
         for(int x = 0; x < read.size(); x++){
             mapXY[y][x].setCoordCharacter(read[x]); 
+            if(read[x]!=' '){
+                mapXY[y][x].toggleWalkable();
+            }
         }
     }
+
+    inFS.close(); 
 }
 
 void mapManager::initializePlayer(const int & initialXPos, const int & initialYPos){
-    mapXY[initialYPos][initialXPos].setCoordCharacter('@'); 
+    mapXY[initialYPos][initialXPos].togglePlayerActive(); 
 }
 
 void mapManager::movePlayer(const int & newXPos, const int & newYPos){
     if(mapXY[newYPos][newXPos].getCoordCharacter()==' '){
-        mapXY[newYPos][newXPos].setCoordCharacter('@');
+        mapXY[newYPos][newXPos].togglePlayerActive(); 
     }
 }
+
+ void mapManager::removePlayer(const int & currXPos, const int & currYPos){
+        mapXY[currYPos][currXPos].togglePlayerActive(); 
+ }
+
+ void mapManager::printMap() const{
+
+ }
