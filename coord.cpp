@@ -40,3 +40,11 @@ void coord::togglePlayerActive(){
 bool coord::getPlayerActive() const{
     return playerActive; 
 }
+
+void coord::toggleContainsNPC(){
+    containsNPC = !containsNPC; 
+}
+
+bool coord::getContainsNPC() const{
+    return containsNPC; 
+}

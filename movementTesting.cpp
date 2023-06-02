@@ -20,6 +20,18 @@ using namespace std;
 #define MOVE_DOWN 2
 #define MOVE_LEFT 3
 
+#define DEFAULT_TERMINAL_COLOR "\033[37m"
+#define ANSI_RED "\033[31m"
+#define ANSI_LIME "\033[38;5;10m"
+#define ANSI_ORANGE "\033[38;5;208m"
+#define ANSI_GREEN "\033[32m"
+#define ANSI_PINK "\033[38;5;205m"
+#define ANSI_YELLOW "\033[33m"
+#define ANSI_BLUE "\033[34m"
+#define ANSI_NAVY_BLUE "\033[38;5;17m"
+#define ANSI_LIGHT_BLUE "\033[38;5;39m"
+#define ANSI_PURPLE "\033[35m"
+
 
 void printBoldText(const std::string& text) {
     std::cout << "\033[1m" << text << "\033[0m";
@@ -41,7 +53,11 @@ int main()
     unsigned tcnt = 0; 
 
     map.initializeMap("map.txt"); 
-   map.initializePlayer(player.getXPos(),player.getYPos()); 
+    map.initializePlayer(player.getXPos(),player.getYPos()); 
+    map.initalizeNPC(41,14,ANSI_RED);
+    map.initalizeNPC(65,10,ANSI_ORANGE);
+    //map.initalizeNPC(41,14,"\033[31m");
+    
 
     mainClock.timerOn(); 
     mainClock.setTimerPeriod(100); 
@@ -118,9 +134,20 @@ int main()
         for(int i = 0; i<23;i++){
             for(int j = 0; j <100; j++){
                 if(!map.getXYCoord(j,i).getPlayerActive()){
-                    cout<<map.getXYCoord(j,i).getCoordCharacter(); 
+                    if(map.getXYCoord(j,i).getCoordColor()=="\033[30m"){
+                        cout<<map.getXYCoord(j,i).getCoordCharacter(); 
+                    } else {
+                        cout<<map.getXYCoord(j,i).getCoordColor()<<map.getXYCoord(j,i).getCoordCharacter()<<"\033[37m";
+                    }
+                    
                 } else {
-                    cout<<"@"; 
+                    if(!map.getXYCoord(j,i).getContainsNPC()){
+                        cout<<"@"; 
+                    } else {
+                        cout<<map.getXYCoord(j,i).getCoordColor()<<"@"<<"\033[37m";
+                        //cout<<"@"; 
+                    }
+                    
                 }
                  
             }

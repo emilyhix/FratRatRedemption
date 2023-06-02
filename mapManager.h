@@ -16,6 +16,8 @@ class mapManager{
         void initializePlayer(const int &, const int &); 
         void movePlayer(const int &, const int &); 
         void removePlayer(const int &, const int &); 
+
+        void initalizeNPC(const int &, const int &, const string &);
         void printMap() const; 
 };
 

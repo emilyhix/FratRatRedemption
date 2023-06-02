@@ -38,10 +38,16 @@ void mapManager::initializePlayer(const int & initialXPos, const int & initialYP
     mapXY[initialYPos][initialXPos].togglePlayerActive(); 
 }
 
+void mapManager::initalizeNPC(const int & npcXPos, const int & npcYPos, const string & npcColor){
+    mapXY[npcYPos][npcXPos].toggleContainsNPC(); 
+    mapXY[npcYPos][npcXPos].setCoordCharacter('X'); 
+    mapXY[npcYPos][npcXPos].setCoordColor(npcColor); 
+}
+
 void mapManager::movePlayer(const int & newXPos, const int & newYPos){
-    if(mapXY[newYPos][newXPos].getCoordCharacter()==' '){
+    //if(mapXY[newYPos][newXPos].getWalkable()){
         mapXY[newYPos][newXPos].togglePlayerActive(); 
-    }
+    //}
 }
 
  void mapManager::removePlayer(const int & currXPos, const int & currYPos){

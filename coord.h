@@ -24,6 +24,9 @@ class coord{
         bool getWalkable() const; 
         void togglePlayerActive(); 
         bool getPlayerActive() const; 
+
+        void toggleContainsNPC();
+        bool getContainsNPC() const; 
 };
 
 
