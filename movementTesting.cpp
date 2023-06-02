@@ -67,6 +67,7 @@ int main()
             switch(keyboardInput){
                 case 'w':
                     //y++;
+                    
                     if(map.getXYCoord(player.getXPos(),player.getYPos()-1).getWalkable()){
                         //player.moveUp();
                         player.movePlayerPosition(MOVE_UP);
@@ -103,11 +104,6 @@ int main()
                 break;
 
                 case '0':
-                    //x++; 
-                    if(map.getXYCoord(player.getXPos()-1,player.getYPos()).getPlayerActive()){
-                        cout<<"\033[31m";
-                    }
-                    
                 break;
 
                 default:

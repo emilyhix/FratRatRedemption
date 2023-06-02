@@ -6,6 +6,7 @@ coord::coord(){
     color = "\033[30m";
     walkable = true; 
     playerActive = false; 
+    containsNPC = false; 
 }
 
 void coord::setCoordCharacter(const char & newChar){

@@ -48,6 +48,6 @@ void mapManager::movePlayer(const int & newXPos, const int & newYPos){
         mapXY[currYPos][currXPos].togglePlayerActive(); 
  }
 
- void mapManager::printMap() const{
+ void mapManager::printMap() const{ // WAS TOLD BY GARRET THAT PUTTING PRINT IN HERE IS OK
 
  }

@@ -1,7 +1,7 @@
 #ifndef __PLAYERMANAGER_H
 #define __PLAYERMANAGER_H
 
-class playerManager{
+class playerManager{ //PUT EVERYTHING HERE INTO MAP MANAGER
     private:
         int xpos; 
         int ypos; 

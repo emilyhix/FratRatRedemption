@@ -12,6 +12,7 @@ class coord{
         std::string color;
         bool walkable; 
         bool playerActive;
+        bool containsNPC;
 
     public: 
         coord(); 
