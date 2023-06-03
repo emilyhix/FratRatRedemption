@@ -56,6 +56,14 @@ int main()
     map.initializePlayer(player.getXPos(),player.getYPos()); 
     map.initalizeNPC(41,14,ANSI_RED);
     map.initalizeNPC(65,10,ANSI_ORANGE);
+    map.initalizeNPC(58,16,ANSI_LIGHT_BLUE);
+    map.initalizeNPC(48,17,ANSI_GREEN);
+    map.initalizeNPC(28,18,ANSI_YELLOW);
+    map.initalizeNPC(39,5,ANSI_PINK);
+    map.initalizeNPC(9,19,ANSI_LIME);
+    map.initalizeNPC(10,11,ANSI_NAVY_BLUE);
+    map.initalizeNPC(19,7,ANSI_BLUE);
+    map.initalizeNPC(21,12,ANSI_PURPLE);
     //map.initalizeNPC(41,14,"\033[31m");
     
 
@@ -160,10 +168,10 @@ int main()
             mainClock.timerOff(); 
         }
 
-        // if(tcnt==100){
-        //     cout<<"it has been 10 seconds"<<endl; 
-        //     break; 
-        // }
+        if(tcnt==100){
+            cout<<"it has been 10 seconds"<<endl; 
+            break; 
+        }
 
        tcnt++; 
         mainClock.timerISR(); 
