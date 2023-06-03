@@ -7,6 +7,6 @@ coord.cpp
 gameClock.cpp
 mapManager.cpp
 movementTesting.cpp
-playerManager.cpp
+playerActor.cpp
 userInput.cpp
 )

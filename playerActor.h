@@ -1,13 +1,13 @@
-#ifndef __PLAYERMANAGER_H
-#define __PLAYERMANAGER_H
+#ifndef __PLAYERACTOR_H
+#define __PLAYERACTOR_H
 
-class playerManager{ //PUT EVERYTHING HERE INTO MAP MANAGER
+class playerActor{ //PUT EVERYTHING HERE INTO MAP MANAGER
     private:
         int xpos; 
         int ypos; 
 
     public:
-        playerManager(); 
+        playerActor(); 
         int getXPos() const;
         int getYPos() const;
         void setXPos(const int &);

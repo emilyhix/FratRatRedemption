@@ -9,7 +9,7 @@
 #include "gameClock.h"
 #include "userInput.h"
 #include "mapManager.h"
-#include "playerManager.h"
+#include "playerActor.h"
 
 // using namespace std::chrono;
 // using namespace std::literals::chrono_literals; 
@@ -49,7 +49,7 @@ int main()
     gameClock mainClock; 
     userInput inputGetter; 
     mapManager map; 
-    playerManager player;
+    playerActor player;
     unsigned tcnt = 0; 
 
     map.initializeMap("map.txt"); 
@@ -168,10 +168,10 @@ int main()
             mainClock.timerOff(); 
         }
 
-        if(tcnt==100){
-            cout<<"it has been 10 seconds"<<endl; 
-            break; 
-        }
+        // if(tcnt==100){
+        //     cout<<"it has been 10 seconds"<<endl; 
+        //     break; 
+        // }
 
        tcnt++; 
         mainClock.timerISR(); 
