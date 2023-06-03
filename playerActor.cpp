@@ -3,8 +3,8 @@
 //using namespace std;
 
 playerActor::playerActor(){
-    xpos = 62; 
-    ypos = 5; 
+    xpos = 61; 
+    ypos = 4; 
 }
 
 int playerActor::getXPos()const{

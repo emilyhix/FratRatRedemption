@@ -3,7 +3,7 @@
 
 coord::coord(){
     character = ' '; 
-    color = "\033[30m";
+    color = "\033[37m";
     walkable = true; 
     playerActive = false; 
     containsNPC = false; 

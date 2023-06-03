@@ -4,6 +4,8 @@
 #include <iostream>
 #include "coord.h"
 
+using std::cout;
+
 class mapManager{
     private:
         coord mapXY[23][100];
@@ -16,7 +18,6 @@ class mapManager{
         void initializePlayer(const int &, const int &); 
         void movePlayer(const int &, const int &); 
         void removePlayer(const int &, const int &); 
-
         void initalizeNPC(const int &, const int &, const string &);
         void printMap() const; 
 };

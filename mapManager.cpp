@@ -3,6 +3,9 @@
 #include <string> 
 #include "mapManager.h"
 
+#define ANSI_CLEAR_TERMINAL "\x1B[2J\x1B[H"
+#define ANSI_DEFAULT_TERMINAL_COLOR "\033[37m"
+
 mapManager::mapManager(){
 
 }
@@ -45,15 +48,34 @@ void mapManager::initalizeNPC(const int & npcXPos, const int & npcYPos, const st
 }
 
 void mapManager::movePlayer(const int & newXPos, const int & newYPos){
-    //if(mapXY[newYPos][newXPos].getWalkable()){
         mapXY[newYPos][newXPos].togglePlayerActive(); 
-    //}
 }
 
- void mapManager::removePlayer(const int & currXPos, const int & currYPos){
+void mapManager::removePlayer(const int & currXPos, const int & currYPos){
         mapXY[currYPos][currXPos].togglePlayerActive(); 
  }
 
- void mapManager::printMap() const{ // WAS TOLD BY GARRET THAT PUTTING PRINT IN HERE IS OK
-
- }
+void mapManager::printMap() const{ // WAS TOLD BY GARRET THAT PUTTING PRINT IN HERE IS OK
+    std::cout<<ANSI_CLEAR_TERMINAL;
+    for(int i = 0; i<23;i++){
+        for(int j = 0; j <100; j++){
+            if(!mapXY[i][j].getPlayerActive()){
+                if(mapXY[i][j].getCoordColor()==ANSI_DEFAULT_TERMINAL_COLOR){
+                    std::cout<<mapXY[i][j].getCoordCharacter(); 
+                } else {
+                    std::cout<<mapXY[i][j].getCoordColor()<<mapXY[i][j].getCoordCharacter()<<ANSI_DEFAULT_TERMINAL_COLOR;
+                }
+                
+            } else {
+                if(!mapXY[i][j].getContainsNPC()){
+                    std::cout<<"@"; 
+                } else {
+                    std::cout<<mapXY[i][j].getCoordColor()<<"@"<<ANSI_DEFAULT_TERMINAL_COLOR;
+                }
+                
+            }
+            
+        }
+        std::cout<<"\n";
+    }
+}
