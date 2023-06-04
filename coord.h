@@ -11,11 +11,16 @@ class coord{
         char character; 
         std::string color;
         bool walkable; 
+
+        //0 if no player/NPC; 1 if player/NPC
         bool playerActive;
         bool containsNPC;
 
     public: 
+        //Constructor
         coord(); 
+
+        //Coord Control Functions
         void setCoordColor(const string &); 
         void setCoordCharacter(const char &); 
         char getCoordCharacter() const;

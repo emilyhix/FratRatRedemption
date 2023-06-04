@@ -1,6 +1,7 @@
 #include <iostream>
 #include "coord.h"
 
+//Constructor
 coord::coord(){
     character = ' '; 
     color = "\033[37m";
@@ -9,6 +10,7 @@ coord::coord(){
     containsNPC = false; 
 }
 
+//Coord Control Functions
 void coord::setCoordCharacter(const char & newChar){
     character = newChar; 
 }

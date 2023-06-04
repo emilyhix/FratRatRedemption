@@ -1,12 +1,12 @@
 #include "playerActor.h"
 
-//using namespace std;
-
+//Constructor
 playerActor::playerActor(){
     xpos = 61; 
     ypos = 4; 
 }
 
+//Player Actor control functions
 int playerActor::getXPos()const{
     return xpos;
 }
