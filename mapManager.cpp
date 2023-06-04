@@ -47,8 +47,12 @@ void mapManager::initalizeNPC(const int & npcXPos, const int & npcYPos, const st
     mapXY[npcYPos][npcXPos].setCoordColor(npcColor); 
 }
 
+void mapManager::deactivateNPC(const int & npcXPos, const int & npcYPos){
+    mapXY[npcYPos][npcXPos].toggleContainsNPC();
+}
+
 void mapManager::movePlayer(const int & newXPos, const int & newYPos){
-        mapXY[newYPos][newXPos].togglePlayerActive(); 
+    mapXY[newYPos][newXPos].togglePlayerActive(); 
 }
 
 void mapManager::removePlayer(const int & currXPos, const int & currYPos){

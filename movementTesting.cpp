@@ -44,14 +44,15 @@ void clearTerminal() {
 int main()
 {
     //SETUP
-    gameClock mainClock; 
+    gameClock mapClock; 
+    gameClock interactionClock; 
     userInput inputGetter; 
     mapManager map; 
     playerActor player;
     unsigned tcnt = 0; 
 
     bool primaryLoopFlag = 1; 
-    int gameMode = 0;
+    int gameMode = 0; //0 == map; 1 == interaction
 
     map.initializeMap("map.txt"); 
     map.initializePlayer(player.getXPos(),player.getYPos()); 
@@ -66,76 +67,96 @@ int main()
     map.initalizeNPC(19,7,ANSI_BLUE);
     map.initalizeNPC(21,12,ANSI_PURPLE);
 
-    mainClock.timerOn(); 
-    mainClock.setTimerPeriod(100); 
+    mapClock.timerOn(); 
+    mapClock.setTimerPeriod(100); 
     inputGetter.setInputMode(2); 
 
-    char keyboardInput=0;
+    interactionClock.timerOn();
+    interactionClock.setTimerPeriod(50);
 
-    map.printMap(); 
+    char keyboardInput=0;
+    int selectedInteractionOption = 0; 
+
+    //map.printMap(); 
 
     //PRIMARY LOOP
     while(primaryLoopFlag){
-        while(mainClock.getTimerStatus() == 1){ //MAP LOOP
-                if(tcnt%1==0){
-                    keyboardInput = inputGetter.getUserInput(); 
-                    if(keyboardInput>0){
-                        map.removePlayer(player.getXPos(),player.getYPos());
-                        switch(keyboardInput){
-                            case 'w':   
-                                if(map.getXYCoord(player.getXPos(),player.getYPos()-1).getWalkable()){
-                                    player.movePlayerPosition(MOVE_UP);
-                                }
-                                
-                            break;
-
-                            case 'a': 
-                                if(map.getXYCoord(player.getXPos()-1,player.getYPos()).getWalkable()){
-                                player.movePlayerPosition(MOVE_LEFT);
-                                }
-                            break; 
-
-                            case 's':
-                                if(map.getXYCoord(player.getXPos(),player.getYPos()+1).getWalkable()){
-                                    player.movePlayerPosition(MOVE_DOWN);
-                                }
-                            break; 
-
-                            case 'd':
-                                if(map.getXYCoord(player.getXPos()+1,player.getYPos()).getWalkable()){
-                                    player.movePlayerPosition(MOVE_RIGHT);
-                                }
-                            break;
-
-                            default:
-                            break; 
+        //map.printMap(); 
+        while(gameMode == 0){ //MAP LOOP
+            map.printMap();
+            keyboardInput = inputGetter.getUserInput(); 
+            if(keyboardInput>0){
+                map.removePlayer(player.getXPos(),player.getYPos());
+                switch(keyboardInput){
+                    case 'w':   
+                        if(map.getXYCoord(player.getXPos(),player.getYPos()-1).getWalkable()){
+                            player.movePlayerPosition(MOVE_UP);
                         }
-                        //cout<< "\033[31m"<<"\rCOORDINATE(x,y): ( "<<x<<" , "<<y<<" )\n"<< "\033[0m"; 
-                        map.movePlayer(player.getXPos(),player.getYPos());
-                        map.printMap(); 
-                    }
+                        
+                    break;
 
+                    case 'a': 
+                        if(map.getXYCoord(player.getXPos()-1,player.getYPos()).getWalkable()){
+                        player.movePlayerPosition(MOVE_LEFT);
+                        }
+                    break; 
+
+                    case 's':
+                        if(map.getXYCoord(player.getXPos(),player.getYPos()+1).getWalkable()){
+                            player.movePlayerPosition(MOVE_DOWN);
+                        }
+                    break; 
+
+                    case 'd':
+                        if(map.getXYCoord(player.getXPos()+1,player.getYPos()).getWalkable()){
+                            player.movePlayerPosition(MOVE_RIGHT);
+                        }
+                    break;
+
+                    default:
+                    break; 
                 }
+                //cout<< "\033[31m"<<"\rCOORDINATE(x,y): ( "<<x<<" , "<<y<<" )\n"<< "\033[0m"; 
+                map.movePlayer(player.getXPos(),player.getYPos());
+                if(map.getXYCoord(player.getXPos(),player.getYPos()).getContainsNPC()){
+                    mapClock.timerOff(); 
+                    gameMode = 1;
+                }
+                //map.printMap(); 
+            }
+
                 if(keyboardInput==27){
-                    mainClock.timerOff(); 
+                    mapClock.timerOff(); 
                     primaryLoopFlag = 0; 
                     break;
                 }
 
                 // if(tcnt==100){
                 //     cout<<"it has been 10 seconds"<<endl; 
-                //     mainClock.timerOff(); 
+                //     mapClock.timerOff(); 
                 //     primaryLoopFlag = 0; 
                 //     break;
                 // }
 
             tcnt++; 
-            mainClock.timerISR(); 
+            mapClock.timerISR(); 
         } //END OF MAP LOOP
 
 
-        while(1){//INTERACTION LOOP
-
+        while(gameMode==1){//INTERACTION LOOP
+            map.printMap(); 
+            cout<<"CHOOSE OPTION:\nOPTION SELECTED:";
+            keyboardInput = inputGetter.getUserInput();
+            if(keyboardInput==10){
+                interactionClock.timerOff(); 
+                map.deactivateNPC(player.getXPos(),player.getYPos());
+                clearTerminal(); 
+                gameMode=0; 
+                break; 
+            }
+            //primaryLoopFlag = 0; 
+            cout<<"\n"; 
+            interactionClock.timerISR(); 
         }
     }
 
