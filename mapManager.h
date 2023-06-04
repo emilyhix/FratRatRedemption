@@ -20,7 +20,7 @@ class mapManager{
         void removePlayer(const int &, const int &); 
         void initalizeNPC(const int &, const int &, const string &);
         void deactivateNPC(const int &, const int &); 
-        void printMap() const; 
+        void printMap(const string &) const; 
 };
 
 #endif

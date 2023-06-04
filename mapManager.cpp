@@ -59,7 +59,7 @@ void mapManager::removePlayer(const int & currXPos, const int & currYPos){
         mapXY[currYPos][currXPos].togglePlayerActive(); 
  }
 
-void mapManager::printMap() const{ // WAS TOLD BY GARRET THAT PUTTING PRINT IN HERE IS OK
+void mapManager::printMap(const string & currentDefaultColor) const{ // WAS TOLD BY GARRET THAT PUTTING PRINT IN HERE IS OK
     std::cout<<ANSI_CLEAR_TERMINAL;
     for(int i = 0; i<23;i++){
         for(int j = 0; j <100; j++){
@@ -67,14 +67,14 @@ void mapManager::printMap() const{ // WAS TOLD BY GARRET THAT PUTTING PRINT IN H
                 if(mapXY[i][j].getCoordColor()==ANSI_DEFAULT_TERMINAL_COLOR){
                     std::cout<<mapXY[i][j].getCoordCharacter(); 
                 } else {
-                    std::cout<<mapXY[i][j].getCoordColor()<<mapXY[i][j].getCoordCharacter()<<ANSI_DEFAULT_TERMINAL_COLOR;
+                    std::cout<<mapXY[i][j].getCoordColor()<<mapXY[i][j].getCoordCharacter()<<currentDefaultColor;
                 }
                 
             } else {
                 if(!mapXY[i][j].getContainsNPC()){
                     std::cout<<"@"; 
                 } else {
-                    std::cout<<mapXY[i][j].getCoordColor()<<"@"<<ANSI_DEFAULT_TERMINAL_COLOR;
+                    std::cout<<mapXY[i][j].getCoordColor()<<"@"<<currentDefaultColor;
                 }
                 
             }

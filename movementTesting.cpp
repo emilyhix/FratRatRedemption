@@ -20,6 +20,7 @@ using namespace std;
 
 #define ANSI_CLEAR_TERMINAL "\x1B[2J\x1B[H"
 #define ANSI_DEFAULT_TERMINAL_COLOR "\033[37m"
+#define ANSI_GREY "\033[30m"
 #define ANSI_RED "\033[31m"
 #define ANSI_LIME "\033[38;5;10m"
 #define ANSI_ORANGE "\033[38;5;208m"
@@ -70,7 +71,7 @@ int main()
     unsigned tcnt = 0; 
 
     bool primaryLoopFlag = 1; 
-    int gameMode = 0; //0 == map; 1 == interaction
+    int gameMode = 0; //-1 == off; 0 == map; 1 == interaction
 
     map.initializeMap("map.txt"); 
     map.initializePlayer(player.getXPos(),player.getYPos()); 
@@ -90,18 +91,17 @@ int main()
     inputGetter.setInputMode(2); 
 
     interactionClock.timerOn();
-    interactionClock.setTimerPeriod(50);
+    interactionClock.setTimerPeriod(200);
 
     char keyboardInput=0;
     int selectedInteractionOption = 0; 
-
-    //map.printMap(); 
 
     //PRIMARY LOOP
     while(primaryLoopFlag){
         //map.printMap(); 
         while(gameMode == 0){ //MAP LOOP
-            map.printMap();
+            selectedInteractionOption = 0; 
+            map.printMap(ANSI_DEFAULT_TERMINAL_COLOR);
             keyboardInput = inputGetter.getUserInput(); 
             if(keyboardInput>0){
                 map.removePlayer(player.getXPos(),player.getYPos());
@@ -134,13 +134,11 @@ int main()
                     default:
                     break; 
                 }
-                //cout<< "\033[31m"<<"\rCOORDINATE(x,y): ( "<<x<<" , "<<y<<" )\n"<< "\033[0m"; 
                 map.movePlayer(player.getXPos(),player.getYPos());
                 if(map.getXYCoord(player.getXPos(),player.getYPos()).getContainsNPC()){
                     mapClock.timerOff(); 
                     gameMode = 1;
                 }
-                //map.printMap(); 
             }
 
                 if(keyboardInput==27){
@@ -161,8 +159,10 @@ int main()
         } //END OF MAP LOOP
 
 
-        while(gameMode==1){//INTERACTION LOOP
-            map.printMap(); 
+        while(gameMode==1){//INTERACTION LOOP (to be edited to accommodate textManager)
+            cout<<ANSI_GREY;
+            map.printMap(ANSI_GREY); 
+            cout<<ANSI_DEFAULT_TERMINAL_COLOR;
             cout<<"CHOOSE OPTION:\nOPTION SELECTED: "<<selectedInteractionOption;
             keyboardInput = inputGetter.getUserInput();
             switch(keyboardInput){
@@ -187,7 +187,6 @@ int main()
                 primaryLoopFlag = 0; 
                 break;
             }
-            //primaryLoopFlag = 0; 
             cout<<"\n"; 
             interactionClock.timerISR(); 
         }
