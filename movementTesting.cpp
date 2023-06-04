@@ -41,6 +41,24 @@ void clearTerminal() {
     cout << "\x1B[2J\x1B[H";
 }
 
+void interactionOptionAdjust(int & currentOptionSelected, const int & directionInput){ //0 = up, 2 = down
+    switch(directionInput){
+        case 0:
+        currentOptionSelected--;
+        break;
+
+        case 2:
+        currentOptionSelected++; 
+        break; 
+    }
+    
+    if(currentOptionSelected>3){
+        currentOptionSelected = 0; 
+    } else if (currentOptionSelected < 0){
+        currentOptionSelected = 3; 
+    }
+}
+
 int main()
 {
     //SETUP
@@ -145,14 +163,29 @@ int main()
 
         while(gameMode==1){//INTERACTION LOOP
             map.printMap(); 
-            cout<<"CHOOSE OPTION:\nOPTION SELECTED:";
+            cout<<"CHOOSE OPTION:\nOPTION SELECTED: "<<selectedInteractionOption;
             keyboardInput = inputGetter.getUserInput();
+            switch(keyboardInput){
+                case 'w':
+                    interactionOptionAdjust(selectedInteractionOption,MOVE_UP);
+                break;
+
+                case 's':
+                    interactionOptionAdjust(selectedInteractionOption,MOVE_DOWN);
+                break; 
+            }
             if(keyboardInput==10){
                 interactionClock.timerOff(); 
                 map.deactivateNPC(player.getXPos(),player.getYPos());
                 clearTerminal(); 
                 gameMode=0; 
                 break; 
+            }
+
+            if(keyboardInput==27){
+                interactionClock.timerOff(); 
+                primaryLoopFlag = 0; 
+                break;
             }
             //primaryLoopFlag = 0; 
             cout<<"\n"; 
@@ -162,6 +195,6 @@ int main()
 
     inputGetter.setInputMode(0); 
 
-    cout<<"\f\nDONE!\n"; 
+    cout<<"\f\nGAME EXITED!\n"; 
     return 0; 
 }
