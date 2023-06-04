@@ -11,8 +11,6 @@
 #include "mapManager.h"
 #include "playerActor.h"
 
-// using namespace std::chrono;
-// using namespace std::literals::chrono_literals; 
 using namespace std; 
 
 #define MOVE_UP 0
@@ -20,7 +18,8 @@ using namespace std;
 #define MOVE_DOWN 2
 #define MOVE_LEFT 3
 
-#define DEFAULT_TERMINAL_COLOR "\033[37m"
+#define ANSI_CLEAR_TERMINAL "\x1B[2J\x1B[H"
+#define ANSI_DEFAULT_TERMINAL_COLOR "\033[37m"
 #define ANSI_RED "\033[31m"
 #define ANSI_LIME "\033[38;5;10m"
 #define ANSI_ORANGE "\033[38;5;208m"
@@ -33,24 +32,26 @@ using namespace std;
 #define ANSI_PURPLE "\033[35m"
 
 
-void printBoldText(const std::string& text) {
-    std::cout << "\033[1m" << text << "\033[0m";
+void printBoldText(const string& text) {
+    cout << "\033[1m" << text << "\033[0m";
 }
 
 void clearTerminal() {
     // CSI[2J clears screen, CSI[H moves the cursor to top-left corner
-    std::cout << "\x1B[2J\x1B[H";
+    cout << "\x1B[2J\x1B[H";
 }
 
 int main()
 {
-    //clearTerminal(); 
-    //gameCLOCK class testing
+    //SETUP
     gameClock mainClock; 
     userInput inputGetter; 
     mapManager map; 
     playerActor player;
     unsigned tcnt = 0; 
+
+    bool primaryLoopFlag = 1; 
+    int gameMode = 0;
 
     map.initializeMap("map.txt"); 
     map.initializePlayer(player.getXPos(),player.getYPos()); 
@@ -64,117 +65,78 @@ int main()
     map.initalizeNPC(10,11,ANSI_NAVY_BLUE);
     map.initalizeNPC(19,7,ANSI_BLUE);
     map.initalizeNPC(21,12,ANSI_PURPLE);
-    //map.initalizeNPC(41,14,"\033[31m");
-    
 
     mainClock.timerOn(); 
     mainClock.setTimerPeriod(100); 
     inputGetter.setInputMode(2); 
 
     char keyboardInput=0;
-    //int x = 0; 
-    //int y = 0; 
-        clearTerminal(); 
-        for(int i = 0; i<23;i++){
-            for(int j = 0; j <100; j++){
-                cout<<map.getXYCoord(j,i).getCoordCharacter(); 
-            }
-        cout<<"\n";
-        }
 
-    while(mainClock.getTimerStatus() == 1){ //MAIN CLOCK
-        if(tcnt%1==0){
-            keyboardInput = inputGetter.getUserInput(); 
-            if(keyboardInput>0){
-                map.removePlayer(player.getXPos(),player.getYPos());
-                //map.getXYCoord(player.getXPos(),player.getYPos()).playerActiveFalse(); 
-            switch(keyboardInput){
-                case 'w':
-                    //y++;
-                    
-                    if(map.getXYCoord(player.getXPos(),player.getYPos()-1).getWalkable()){
-                        //player.moveUp();
-                        player.movePlayerPosition(MOVE_UP);
+    map.printMap(); 
+
+    //PRIMARY LOOP
+    while(primaryLoopFlag){
+        while(mainClock.getTimerStatus() == 1){ //MAP LOOP
+                if(tcnt%1==0){
+                    keyboardInput = inputGetter.getUserInput(); 
+                    if(keyboardInput>0){
+                        map.removePlayer(player.getXPos(),player.getYPos());
+                        switch(keyboardInput){
+                            case 'w':   
+                                if(map.getXYCoord(player.getXPos(),player.getYPos()-1).getWalkable()){
+                                    player.movePlayerPosition(MOVE_UP);
+                                }
+                                
+                            break;
+
+                            case 'a': 
+                                if(map.getXYCoord(player.getXPos()-1,player.getYPos()).getWalkable()){
+                                player.movePlayerPosition(MOVE_LEFT);
+                                }
+                            break; 
+
+                            case 's':
+                                if(map.getXYCoord(player.getXPos(),player.getYPos()+1).getWalkable()){
+                                    player.movePlayerPosition(MOVE_DOWN);
+                                }
+                            break; 
+
+                            case 'd':
+                                if(map.getXYCoord(player.getXPos()+1,player.getYPos()).getWalkable()){
+                                    player.movePlayerPosition(MOVE_RIGHT);
+                                }
+                            break;
+
+                            default:
+                            break; 
+                        }
+                        //cout<< "\033[31m"<<"\rCOORDINATE(x,y): ( "<<x<<" , "<<y<<" )\n"<< "\033[0m"; 
+                        map.movePlayer(player.getXPos(),player.getYPos());
+                        map.printMap(); 
                     }
-                    //player.moveUp();
-                    
-                break;
 
-                case 'a': 
-                    //x--;
-                     if(map.getXYCoord(player.getXPos()-1,player.getYPos()).getWalkable()){
-                       //player.moveLeft();
-                       player.movePlayerPosition(MOVE_LEFT);
-                    }
-                     //player.moveLeft(); 
-                break; 
-
-                case 's':
-                    //y--;
-                    if(map.getXYCoord(player.getXPos(),player.getYPos()+1).getWalkable()){
-                        //player.moveDown();
-                        player.movePlayerPosition(MOVE_DOWN);
-                    }
-                    //player.moveDown();
-                break; 
-
-                case 'd':
-                    //x++; 
-                    if(map.getXYCoord(player.getXPos()+1,player.getYPos()).getWalkable()){
-                         //player.moveRight(); 
-                         player.movePlayerPosition(MOVE_RIGHT);
-                    }
-                    //player.moveRight(); 
-                break;
-
-                case '0':
-                break;
-
-                default:
-                break; 
-            }
-
-            //cout<< "\033[31m"<<"\rCOORDINATE(x,y): ( "<<x<<" , "<<y<<" )\n"<< "\033[0m"; 
-            map.movePlayer(player.getXPos(),player.getYPos());
-
-        //clearTerminal(); 
-        clearTerminal(); 
-        for(int i = 0; i<23;i++){
-            for(int j = 0; j <100; j++){
-                if(!map.getXYCoord(j,i).getPlayerActive()){
-                    if(map.getXYCoord(j,i).getCoordColor()=="\033[30m"){
-                        cout<<map.getXYCoord(j,i).getCoordCharacter(); 
-                    } else {
-                        cout<<map.getXYCoord(j,i).getCoordColor()<<map.getXYCoord(j,i).getCoordCharacter()<<"\033[37m";
-                    }
-                    
-                } else {
-                    if(!map.getXYCoord(j,i).getContainsNPC()){
-                        cout<<"@"; 
-                    } else {
-                        cout<<map.getXYCoord(j,i).getCoordColor()<<"@"<<"\033[37m";
-                        //cout<<"@"; 
-                    }
-                    
                 }
-                 
-            }
-        cout<<"\n";
-        }
-        }
+                if(keyboardInput==27){
+                    mainClock.timerOff(); 
+                    primaryLoopFlag = 0; 
+                    break;
+                }
+
+                // if(tcnt==100){
+                //     cout<<"it has been 10 seconds"<<endl; 
+                //     mainClock.timerOff(); 
+                //     primaryLoopFlag = 0; 
+                //     break;
+                // }
+
+            tcnt++; 
+            mainClock.timerISR(); 
+        } //END OF MAP LOOP
+
+
+        while(1){//INTERACTION LOOP
 
         }
-        if(keyboardInput==27){
-            mainClock.timerOff(); 
-        }
-
-        // if(tcnt==100){
-        //     cout<<"it has been 10 seconds"<<endl; 
-        //     break; 
-        // }
-
-       tcnt++; 
-        mainClock.timerISR(); 
     }
 
     inputGetter.setInputMode(0); 
