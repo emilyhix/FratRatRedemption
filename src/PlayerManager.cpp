@@ -1,7 +1,29 @@
 #include "../header/PlayerManager.hpp"
 
+
+PlayerManager::PlayerManager() {
+
+}
+
+PlayerManager::PlayerManager(string name, string type) {
+    playerName = name;
+    playerType = type;
+}
+
+void PlayerManager::setPlayerName(string type) {
+    playerType = type;
+}
+
+string PlayerManager::getPlayerName() {
+    return playerName;
+}
+
 void PlayerManager::setPlayerType(string type) {
     playerType = type;
+}
+
+string PlayerManager::getPlayerType() {
+    return playerType;
 }
 
 void PlayerManager::setPlayerRep(int newReputation) {
@@ -21,24 +43,24 @@ int PlayerManager::getPlayerMor() {
     return morality;
 }
 
-void PlayerManager::setPopularRep(int popRep) {
-    popularReputation = popRep;
+void PlayerManager::setPopularRep(int newPopularRep) {
+    popularReputation = newPopularRep;
 }
 
 int PlayerManager::getPopularRep() {
     return popularReputation;
 }
 
-void PlayerManager::setNormieRep(int normieRep) {
-    normieReputation = normieRep;
+void PlayerManager::setNormieRep(int newNormieRep) {
+    normieReputation = newNormieRep;
 }
 
 int PlayerManager::getNormieRep() {
     return normieReputation;
 }
 
-void PlayerManager::setOutcastRep(int outcastRep) {
-    outcastReputation = outcastRep;
+void PlayerManager::setOutcastRep(int newOutcastRep) {
+    outcastReputation = newOutcastRep;
 }
 
 int PlayerManager::getOutcastRep() {
