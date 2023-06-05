@@ -26,8 +26,8 @@ string PlayerManager::getPlayerType() {
     return playerType;
 }
 
-void PlayerManager::setPlayerRep(int rep) {
-    reputation = rep;
+void PlayerManager::setPlayerRep(int newReputation) {
+    reputation = newReputation;
 }
 
 
@@ -35,32 +35,32 @@ int PlayerManager::getPlayerRep() {
     return reputation;
 }
 
-void PlayerManager::setPlayerMor(int mor) {
-    morality = mor;
+void PlayerManager::setPlayerMor(int newMorality) {
+    morality = newMorality;
 }
 
 int PlayerManager::getPlayerMor() {
     return morality;
 }
 
-void PlayerManager::setPopularRep(int popRep) {
-    popularReputation = popRep;
+void PlayerManager::setPopularRep(int newPopularRep) {
+    popularReputation = newPopularRep;
 }
 
 int PlayerManager::getPopularRep() {
     return popularReputation;
 }
 
-void PlayerManager::setNormieRep(int normieRep) {
-    normieReputation = normieRep;
+void PlayerManager::setNormieRep(int newNormieRep) {
+    normieReputation = newNormieRep;
 }
 
 int PlayerManager::getNormieRep() {
     return normieReputation;
 }
 
-void PlayerManager::setOutcastRep(int outcastRep) {
-    outcastReputation = outcastRep;
+void PlayerManager::setOutcastRep(int newOutcastRep) {
+    outcastReputation = newOutcastRep;
 }
 
 int PlayerManager::getOutcastRep() {
