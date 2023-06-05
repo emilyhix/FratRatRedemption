@@ -1,5 +1,5 @@
 #include <iostream>
-#include "coord.h"
+#include "../header/coord.hpp"
 
 //Constructor
 coord::coord(){

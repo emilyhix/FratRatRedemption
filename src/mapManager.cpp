@@ -1,7 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include <string> 
-#include "mapManager.h"
+#include "../header/mapManager.hpp"
 
 #define ANSI_CLEAR_TERMINAL "\x1B[2J\x1B[H"
 #define ANSI_DEFAULT_TERMINAL_COLOR "\033[37m"

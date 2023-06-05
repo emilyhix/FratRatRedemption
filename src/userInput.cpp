@@ -3,7 +3,7 @@
 #include <fcntl.h>
 #include <unistd.h>
 
-#include "userInput.h"
+#include "../header/userInput.hpp"
 
 //Constructor
 userInput::userInput(){

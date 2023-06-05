@@ -6,10 +6,10 @@
 // #include <thread> 
 #include <cstdlib>
 
-#include "gameClock.h"
-#include "userInput.h"
-#include "mapManager.h"
-#include "playerActor.h"
+#include "header/gameClock.hpp"
+#include "header/userInput.hpp"
+#include "header/mapManager.hpp"
+#include "header/playerActor.hpp"
 
 using namespace std; 
 

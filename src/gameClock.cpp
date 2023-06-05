@@ -2,7 +2,7 @@
 #include <chrono>
 #include <thread> 
 
-#include "gameClock.h"
+#include "../header/gameClock.hpp"
 
 using namespace std::chrono;
 using namespace std::literals::chrono_literals; 
