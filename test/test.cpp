@@ -1,3 +1,4 @@
+
 #include "../src/EndingManager.cpp"
 #include "../src/PlayerManager.cpp"
 
@@ -27,5 +28,23 @@ int main() {
     EndingManager testEnding(testRep, testMor, testPopularRep, testNormieRep, testOutcastRep, testType);
 
     testEnding.printEnding();
+
+
+    playerManager player;
+    characterCustom cc;
+    cc.createIntro();
+    cc.printCCText(player);
+
+    int id;
+    cin >> id;
+    npc currNPC(id);
+
+    cout << currNPC.getName() << endl;
+    cout << currNPC.getType() << endl;
+
+    currNPC.printIntroduction();
+    currNPC.printDialogue();
+
+    return 0;
 
 }
