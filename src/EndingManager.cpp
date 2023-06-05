@@ -5,6 +5,7 @@ EndingManager::EndingManager(const int finalReputation, const int finalMorality,
     this->finalReputation = finalReputation;
     this->finalMorality = finalMorality;
 
+    // Assigns ending text based on player's final reputation and morality stats
     if (finalMorality < 10) {
         playerResultText = "";
     }
@@ -37,7 +38,7 @@ EndingManager::EndingManager(const int finalReputation, const int finalMorality,
 
 void EndingManager::printEnding() {
 
-    // print player's end results to terminal
+    // Print player's end results to terminal
     cout << "PARTY OVER!\n\n";
 
     cout << playerResultText << endl;

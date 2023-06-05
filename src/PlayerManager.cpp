@@ -1,11 +1,11 @@
-#include "../PlayerManager.hpp"
+#include "../header/PlayerManager.hpp"
 
 void PlayerManager::setPlayerType(int type) {
     playerType = type;
 }
 
-void PlayerManager::setPlayerRep(int rep) {
-    reputation = rep;
+void PlayerManager::setPlayerRep(int newReputation) {
+    reputation = newReputation;
 }
 
 
@@ -13,8 +13,8 @@ int PlayerManager::getPlayerRep() {
     return reputation;
 }
 
-void PlayerManager::setPlayerMor(int mor) {
-    morality = mor;
+void PlayerManager::setPlayerMor(int newMorality) {
+    morality = newMorality;
 }
 
 int PlayerManager::getPlayerMor() {
@@ -34,7 +34,7 @@ void PlayerManager::setNormieRep(int normieRep) {
 }
 
 int PlayerManager::getNormieRep() {
-    return normieRep;
+    return normieReputation;
 }
 
 void PlayerManager::setOutcastRep(int outcastRep) {
