@@ -1,5 +1,5 @@
 #include "../header/PlayerManager.hpp"
-
+#include <string>
 
 PlayerManager::PlayerManager() {
 
@@ -10,16 +10,24 @@ PlayerManager::PlayerManager(string name, string type) {
     playerType = type;
 }
 
-void PlayerManager::setPlayerName(string type) {
-    playerType = type;
+void PlayerManager::setPlayerName() {
+    cin >> playerName;
 }
 
 string PlayerManager::getPlayerName() {
     return playerName;
 }
 
-void PlayerManager::setPlayerType(string type) {
-    playerType = type;
+void PlayerManager::setPlayerType(const int &chosenType){
+    if(chosenType == 1){
+        playerType = "Popular";
+    }
+    else if(chosenType == 2){
+        playerType = "Normie";
+    }
+    else if(chosenType == 3){
+        playerType == "Outcast";
+    }
 }
 
 string PlayerManager::getPlayerType() {

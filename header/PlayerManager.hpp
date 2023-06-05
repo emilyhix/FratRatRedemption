@@ -17,9 +17,9 @@ class PlayerManager {
     public:
         PlayerManager();
         PlayerManager(string, string);
-        void setPlayerName(string);
+        void setPlayerName();
         string getPlayerName();
-        void setPlayerType(string);
+        void setPlayerType(const int &);
         string getPlayerType();
         void setPlayerRep(int);
         int getPlayerRep();
@@ -32,6 +32,5 @@ class PlayerManager {
         void setOutcastRep(int);
         int getOutcastRep();
 };
-
 
 #endif
