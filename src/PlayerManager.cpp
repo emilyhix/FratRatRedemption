@@ -73,3 +73,4 @@ void PlayerManager::setOutcastRep(int newOutcastRep) {
 
 int PlayerManager::getOutcastRep() {
     return outcastReputation;
+}

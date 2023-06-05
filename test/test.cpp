@@ -4,7 +4,6 @@
 
 #include <iostream>
 #include <string>
-
 using namespace std;
 
 int main() {
@@ -35,16 +34,40 @@ int main() {
     cc.createIntro();
     cc.printCCText(player);
 
-    int id;
-    cin >> id;
-    npc currNPC(id);
+    PlayerManager player;
 
-    cout << currNPC.getName() << endl;
-    cout << currNPC.getType() << endl;
+    string testName;
+    string testType;
 
-    currNPC.printIntroduction();
-    currNPC.printDialogue();
+    int testRep;
+    int testMor;
+    int testPopularRep;
+    int testNormieRep;
+    int testOutcastRep;
 
-    return 0;
+    cin >> testName;
+    cin >> testType;
+    cin >> testRep;
+    cin >> testMor;
+    cin >> testPopularRep;
+    cin >> testNormieRep;
+    cin >> testOutcastRep;
 
+    
+    player.setPopularRep(testPopularRep);
+    player.setNormieRep(testNormieRep);
+    player.setOutcastRep(testOutcastRep);
+
+    cout << endl;
+    cout << "Name: " << testName << endl;
+    cout << "Type: " << testType << endl;
+    cout << "Original Reputation: " << player.getPlayerRep() << endl;
+    player.setPlayerRep(testRep);
+    cout << "Changed Reputation according to input: " << player.getPlayerRep() << endl;
+    cout << "Original Morality: " << player.getPlayerMor() << endl;
+    player.setPlayerMor(testMor);
+    cout << "Changed Morality according to input: " << player.getPlayerMor() << endl;
+    cout << "Popular Rep: " << player.getPopularRep() << endl;
+    cout << "Normie Rep: " << player.getNormieRep() << endl;
+    cout << "Outcast Rep: " << player.getOutcastRep() << endl;
 }
