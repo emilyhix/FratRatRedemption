@@ -10,12 +10,20 @@ PlayerManager::PlayerManager(string name, string type) {
     playerType = type;
 }
 
-void PlayerManager::setPlayerType(string type) {
+void PlayerManager::setPlayerName(string type) {
     playerType = type;
+}
+
+string PlayerManager::getPlayerName() {
+    return playerName;
 }
 
 void PlayerManager::setPlayerType(string type) {
     playerType = type;
+}
+
+string PlayerManager::getPlayerType() {
+    return playerType;
 }
 
 void PlayerManager::setPlayerRep(int rep) {

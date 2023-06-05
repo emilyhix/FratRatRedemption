@@ -1,21 +1,37 @@
 #include <iostream>
 #include <string>
-#include "../src/npc.cpp"
+#include "../src/PlayerManager.cpp"
 
+#include <iostream>
+#include <string>
 using namespace std;
 
 int main(){
 
-    int id;
-    cin >> id;
-    npc currNPC(id);
+    PlayerManager player;
 
-    cout << currNPC.getName() << endl;
-    cout << currNPC.getType() << endl;
+    string testName;
+    string testType;
 
-    currNPC.printIntroduction();
-    currNPC.printDialogue();
+    int testRep;
+    int testMor;
+    int testPopularRep;
+    int testNormieRep;
+    int testOutcastRep;
 
-    return 0;
+    cin >> testRep;
+    cin >> testMor;
+    cin >> testPopularRep;
+    cin >> testNormieRep;
+    cin >> testOutcastRep;
 
+    player.setPlayerRep(testRep);
+    player.setPlayerMor(testMor);
+    player.setPopularRep(testPopularRep);
+    player.setNormieRep(testNormieRep);
+    player.setOutcastRep(testOutcastRep);
+
+    cout << endl;
+    cout << "Original Rep: " << player.getPlayerRep() << endl;
+    cout << 
 }

@@ -9,7 +9,7 @@ class PlayerManager {
         string playerName = "";
         string playerType = "";
         int reputation = 0;
-        int morality = 0; // UPDATE: starting morality value
+        int morality = 17;
         int popularReputation = 0;
         int normieReputation = 0;
         int outcastReputation = 0;
@@ -17,6 +17,8 @@ class PlayerManager {
     public:
         PlayerManager();
         PlayerManager(string, string);
+        void setPlayerName(string);
+        string getPlayerName(string);
         void setPlayerType(string);
         string getPlayerType();
         void setPlayerRep(int);
