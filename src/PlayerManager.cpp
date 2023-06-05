@@ -1,5 +1,4 @@
 #include "../header/PlayerManager.hpp"
-#include "../header/TextManager.hpp"
 #include <iostream>
 #include <string>
 
@@ -15,7 +14,7 @@ void playerManager::setPlayerType(const int &chosenType){
         playerType = "Normie";
     }
     else if(chosenType == 3){
-        playerType == "Outcast";
+        playerType = "Outcast";
     }
 }
 

@@ -1,28 +1,29 @@
-#include <iostream>
+#include <gtest/gtest.h>
 #include <string>
-#include "../src/npc.cpp"
-#include "../src/characterCustomization.cpp"
 #include "../src/PlayerManager.cpp"
+#include "../src/characterCustomization.cpp"
 
-using namespace std;
+TEST(playerCustomization, playerNameTest){
+    playerManager p1;
+    p1.setPlayerName();
+    EXPECT_EQ("bip", p1.getPlayerName());
+}
 
-int main(){
 
-    playerManager player;
-    characterCustom cc;
-    cc.createIntro();
-    cc.print(player);
+TEST(playerCustomization, playerType_Popular){
+    playerManager p1;
+    p1.setPlayerType(1);
+    EXPECT_EQ("Popular", p1.getPlayerType());
+}
 
-    int id;
-    cin >> id;
-    npc currNPC(id);
+TEST(playerCustomization, playerType_Normie){
+    playerManager p1;
+    p1.setPlayerType(2);
+    EXPECT_EQ("Normie", p1.getPlayerType()); 
+}
 
-    cout << currNPC.getName() << endl;
-    cout << currNPC.getType() << endl;
-
-    currNPC.printIntroduction();
-    currNPC.printDialogue();
-
-    return 0;
-
+TEST(playerCustomization, playerType_Outcast){
+    playerManager p1;
+    p1.setPlayerType(3);
+    EXPECT_EQ("Outcast", p1.getPlayerType());
 }
