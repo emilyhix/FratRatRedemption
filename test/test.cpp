@@ -1,12 +1,34 @@
+
+#include "../src/EndingManager.cpp"
+#include "../src/PlayerManager.cpp"
+
 #include <iostream>
 #include <string>
-#include "../src/npc.cpp"
-#include "../src/characterCustomization.cpp"
-#include "../src/PlayerManager.cpp"
 
 using namespace std;
 
-int main(){
+int main() {
+
+    PlayerManager player;
+    string testType;
+    int testRep;
+    int testMor;
+    int testPopularRep;
+    int testNormieRep;
+    int testOutcastRep;
+
+    cin >> testType;
+    cin >> testRep;
+    cin >> testMor;
+    cin >> testPopularRep;
+    cin >> testNormieRep;
+    cin >> testOutcastRep;
+
+
+    EndingManager testEnding(testRep, testMor, testPopularRep, testNormieRep, testOutcastRep, testType);
+
+    testEnding.printEnding();
+
 
     playerManager player;
     characterCustom cc;
