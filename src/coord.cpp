@@ -1,5 +1,5 @@
 #include <iostream>
-#include "coord.h"
+#include "../header/coord.hpp"
 
 //Constructor
 coord::coord(){
@@ -8,6 +8,26 @@ coord::coord(){
     walkable = true; 
     playerActive = false; 
     containsNPC = false; 
+}
+
+bool coord::operator==(const coord& c) {
+    bool result = true;
+    if (c.character != this->character) {
+        result = false;
+    }
+    if (c.color != this->color) {
+        result = false;
+    }
+    if (c.walkable != this->walkable) {
+        result = false;
+    }
+    if (c.playerActive != this->playerActive) {
+        result = false;
+    }
+    if (c.containsNPC != this->containsNPC) {
+        result = false;
+    }
+    return result;
 }
 
 //Coord Control Functions
