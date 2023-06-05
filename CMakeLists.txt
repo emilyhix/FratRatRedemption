@@ -6,7 +6,7 @@ ADD_EXECUTABLE(run
 src/coord.cpp
 src/gameClock.cpp
 src/mapManager.cpp
-src/movementTesting.cpp
+src/gameManager.cpp
 src/playerActor.cpp
 src/userInput.cpp
 src/npc.cpp
