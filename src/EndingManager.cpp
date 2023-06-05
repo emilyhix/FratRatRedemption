@@ -9,29 +9,41 @@ EndingManager::EndingManager(int& finalReputation, int& finalMorality, int& fina
     if (finalMorality < 10) {
         playerResultText = "low morality ending";
     }
+    else if ((finalPopularRep < 0) && (finalNormieRep < 0) && (finalOutcastRep < 0)) {
+        playerResultText = "";
+    }
     else if (finalPopularRep > finalNormieRep && finalPopularRep > finalOutcastRep) {
         if (playerType == "popular") { 
-            playerResultText = "popular-popular";
+            playerResultText = "";
+        }
+        else if (playerType == "normie") {
+            playerResultText = "";
         }
         else {
-            playerResultText = "nonpopular-popular";
+            playerResultText = "";
         }
     }
     else if (finalNormieRep > finalOutcastRep) {
-        if (playerType == "normie") { 
-            playerResultText = "normie-normie";
+        if (playerType == "popular") { 
+            playerResultText = "";
+        }
+        else if (playerType == "normie") {
+            playerResultText = "";
         }
         else {
-            playerResultText = "nonnormie-normie";
+            playerResultText = "";
         }
     }
     else {
-        if (playerType == "outcast") { 
-            playerResultText = "outcast-outcast";
+        if (playerType == "popular") { 
+            playerResultText = "";
+        }
+        else if (playerType == "normie") {
+            playerResultText = "";
         }
         else {
-            playerResultText = "nonoutcast-outcast";
-        }      
+            playerResultText = "";
+        }
     } 
 }
 
