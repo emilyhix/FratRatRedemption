@@ -73,6 +73,7 @@ int main()
     bool primaryLoopFlag = 1; 
     int gameMode = 0; //-1 == off; 0 == map; 1 == interaction
 
+    //NPC MAP INITIALIZATION
     map.initializeMap("map.txt"); 
     map.initializePlayer(player.getXPos(),player.getYPos()); 
     map.initalizeNPC(41,14,ANSI_RED);
