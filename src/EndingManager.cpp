@@ -2,7 +2,10 @@
 
 EndingManager::EndingManager(const int finalReputation, const int finalMorality, const int finalPopularRep, const int finalNormieRep, const int finalOutcastRep, const string playerType) {
 
-    if (morality < 10) {
+    this->finalReputation = finalReputation;
+    this->finalMorality = finalMorality;
+
+    if (finalMorality < 10) {
         playerResultText = "";
     }
     else if (finalPopularRep > finalNormieRep && finalPopularRep > finalOutcastRep) {
@@ -32,7 +35,7 @@ EndingManager::EndingManager(const int finalReputation, const int finalMorality,
 }
 
 
-void Ending::printEnding() {
+void EndingManager::printEnding() {
 
     // print player's end results to terminal
     cout << "PARTY OVER!\n\n";
@@ -41,6 +44,6 @@ void Ending::printEnding() {
 
     cout << "\nSTATS" << endl;
 
-    cout << "Reputation: " << endingReputation << "     Morality: " << endingMorality << endl;
+    cout << "Reputation: " << finalReputation << "     Morality: " << finalMorality << endl;
 
 }
