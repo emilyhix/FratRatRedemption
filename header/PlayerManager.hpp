@@ -1,12 +1,12 @@
 #ifndef STATSMANAGER_H
 #define PLAYERMANAGER_H
  
+#include <string>
 using namespace std;
 
 class PlayerManager {
     private:
-        int playerType;
-
+        string playerType;
         int reputation = 0;
         int morality = 0;
         int popularReputation = 0;
@@ -14,7 +14,7 @@ class PlayerManager {
         int outcastReputation = 0;
     
     public:
-        void setPlayerType(int);
+        void setPlayerType(string);
 
         void setPlayerRep(int);
         int getPlayerRep();

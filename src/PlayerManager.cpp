@@ -1,6 +1,6 @@
 #include "../header/PlayerManager.hpp"
 
-void PlayerManager::setPlayerType(int type) {
+void PlayerManager::setPlayerType(string type) {
     playerType = type;
 }
 

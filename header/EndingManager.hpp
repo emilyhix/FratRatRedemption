@@ -3,7 +3,6 @@
 
 #include <iostream>
 #include <string>
-#include "../src/PlayerManager.cpp"
 using namespace std;
 
 class EndingManager {
@@ -13,7 +12,7 @@ class EndingManager {
         string playerResultText;
 
     public:
-        EndingManager(const int, const int, const int, const int, const int, string);
+        EndingManager(int&, int&, int&, int&, int&, string);
         void printEnding();
 };
 

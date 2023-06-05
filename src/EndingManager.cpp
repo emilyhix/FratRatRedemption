@@ -1,36 +1,36 @@
 #include "../header/EndingManager.hpp"
 
-EndingManager::EndingManager(const int finalReputation, const int finalMorality, const int finalPopularRep, const int finalNormieRep, const int finalOutcastRep, const string playerType) {
+EndingManager::EndingManager(int& finalReputation, int& finalMorality, int& finalPopularRep, int& finalNormieRep, int& finalOutcastRep, string playerType) {
 
     this->finalReputation = finalReputation;
     this->finalMorality = finalMorality;
 
     // Assigns ending text based on player's final reputation and morality stats
     if (finalMorality < 10) {
-        playerResultText = "";
+        playerResultText = "low morality ending";
     }
     else if (finalPopularRep > finalNormieRep && finalPopularRep > finalOutcastRep) {
         if (playerType == "popular") { 
-            playerResultText = "";
+            playerResultText = "popular-popular";
         }
         else {
-            playerResultText = "";
+            playerResultText = "nonpopular-popular";
         }
     }
     else if (finalNormieRep > finalOutcastRep) {
         if (playerType == "normie") { 
-            playerResultText = "";
+            playerResultText = "normie-normie";
         }
         else {
-            playerResultText = "";
+            playerResultText = "nonnormie-normie";
         }
     }
     else {
         if (playerType == "outcast") { 
-            playerResultText = "";
+            playerResultText = "outcast-outcast";
         }
         else {
-            playerResultText = "";
+            playerResultText = "nonoutcast-outcast";
         }      
     } 
 }
