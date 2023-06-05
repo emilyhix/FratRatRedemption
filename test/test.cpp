@@ -11,7 +11,7 @@ int main(){
     playerManager player;
     characterCustom cc;
     cc.createIntro();
-    cc.printCCText(player);
+    cc.print(player);
 
     int id;
     cin >> id;

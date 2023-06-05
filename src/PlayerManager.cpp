@@ -1,4 +1,5 @@
 #include "../header/PlayerManager.hpp"
+#include "../header/TextManager.hpp"
 #include <iostream>
 #include <string>
 
