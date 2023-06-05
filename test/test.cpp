@@ -1,10 +1,17 @@
 #include <iostream>
 #include <string>
 #include "../src/npc.cpp"
+#include "../src/characterCustomization.cpp"
+#include "../src/PlayerManager.cpp"
 
 using namespace std;
 
 int main(){
+
+    playerManager player;
+    characterCustom cc;
+    cc.createIntro();
+    cc.printCCText(player);
 
     int id;
     cin >> id;
