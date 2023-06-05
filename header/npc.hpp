@@ -3,6 +3,7 @@
 #include <string>
 #include <iostream>
 using namespace std;
+#include "../header/mapManager.hpp"
 
 class npc {
     private:
@@ -12,7 +13,7 @@ class npc {
         string npcName;
         string introduction;
     public:
-        npc(int id);
+        npc(mapManager &map, coord id);
         string getName();
         string getType();
         void printDialogue();
