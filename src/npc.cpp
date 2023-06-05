@@ -373,36 +373,14 @@ string npc::getType() {
     return npcType;
 }
 
-void npc::printDialogue() {
-    cout << dialogue[0] << endl;
-    for (int i = 0; i < 4; ++i) {
-        cout << responses[0][i] << endl;
+void npc::printDialogue(int num) {
+    cout << dialogue[num] << endl << endl;
+    if (num < 4) {
+        cout << "Choose a response:" << endl;
+        for (int i = 0; i < 4; ++i) {
+        cout << " - " << responses[num][i] << endl;
+        }
     }
-    cout << endl;
-    // Player Input, passes in npcType
-
-    cout << dialogue[1] << endl;
-    for (int i = 0; i < 4; ++i) {
-        cout << responses[1][i] << endl;
-    }
-    cout << endl;
-    // Player Input, passes in npcType
-
-    cout << dialogue[2] << endl;
-    for (int i = 0; i < 4; ++i) {
-        cout << responses[2][i] << endl;
-    }
-    cout << endl;
-    // Player Input, passes in npcType
-
-    cout << dialogue[3] << endl;
-    for (int i = 0; i < 4; ++i) {
-        cout << responses[3][i] << endl;
-    }
-    cout << endl;
-    // Player Input, passes in npcType
-
-    cout << dialogue[4] << endl << endl;
 }
 
 void npc::printIntroduction() {
