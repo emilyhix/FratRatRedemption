@@ -3,8 +3,7 @@
 npc::npc(int id) {
     
     // Chad & Thad
-    if (id == 1) {
-        
+    if (id == 1) {        
         npcName = "Chad & Thad";
         npcType = "Popular";
 
@@ -330,7 +329,7 @@ npc::npc(int id) {
     
     // Isaiah
     if (id == 10) {
-         npcName = "Isaiah";
+        npcName = "Isaiah";
         npcType = "Popular";
 
         introduction = "In the center of the house, there's a very handsome fella. They're wearing "
