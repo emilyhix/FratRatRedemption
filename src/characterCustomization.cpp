@@ -13,7 +13,7 @@ void characterCustom::createIntro(){
 
 }
 
-void characterCustom::printCCText(playerManager &player){
+void characterCustom::print(playerManager &player){
     
     cout << customizationLines[0] << endl;
     cout << customizationLines[1] << endl << endl;
@@ -24,7 +24,7 @@ void characterCustom::printCCText(playerManager &player){
     cout << customizationLines[2] << endl;
     cout << "Popular" << endl << "Normie" << endl << "Outcast" << endl << endl;
 
-    player.setPlayerType();
+    player.setPlayerType(1);
     cout << endl;
 
     cout << customizationLines[3] << endl;

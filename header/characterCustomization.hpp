@@ -10,7 +10,7 @@ class characterCustom{
     
     public:
         void createIntro();
-        void printCCText(playerManager &);
+        void print(playerManager &);
 
 };
 
