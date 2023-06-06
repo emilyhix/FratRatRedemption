@@ -14,7 +14,6 @@
 #include "header/PlayerManager.hpp"
 #include "header/characterCustomization.hpp"
 #include "src/characterCustomization.cpp"
-#include "header/gameManager.hpp"
 
 using namespace std; 
 
