@@ -67,6 +67,8 @@ void interactionOptionAdjust(int & currentOptionSelected, const int & directionI
 
 int main()
 {
+    clearTerminal(); 
+
     //PLAYER CUSTOMIZATION
     PlayerManager playerInfo;
     characterCustom cc;
