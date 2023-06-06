@@ -6,4 +6,14 @@ ADD_EXECUTABLE(player
     test/test.cpp
 )
 
-TARGET_LINK_LIBRARIES(player gtest gtest_main)
+ADD_EXECUTABLE(run 
+    src/coord.cpp
+    src/gameClock.cpp
+    src/mapManager.cpp
+    gameManager.cpp
+    src/playerActor.cpp
+    src/userInput.cpp
+    src/npc.cpp
+)
+
+TARGET_LINK_LIBRARIES (player gtest gtest_main)
