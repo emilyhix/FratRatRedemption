@@ -116,6 +116,11 @@ int main()
         while(gameMode == 0){ //MAP LOOP
             selectedInteractionOption = 0; 
             map.printMap(ANSI_DEFAULT_TERMINAL_COLOR);
+            if((player.getXPos()==61 && player.getYPos()==3)){
+                mapClock.timerOff(); 
+                primaryLoopFlag = 0; 
+                break;
+            }
             keyboardInput = inputGetter.getUserInput(); 
             if(keyboardInput>0){
                 map.removePlayer(player.getXPos(),player.getYPos());
@@ -235,8 +240,12 @@ int main()
         }
     }
 
+    cout<<ANSI_GREY;
+    map.printMap(ANSI_GREY); 
+    cout<<ANSI_DEFAULT_TERMINAL_COLOR;
+
     inputGetter.setInputMode(0); 
 
-    cout<<"\f\nGAME EXITED!\n"; 
+    cout<<"\f\nYou left the party!\n"; 
     return 0; 
 }
