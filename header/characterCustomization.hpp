@@ -9,8 +9,8 @@ class characterCustom{
         string customizationLines[5];
     
     public:
-        void createIntro();
-        void print(playerManager &);
+        characterCustom();
+        void createCharacter(PlayerManager &);
 
 };
 
