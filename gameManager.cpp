@@ -159,28 +159,57 @@ int main()
             mapClock.timerISR(); 
         } //END OF MAP LOOP
 
-
+        int dialogueState = 0;
         while(gameMode==1){//INTERACTION LOOP (to be edited to accommodate textManager)
             cout<<ANSI_GREY;
             map.printMap(ANSI_GREY); 
             cout<<ANSI_DEFAULT_TERMINAL_COLOR;
-            cout<<"CHOOSE OPTION:\nOPTION SELECTED: "<<selectedInteractionOption;
+
+            npc InteractingNPC (map, map.getXYCoord(player.getXPos(),player.getYPos()));
+
+            if (dialogueState == 0) {
+                InteractingNPC.printIntroduction();
+                InteractingNPC.printDialogue(dialogueState);
+            }
+            if (dialogueState == 1) {
+                InteractingNPC.printDialogue(dialogueState);
+            }
+            if (dialogueState == 2) {
+                InteractingNPC.printDialogue(dialogueState);
+            }
+            if (dialogueState == 3) {
+                InteractingNPC.printDialogue(dialogueState);
+            }
+            if (dialogueState == 4) {
+                InteractingNPC.printDialogue(dialogueState);
+            }
+        
+            if (dialogueState < 4) {
+                int optionSelect = selectedInteractionOption + 1;
+                cout<<"OPTION SELECTED: "<< optionSelect;
+            }
             keyboardInput = inputGetter.getUserInput();
             switch(keyboardInput){
                 case 'w':
                     interactionOptionAdjust(selectedInteractionOption,MOVE_UP);
-                break;
+                    break;
 
                 case 's':
                     interactionOptionAdjust(selectedInteractionOption,MOVE_DOWN);
                 break; 
             }
+        
             if(keyboardInput==10){
-                interactionClock.timerOff(); 
-                map.deactivateNPC(player.getXPos(),player.getYPos());
-                clearTerminal(); 
-                gameMode=0; 
-                break; 
+                ++dialogueState;
+                // Affect player stats based on what selectedInteractionOption is set to
+                
+                if (dialogueState == 5) {
+                    interactionClock.timerOff(); 
+                    map.deactivateNPC(player.getXPos(),player.getYPos());
+                    clearTerminal(); 
+                    gameMode=0; 
+                    break;    
+                }
             }
 
             if(keyboardInput==27){

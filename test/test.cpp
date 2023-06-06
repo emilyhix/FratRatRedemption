@@ -53,4 +53,3 @@ TEST(movementTesting, setY){
     EXPECT_FALSE(player.getYPos() == 4);
     EXPECT_TRUE(player.getYPos() == 15);
 }
-

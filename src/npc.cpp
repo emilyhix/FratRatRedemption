@@ -1,9 +1,9 @@
 #include "../header/npc.hpp"
 
-npc::npc(int id) {
+npc::npc(mapManager &map, coord id) {
     
     // Chad & Thad
-    if (id == 1) {        
+    if (id == map.getXYCoord(10, 11)) {        
         npcName = "Chad & Thad";
         npcType = "Popular";
 
@@ -39,7 +39,7 @@ npc::npc(int id) {
     }
     
     // Bethany
-    if (id == 2) {
+    if (id == map.getXYCoord(39,5)) {
         npcName = "Bethany";
         npcType = "Popular";
 
@@ -75,7 +75,7 @@ npc::npc(int id) {
     }
     
     // Veronica
-    if (id == 3) {
+    if (id == map.getXYCoord(21,12)) {
         npcName = "Veronica";
         npcType = "Outcast";
 
@@ -111,7 +111,7 @@ npc::npc(int id) {
     }
     
     // Denzel
-    if (id == 4) {
+    if (id == map.getXYCoord(19,7)) {
         npcName = "Denzel";
         npcType = "Normie";
         
@@ -147,7 +147,7 @@ npc::npc(int id) {
     }        
     
     // Marcus
-    if (id == 5) {
+    if (id == map.getXYCoord(65,10)) {
         npcName = "Marcus";
         npcType = "Alpha Male";
         
@@ -183,7 +183,7 @@ npc::npc(int id) {
     }
     
     // Cloud
-    if (id == 6) {
+    if (id == map.getXYCoord(58,16)) {
         npcName = "Cloud";
         npcType = "Normie";
 
@@ -220,7 +220,7 @@ npc::npc(int id) {
     }
     
     // Christina
-    if (id == 7) {
+    if (id == map.getXYCoord(28,18)) {
         npcName = "Christina";
         npcType = "Outcast";
 
@@ -256,7 +256,7 @@ npc::npc(int id) {
     }
     
     // Trevor
-    if (id == 8) {
+    if (id == map.getXYCoord(9,19)) {
         npcName = "Trevor";
         npcType = "Normie";
 
@@ -292,7 +292,7 @@ npc::npc(int id) {
     }
     
     // Harper
-    if (id == 9) {
+    if (id == map.getXYCoord(48,17)) {
         npcName = "Harper";
         npcType = "Outcast";
 
@@ -328,7 +328,7 @@ npc::npc(int id) {
     }
     
     // Isaiah
-    if (id == 10) {
+    if (id == map.getXYCoord(41,14)) {
         npcName = "Isaiah";
         npcType = "Popular";
 
@@ -373,36 +373,14 @@ string npc::getType() {
     return npcType;
 }
 
-void npc::printDialogue() {
-    cout << dialogue[0] << endl;
-    for (int i = 0; i < 4; ++i) {
-        cout << responses[0][i] << endl;
+void npc::printDialogue(int num) {
+    cout << dialogue[num] << endl << endl;
+    if (num < 4) {
+        cout << "Choose a response:" << endl;
+        for (int i = 0; i < 4; ++i) {
+        cout << " - " << responses[num][i] << endl;
+        }
     }
-    cout << endl;
-    // Player Input, passes in npcType
-
-    cout << dialogue[1] << endl;
-    for (int i = 0; i < 4; ++i) {
-        cout << responses[1][i] << endl;
-    }
-    cout << endl;
-    // Player Input, passes in npcType
-
-    cout << dialogue[2] << endl;
-    for (int i = 0; i < 4; ++i) {
-        cout << responses[2][i] << endl;
-    }
-    cout << endl;
-    // Player Input, passes in npcType
-
-    cout << dialogue[3] << endl;
-    for (int i = 0; i < 4; ++i) {
-        cout << responses[3][i] << endl;
-    }
-    cout << endl;
-    // Player Input, passes in npcType
-
-    cout << dialogue[4] << endl << endl;
 }
 
 void npc::printIntroduction() {
