@@ -3,7 +3,7 @@
 //Constructor
 playerActor::playerActor(){
     xpos = 61; 
-    ypos = 4; 
+    ypos = 6; 
 }
 
 //Player Actor control functions
