@@ -11,6 +11,9 @@
 #include "header/mapManager.hpp"
 #include "header/playerActor.hpp"
 #include "header/npc.hpp"
+#include "header/PlayerManager.hpp"
+#include "header/characterCustomization.hpp"
+#include "src/characterCustomization.cpp"
 
 using namespace std; 
 
@@ -63,6 +66,12 @@ void interactionOptionAdjust(int & currentOptionSelected, const int & directionI
 
 int main()
 {
+    //PLAYER CUSTOMIZATION
+    PlayerManager playerInfo;
+    characterCustom cc;
+    cc.createCharacter(playerInfo);
+
+
     //SETUP
     gameClock mapClock; 
     gameClock interactionClock; 

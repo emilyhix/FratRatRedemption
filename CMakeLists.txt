@@ -1,8 +1,10 @@
 CMAKE_MINIMUM_REQUIRED(VERSION 3.2)
 
-project(FratRatRedemption)
-
 ADD_SUBDIRECTORY(googletest)
+
+ADD_EXECUTABLE(player
+    test/test.cpp
+)
 
 ADD_EXECUTABLE(run 
     src/coord.cpp
@@ -14,8 +16,4 @@ ADD_EXECUTABLE(run
     src/npc.cpp
 )
 
-ADD_EXECUTABLE(movement
-    test/test.cpp
-)
-
-TARGET_LINK_LIBRARIES (movement gtest gtest_main)
+TARGET_LINK_LIBRARIES (player gtest gtest_main)
