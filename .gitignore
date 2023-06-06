@@ -5,4 +5,3 @@ Makefile
 cmake_install.cmake
 run
 lib/
-googletest/

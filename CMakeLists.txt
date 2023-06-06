@@ -11,6 +11,7 @@ ADD_EXECUTABLE(run
     gameManager.cpp
     src/playerActor.cpp
     src/userInput.cpp
+    src/npc.cpp
 )
 
 ADD_EXECUTABLE(movement

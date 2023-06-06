@@ -10,6 +10,7 @@
 #include "header/userInput.hpp"
 #include "header/mapManager.hpp"
 #include "header/playerActor.hpp"
+#include "header/npc.hpp"
 
 using namespace std; 
 
