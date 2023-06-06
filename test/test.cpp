@@ -2,7 +2,6 @@
 #include <string>
 #include "../header/PlayerManager.hpp"
 #include "../header/characterCustomization.hpp"
-#include "../src/PlayerManager.cpp"
 
 TEST(playerCustomization, playerNameTest){
     PlayerManager p1;
@@ -28,3 +27,11 @@ TEST(playerCustomization, playerType_Outcast){
     p1.setPlayerType();
     EXPECT_EQ("Outcast", p1.getPlayerType());
 }
+
+TEST(createChar, fullFunctionTest){
+    PlayerManager p1;
+    characterCustom cc;
+
+    EXPECT_NO_THROW(cc.createCharacter(p1));
+}
+
