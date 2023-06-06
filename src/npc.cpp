@@ -7,7 +7,7 @@ npc::npc(mapManager &map, coord id) {
         npcName = "Chad & Thad";
         npcType = "Popular";
 
-        introduction = "You see two clearidentical, muscular, blond haired men standing by the speaker. "
+        introduction = "You see two identical, muscular, blond haired men standing by the speaker. "
                         "They're wearing fitted t-shirts, shorts, and flip flops. They're laughing "
                         "and looking at a phone.";
             
