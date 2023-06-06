@@ -20,4 +20,8 @@ ADD_EXECUTABLE(run
     src/npc.cpp
 )
 
+ADD_EXECUTABLE(runAllTests
+
+)
+
 TARGET_LINK_LIBRARIES (player gtest gtest_main)
