@@ -1,47 +1,34 @@
-#include <iostream>
-#include <string>
+#include <gtest/gtest.h>
 #include "../src/PlayerManager.cpp"
 
-#include <iostream>
-#include <string>
-using namespace std;
 
-int main(){
-
-    PlayerManager player;
-
-    string testName;
-    string testType;
-
-    int testRep;
-    int testMor;
-    int testPopularRep;
-    int testNormieRep;
-    int testOutcastRep;
-
-    cin >> testName;
-    cin >> testType;
-    cin >> testRep;
-    cin >> testMor;
-    cin >> testPopularRep;
-    cin >> testNormieRep;
-    cin >> testOutcastRep;
-
-    
-    player.setPopularRep(testPopularRep);
-    player.setNormieRep(testNormieRep);
-    player.setOutcastRep(testOutcastRep);
-
-    cout << endl;
-    cout << "Name: " << testName << endl;
-    cout << "Type: " << testType << endl;
-    cout << "Original Reputation: " << player.getPlayerRep() << endl;
-    player.setPlayerRep(testRep);
-    cout << "Changed Reputation according to input: " << player.getPlayerRep() << endl;
-    cout << "Original Morality: " << player.getPlayerMor() << endl;
-    player.setPlayerMor(testMor);
-    cout << "Changed Morality according to input: " << player.getPlayerMor() << endl;
-    cout << "Popular Rep: " << player.getPopularRep() << endl;
-    cout << "Normie Rep: " << player.getNormieRep() << endl;
-    cout << "Outcast Rep: " << player.getOutcastRep() << endl;
+TEST(playerManagerTests, playerReputationTest) {
+    PlayerManager p1;
+    p1.setPlayerRep(15);
+    EXPECT_EQ(p1.getPlayerRep(), 15);
 }
+
+TEST(playerManagerTests, playerMoralityTest) {
+    PlayerManager p1;
+    p1.setPlayerMor(15);
+    EXPECT_EQ(p1.getPlayerMor(), 15);
+}
+
+TEST(playerManagerTests, popularRepTest) {
+    PlayerManager p1;
+    p1.setPopularRep(10);
+    EXPECT_EQ(p1.getPopularRep(), 10);
+}
+
+TEST(playerManagerTests, normieRepTest) {
+    PlayerManager p1;
+    p1.setNormieRep(10);
+    EXPECT_EQ(p1.getNormieRep(), 10);
+}
+
+TEST(playerManagerTests, outcastRepTest) {
+    PlayerManager p1;
+    p1.setOutcastRep(10);
+    EXPECT_EQ(p1.getOutcastRep(), 10);
+}
+
