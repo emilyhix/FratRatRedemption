@@ -219,7 +219,6 @@ int main()
                 break;
             }
             cout<<"\n"; 
-            clearTerminal(); 
             interactionClock.timerISR(); 
         }
     }
