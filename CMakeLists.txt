@@ -21,7 +21,7 @@ ADD_EXECUTABLE(run
 )
 
 ADD_EXECUTABLE(runAllTests
-
+    test/test.cpp
 )
 
 TARGET_LINK_LIBRARIES (player gtest gtest_main)
