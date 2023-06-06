@@ -21,15 +21,15 @@ class PlayerManager {
         string getPlayerName();
         void setPlayerType(const int &);
         string getPlayerType();
-        void setPlayerRep(int);
+        void setPlayerRep(const int &);
         int getPlayerRep();
-        void setPlayerMor(int);
+        void setPlayerMor(const int &);
         int getPlayerMor(); 
-        void setPopularRep(int);
+        void setPopularRep(const int &);
         int getPopularRep();      
-        void setNormieRep(int);
+        void setNormieRep(const int &);
         int getNormieRep();
-        void setOutcastRep(int);
+        void setOutcastRep(const int &);
         int getOutcastRep();
 };
 
