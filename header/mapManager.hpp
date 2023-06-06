@@ -2,7 +2,7 @@
 #define __MAPMANAGER_H
 
 #include <iostream>
-#include "coord.h"
+#include "coord.hpp"
 
 using std::cout;
 

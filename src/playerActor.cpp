@@ -1,4 +1,4 @@
-#include "playerActor.h"
+#include "../header/playerActor.hpp"
 
 //Constructor
 playerActor::playerActor(){
