@@ -1,5 +1,6 @@
 #include "../header/PlayerManager.hpp"
 #include <string>
+#include <iostream>
 
 PlayerManager::PlayerManager() {
 
@@ -73,3 +74,4 @@ void PlayerManager::setOutcastRep(int newOutcastRep) {
 
 int PlayerManager::getOutcastRep() {
     return outcastReputation;
+}

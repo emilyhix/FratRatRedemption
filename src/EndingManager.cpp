@@ -1,6 +1,6 @@
 #include "../header/EndingManager.hpp"
 
-EndingManager::EndingManager(int& finalReputation, int& finalMorality, int& finalPopularRep, int& finalNormieRep, int& finalOutcastRep, string playerType) {
+EndingManager::EndingManager(const int & finalReputation, const int & finalMorality, const int & finalPopularRep, const int & finalNormieRep, const int & finalOutcastRep, string playerType) {
 
     this->finalReputation = finalReputation;
     this->finalMorality = finalMorality;
@@ -53,10 +53,14 @@ void EndingManager::printEnding() {
     // Print player's end results to terminal
     cout << "PARTY OVER!!!\n\n";
 
-    cout << playerResultText << endl;
+    cout << playerResultText;
 
-    cout << "\nENDING STATS" << endl;
+    cout << "\n";
 
-    cout << "Reputation: " << finalReputation << "     Morality: " << finalMorality << endl;
+    cout << "\nENDING STATS";
+
+    cout << "\n";
+
+    cout << "Reputation: " << finalReputation << "     Morality: " << finalMorality << "\n";
 
 }
