@@ -10,6 +10,26 @@ coord::coord(){
     containsNPC = false; 
 }
 
+bool coord::operator==(const coord& c) {
+    bool result = true;
+    if (c.character != this->character) {
+        result = false;
+    }
+    if (c.color != this->color) {
+        result = false;
+    }
+    if (c.walkable != this->walkable) {
+        result = false;
+    }
+    if (c.playerActive != this->playerActive) {
+        result = false;
+    }
+    if (c.containsNPC != this->containsNPC) {
+        result = false;
+    }
+    return result;
+}
+
 //Coord Control Functions
 void coord::setCoordCharacter(const char & newChar){
     character = newChar; 

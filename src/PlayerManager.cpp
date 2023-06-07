@@ -1,5 +1,8 @@
 #include "../header/PlayerManager.hpp"
 
+#include <string>
+#include <iostream>
+
 PlayerManager::PlayerManager() {
 
 }
@@ -17,15 +20,29 @@ string PlayerManager::getPlayerName() {
     return playerName;
 }
 
-void PlayerManager::setPlayerType(const int & chosenType){
-    if(chosenType == 1){
-        playerType = "Popular";
-    }
-    else if(chosenType == 2){
-        playerType = "Normie";
-    }
-    else if(chosenType == 3){
-        playerType == "Outcast";
+
+void PlayerManager::setPlayerType(){
+    int chosenType = 0;
+    cin >> chosenType;
+    bool valid_input = 0;
+    while(!valid_input){
+        if(chosenType == 1){
+            playerType = "Popular";
+            valid_input = true;
+        }
+        else if(chosenType == 2){
+            playerType = "Normie";
+            valid_input = true;
+        }
+        else if(chosenType == 3){
+            playerType = "Outcast";
+            valid_input = true;
+        }
+        else{
+            cout << "INVALID INPUT." << endl << endl;
+            valid_input = false;
+            cin >> chosenType;
+        }
     }
 }
 

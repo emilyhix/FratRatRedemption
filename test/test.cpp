@@ -1,34 +1,37 @@
 #include <gtest/gtest.h>
-#include "../src/PlayerManager.cpp"
+#include <string>
+#include "../header/PlayerManager.hpp"
+#include "../header/characterCustomization.hpp"
 
-
-TEST(playerManagerTests, playerReputationTest) {
+TEST(playerCustomization, playerNameTest){
     PlayerManager p1;
-    p1.setPlayerRep(15);
-    EXPECT_EQ(p1.getPlayerRep(), 15);
+    p1.setPlayerName();
+    EXPECT_EQ("bip", p1.getPlayerName());
 }
 
-TEST(playerManagerTests, playerMoralityTest) {
+
+TEST(playerCustomization, playerType_Popular){
     PlayerManager p1;
-    p1.setPlayerMor(15);
-    EXPECT_EQ(p1.getPlayerMor(), 15);
+    p1.setPlayerType();
+    EXPECT_EQ("Popular", p1.getPlayerType());
 }
 
-TEST(playerManagerTests, popularRepTest) {
+TEST(playerCustomization, playerType_Normie){
     PlayerManager p1;
-    p1.setPopularRep(10);
-    EXPECT_EQ(p1.getPopularRep(), 10);
+    p1.setPlayerType();
+    EXPECT_EQ("Normie", p1.getPlayerType()); 
 }
 
-TEST(playerManagerTests, normieRepTest) {
+TEST(playerCustomization, playerType_Outcast){
     PlayerManager p1;
-    p1.setNormieRep(10);
-    EXPECT_EQ(p1.getNormieRep(), 10);
+    p1.setPlayerType();
+    EXPECT_EQ("Outcast", p1.getPlayerType());
 }
 
-TEST(playerManagerTests, outcastRepTest) {
+TEST(createChar, fullFunctionTest){
     PlayerManager p1;
-    p1.setOutcastRep(10);
-    EXPECT_EQ(p1.getOutcastRep(), 10);
+    characterCustom cc;
+
+    EXPECT_NO_THROW(cc.createCharacter(p1));
 }
 
