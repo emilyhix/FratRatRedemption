@@ -12,8 +12,8 @@
 #include "header/playerActor.hpp"
 #include "header/npc.hpp"
 #include "header/PlayerManager.hpp"
-#include "header/characterCustomization.hpp"
-#include "src/characterCustomization.cpp"
+#include "header/playerCustomization.hpp"
+#include "src/playerCustomization.cpp"
 #include "src/PlayerManager.cpp"
 
 using namespace std; 
@@ -71,8 +71,8 @@ int main()
 
     //PLAYER CUSTOMIZATION
     PlayerManager playerInfo;
-    characterCustom cc;
-    cc.createCharacter(playerInfo);
+    playerCustom pc;
+    pc.createPlayer(playerInfo);
 
 
     //SETUP
