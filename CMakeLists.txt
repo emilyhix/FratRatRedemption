@@ -17,8 +17,8 @@ ADD_EXECUTABLE(run
     src/EndingManager.cpp
 )
 
-ADD_EXECUTABLE(movement
-    test/test.cpp
+ADD_EXECUTABLE(statUpdate
+    test/StatManagerTest.cpp
 )
 
-TARGET_LINK_LIBRARIES (movement gtest gtest_main)
+TARGET_LINK_LIBRARIES (statUpdate gtest gtest_main)
