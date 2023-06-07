@@ -376,9 +376,10 @@ string npc::getType() {
 void npc::printDialogue(int num) {
     cout << dialogue[num] << endl << endl;
     if (num < 4) {
+        cout << "\033[1m" << "\033[33m" << "Use W and S to select a response. Press enter to confirm.\n\n" << "\033[0m";
         cout << "Choose a response:" << endl;
         for (int i = 0; i < 4; ++i) {
-        cout << " - " << responses[num][i] << endl;
+        cout << " " << i + 1 << " - " << responses[num][i] << endl;
         }
     }
 }

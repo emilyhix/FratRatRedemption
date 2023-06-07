@@ -85,7 +85,7 @@ int main()
 
     bool primaryLoopFlag = 1; 
     int gameMode = 0; //-1 == off; 0 == map; 1 == interaction
-
+    
     //NPC MAP INITIALIZATION
     map.initializeMap("map.txt"); 
     map.initializePlayer(player.getXPos(),player.getYPos()); 
@@ -116,6 +116,8 @@ int main()
         while(gameMode == 0){ //MAP LOOP
             selectedInteractionOption = 0; 
             map.printMap(ANSI_DEFAULT_TERMINAL_COLOR);
+            cout << "\033[1m" << "\033[33m" << "Use WASD to move. Press esc to quit the game.\n" << "\033[0m";
+
             if(((player.getXPos()==61||player.getXPos()==62||player.getXPos()==60) && player.getYPos()==3)){
                 mapClock.timerOff(); 
                 primaryLoopFlag = 0; 
@@ -200,6 +202,8 @@ int main()
             }
             if (dialogueState == 4) {
                 InteractingNPC.printDialogue(dialogueState);
+                cout << "\033[1m" << "\033[33m" << "Press enter to continue.\n" << "\033[0m";
+
             }
         
             if (dialogueState < 4) {
