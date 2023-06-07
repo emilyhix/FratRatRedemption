@@ -9,7 +9,7 @@ class PlayerManager {
         string playerName = "";
         string playerType = "";
         int reputation = 0;
-        int morality = 17;
+        int morality = 40;
         int popularReputation = 0;
         int normieReputation = 0;
         int outcastReputation = 0;

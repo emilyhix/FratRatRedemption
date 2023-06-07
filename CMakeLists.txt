@@ -12,6 +12,9 @@ ADD_EXECUTABLE(run
     src/playerActor.cpp
     src/userInput.cpp
     src/npc.cpp
+    src/PlayerManager.cpp
+    src/StatManager.cpp
+    src/EndingManager.cpp
 )
 
 ADD_EXECUTABLE(movement

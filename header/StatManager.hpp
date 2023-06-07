@@ -1,8 +1,8 @@
 #ifndef STATMANAGER_H
 #define STATMANAGER_H
 
-#include "../src/PlayerManager.cpp"
-#include "../src/npc.cpp"
+#include "../header/PlayerManager.hpp"
+#include "../header/npc.hpp"
 #include <string>
 using namespace std;
 
@@ -11,7 +11,7 @@ class StatManager {
         
     public:
         StatManager();
-        void updateStats(PlayerManager&, npc&, const int &, const int&);
+        void updateStats(PlayerManager&, string, string, const int &, const int&);
 };
 
 

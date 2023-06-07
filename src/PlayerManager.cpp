@@ -1,4 +1,5 @@
 #include "../header/PlayerManager.hpp"
+#include <iostream>
 #include <string>
 
 PlayerManager::PlayerManager() {
