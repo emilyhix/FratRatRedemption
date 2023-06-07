@@ -17,8 +17,8 @@ ADD_EXECUTABLE(run
     src/EndingManager.cpp
 )
 
-ADD_EXECUTABLE(statUpdate
+ADD_EXECUTABLE(runAllTests
     test/StatManagerTest.cpp
 )
 
-TARGET_LINK_LIBRARIES (statUpdate gtest gtest_main)
+TARGET_LINK_LIBRARIES (runAllTests gtest gtest_main)
