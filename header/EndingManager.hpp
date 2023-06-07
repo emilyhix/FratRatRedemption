@@ -12,6 +12,7 @@ class EndingManager {
         string playerResultText;
 
     public:
+        EndingManager();
         EndingManager(const int &, const int &, const int &, const int &, const int &, string);
         void printEnding();
 };
