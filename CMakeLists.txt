@@ -2,9 +2,9 @@ CMAKE_MINIMUM_REQUIRED(VERSION 3.2)
 
 ADD_SUBDIRECTORY(googletest)
 
-ADD_EXECUTABLE(player
-    test/test.cpp
+ADD_EXECUTABLE(runAllTests
+    test/playerManagerTest.cpp
 
 )
 
-TARGET_LINK_LIBRARIES(player gtest gtest_main)
+TARGET_LINK_LIBRARIES(runAllTests gtest gtest_main)
