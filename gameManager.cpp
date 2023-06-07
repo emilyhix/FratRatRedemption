@@ -116,7 +116,7 @@ int main()
         while(gameMode == 0){ //MAP LOOP
             selectedInteractionOption = 0; 
             map.printMap(ANSI_DEFAULT_TERMINAL_COLOR);
-            if((player.getXPos()==61 && player.getYPos()==3)){
+            if(((player.getXPos()==61||player.getXPos()==62||player.getXPos()==60) && player.getYPos()==3)){
                 mapClock.timerOff(); 
                 primaryLoopFlag = 0; 
                 break;
