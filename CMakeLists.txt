@@ -1,5 +1,6 @@
 CMAKE_MINIMUM_REQUIRED(VERSION 3.2)
 
+
 project(FratRatRedemption)
 
 ADD_SUBDIRECTORY(googletest)
@@ -8,6 +9,7 @@ ADD_EXECUTABLE(runAllTests
     test/test.cpp
     src/PlayerManager.cpp 
     src/characterCustomization.cpp
+    test/playerManagerTest.cpp
 )
 
 ADD_EXECUTABLE(player
@@ -24,7 +26,9 @@ ADD_EXECUTABLE(run
     src/playerActor.cpp
     src/userInput.cpp
     src/npc.cpp
+    src/PlayerManager.cpp
 )
 
 TARGET_LINK_LIBRARIES (player gtest gtest_main)
 TARGET_LINK_LIBRARIES (runAllTests gtest gtest_main)
+
