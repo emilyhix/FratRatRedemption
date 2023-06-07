@@ -238,6 +238,7 @@ int main()
 
     cout<<"\f\nGAME EXITED!\n\n"; 
 
+    // OUTPUT ENDING
     EndingManager ending(playerManager.getPlayerRep(), playerManager.getPlayerMor(), playerManager.getPopularRep(), playerManager.getNormieRep(), playerManager.getOutcastRep(), playerManager.getPlayerType());
 
     ending.printEnding();
