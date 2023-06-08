@@ -5,6 +5,7 @@ ADD_SUBDIRECTORY(googletest)
 
 ADD_EXECUTABLE(npcAndDialogue
     test/dialogueTest.cpp 
+    test/npcTest.cpp
     src/npc.cpp
     src/mapManager.cpp
     src/playerActor.cpp
