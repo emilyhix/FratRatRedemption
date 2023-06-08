@@ -1,144 +1,125 @@
 #include <gtest/gtest.h>
 #include <string>
 #include "../header/npc.hpp"
+#include "../header/mapManager.hpp"
+#include "../header/coord.hpp"
 
+TEST(NPC_Dialogue, ChadAndThad){
+    mapManager map;
+    #define ANSI_NAVY_BLUE "\033[38;5;17m"
+    map.initalizeNPC(10,11,ANSI_NAVY_BLUE);
+    npc curr(map, map.getXYCoord(10,11));
 
-TEST(NPC_Name_Testing, NPC_Names_1){
-    int id = 1;
-    npc currNPC(id);
-
-    EXPECT_EQ(currNPC.getName(), "Chad & Thad");
+    EXPECT_NO_THROW(curr.printDialogue(0));
+    EXPECT_NO_THROW(curr.printDialogue(1));
+    EXPECT_NO_THROW(curr.printDialogue(2));
+    EXPECT_NO_THROW(curr.printDialogue(3));
 }
 
-TEST(NPC_Name_Testing, NPC_Names_2) {
-    int id = 2;
-    npc currNPC(id);
-
-    EXPECT_EQ(currNPC.getName(), "Bethany");
+TEST(NPC_Dialogue, Bethany){
+    mapManager map;
+    #define ANSI_PINK "\033[38;5;205m"
+    map.initalizeNPC(39,5,ANSI_PINK);
+    npc curr(map, map.getXYCoord(39, 5));
+    
+    EXPECT_NO_THROW(curr.printDialogue(0));
+    EXPECT_NO_THROW(curr.printDialogue(1));
+    EXPECT_NO_THROW(curr.printDialogue(2));
+    EXPECT_NO_THROW(curr.printDialogue(3));
 }
 
-TEST(NPC_Name_Testing, NPC_Names_3) {
-    int id = 3;
-    npc currNPC(id);
+TEST(NPC_Dialogue, Veronica){
+    mapManager map;
+    #define ANSI_PURPLE "\033[35m"
+    map.initalizeNPC(21,12,ANSI_PURPLE);
+    npc curr(map, map.getXYCoord(21, 12));
 
-    EXPECT_EQ(currNPC.getName(), "Veronica");
+    EXPECT_NO_THROW(curr.printDialogue(0));
+    EXPECT_NO_THROW(curr.printDialogue(1));
+    EXPECT_NO_THROW(curr.printDialogue(2));
+    EXPECT_NO_THROW(curr.printDialogue(3));
 }
 
-TEST(NPC_Name_Testing, NPC_Names_4) {
-    int id = 4;
-    npc currNPC(id);
+TEST(NPC_Dialogue, Denzel){
+    mapManager map;
+    #define ANSI_BLUE "\033[34m"
+    map.initalizeNPC(19,7,ANSI_BLUE);
+    npc curr(map, map.getXYCoord(19, 7));
 
-    EXPECT_EQ(currNPC.getName(), "Denzel");
+    EXPECT_NO_THROW(curr.printDialogue(0));
+    EXPECT_NO_THROW(curr.printDialogue(1));
+    EXPECT_NO_THROW(curr.printDialogue(2));
+    EXPECT_NO_THROW(curr.printDialogue(3));
 }
 
-TEST(NPC_Name_Testing, NPC_Names_5) {
-    int id = 5;
-    npc currNPC(id);
+TEST(NPC_Dialogue, Marcus){
+    mapManager map;
+    #define ANSI_BLUE "\033[34m"
+    map.initalizeNPC(19,7,ANSI_BLUE);
+    npc curr(map, map.getXYCoord(19, 7));
 
-    EXPECT_EQ(currNPC.getName(), "Marcus");
+    EXPECT_NO_THROW(curr.printDialogue(0));
+    EXPECT_NO_THROW(curr.printDialogue(1));
+    EXPECT_NO_THROW(curr.printDialogue(2));
+    EXPECT_NO_THROW(curr.printDialogue(3));
 }
 
-TEST(NPC_Name_Testing, NPC_Names_6) {
-    int id = 6;
-    npc currNPC(id);
+TEST(NPC_Dialogue, Cloud){
+    mapManager map;
+    #define ANSI_LIGHT_BLUE "\033[38;5;39m"
+    map.initalizeNPC(58,16,ANSI_LIGHT_BLUE);
+    npc curr(map, map.getXYCoord(58, 16));
 
-    EXPECT_EQ(currNPC.getName(), "Cloud");
+    EXPECT_NO_THROW(curr.printDialogue(0));
+    EXPECT_NO_THROW(curr.printDialogue(1));
+    EXPECT_NO_THROW(curr.printDialogue(2));
+    EXPECT_NO_THROW(curr.printDialogue(3));
 }
 
-TEST(NPC_Name_Testing, NPC_Names_7) {
-    int id = 7;
-    npc currNPC(id);
+TEST(NPC_Dialogue, Christina){
+    mapManager map;
+    #define ANSI_YELLOW "\033[33m"
+    map.initalizeNPC(28,18,ANSI_YELLOW);
+    npc curr(map, map.getXYCoord(28, 18));
 
-    EXPECT_EQ(currNPC.getName(), "Christina");
+    EXPECT_NO_THROW(curr.printDialogue(0));
+    EXPECT_NO_THROW(curr.printDialogue(1));
+    EXPECT_NO_THROW(curr.printDialogue(2));
+    EXPECT_NO_THROW(curr.printDialogue(3));
 }
 
-TEST(NPC_Name_Testing, NPC_Names_8) {
-    int id = 8;
-    npc currNPC(id);
+TEST(NPC_Dialogue, Trevor){
+    mapManager map;
+    #define ANSI_LIME "\033[38;5;10m"
+    map.initalizeNPC(9,19,ANSI_LIME);
+    npc curr(map, map.getXYCoord(9, 19));
 
-    EXPECT_EQ(currNPC.getName(), "Trevor");
+    EXPECT_NO_THROW(curr.printDialogue(0));
+    EXPECT_NO_THROW(curr.printDialogue(1));
+    EXPECT_NO_THROW(curr.printDialogue(2));
+    EXPECT_NO_THROW(curr.printDialogue(3));
 }
 
-TEST(NPC_Name_Testing, NPC_Names_9) {
-    int id = 9;
-    npc currNPC(id);
+TEST(NPC_Dialogue, Harper){
+    mapManager map;
+    #define ANSI_GREEN "\033[32m"
+    map.initalizeNPC(48,17,ANSI_GREEN);
+    npc curr(map, map.getXYCoord(48, 17));
 
-    EXPECT_EQ(currNPC.getName(), "Harper");
+    EXPECT_NO_THROW(curr.printDialogue(0));
+    EXPECT_NO_THROW(curr.printDialogue(1));
+    EXPECT_NO_THROW(curr.printDialogue(2));
+    EXPECT_NO_THROW(curr.printDialogue(3));
 }
 
-TEST(NPC_Name_Testing, NPC_Names_10) {
-    int id = 10;
-    npc currNPC(id);
+TEST(NPC_Dialogue, Isaiah){
+    mapManager map;
+    #define ANSI_RED "\033[31m"
+    map.initalizeNPC(41,14,ANSI_RED);
+    npc curr(map, map.getXYCoord(41,14));
 
-    EXPECT_EQ(currNPC.getName(), "Isaiah");
-}
-
-TEST(NPC_Type_Testing, NPC_Types_1){
-    int id = 1;
-    npc currNPC(id);
-
-    EXPECT_EQ(currNPC.getType(), "Popular");
-}
-
-TEST(NPC_Type_Testing, NPC_Types_2){
-    int id = 2;
-    npc currNPC(id);
-
-    EXPECT_EQ(currNPC.getType(), "Popular");
-}
-
-TEST(NPC_Type_Testing, NPC_Types_3){
-    int id = 3;
-    npc currNPC(id);
-
-    EXPECT_EQ(currNPC.getType(), "Outcast");
-}
-
-TEST(NPC_Type_Testing, NPC_Types_4){
-    int id = 4;
-    npc currNPC(id);
-
-    EXPECT_EQ(currNPC.getType(), "Normie");
-}
-
-TEST(NPC_Type_Testing, NPC_Types_5){
-    int id = 5;
-    npc currNPC(id);
-
-    EXPECT_EQ(currNPC.getType(), "Alpha Male");
-}
-
-TEST(NPC_Type_Testing, NPC_Types_6){
-    int id = 6;
-    npc currNPC(id);
-
-    EXPECT_EQ(currNPC.getType(), "Normie");
-}
-
-TEST(NPC_Type_Testing, NPC_Types_7){
-    int id = 7;
-    npc currNPC(id);
-
-    EXPECT_EQ(currNPC.getType(), "Outcast");
-}
-
-TEST(NPC_Type_Testing, NPC_Types_8){
-    int id = 8;
-    npc currNPC(id);
-
-    EXPECT_EQ(currNPC.getType(), "Normie");
-}
-
-TEST(NPC_Type_Testing, NPC_Types_9){
-    int id = 9;
-    npc currNPC(id);
-
-    EXPECT_EQ(currNPC.getType(), "Outcast");
-}
-
-TEST(NPC_Type_Testing, NPC_Types_10){
-    int id = 10;
-    npc currNPC(id);
-
-    EXPECT_EQ(currNPC.getType(), "Popular");
+    EXPECT_NO_THROW(curr.printDialogue(0));
+    EXPECT_NO_THROW(curr.printDialogue(1));
+    EXPECT_NO_THROW(curr.printDialogue(2));
+    EXPECT_NO_THROW(curr.printDialogue(3));
 }
