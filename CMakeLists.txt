@@ -8,6 +8,8 @@ ADD_SUBDIRECTORY(googletest)
 ADD_EXECUTABLE(runAllTests
     test/endingTest.cpp
     test/StatManagerTest.cpp
+    test/playerManagerTest.cpp
+    test/playerCustTest.cpp
 )
 
 ADD_EXECUTABLE(run 

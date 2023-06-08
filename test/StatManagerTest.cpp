@@ -1,6 +1,6 @@
 #include <gtest/gtest.h>
 #include <string>
-#include "../src/PlayerManager.cpp"
+#include "../header/PlayerManager.hpp"
 #include "../src/StatManager.cpp"
 
 TEST(StatManagerTests, moralityGained) {
