@@ -5,11 +5,16 @@ ADD_SUBDIRECTORY(googletest)
 
 ADD_EXECUTABLE(runAllTests
     test/dialogueTest.cpp
-    test/npc.cpp
+    test/npcTest.cpp
     test/endingTest.cpp
     test/StatManagerTest.cpp
     test/playerManagerTest.cpp
     test/playerCustTest.cpp
+
+    src/npc.cpp 
+    src/mapManager.cpp 
+    src/coord.cpp 
+    src/titlePrint.cpp
 )
 
 ADD_EXECUTABLE(run 
