@@ -14,47 +14,35 @@ TEST(playerActorTests, constructorInitialValues) {
     EXPECT_EQ(testActor->getYPos(),6);
 }
 
-// TEST(coordTests, constructorInitialValues) {
-//     coord *testCoord = new coord(); 
+TEST(playerActorTests, testSetters) {
+    playerActor *testActor = new playerActor();
 
-//     EXPECT_EQ(testCoord->getCoordCharacter(),' ');
-//     EXPECT_EQ(testCoord->getCoordColor(),"\033[37m");
-//     EXPECT_EQ(testCoord->getWalkable(),1);
-//     EXPECT_EQ(testCoord->getPlayerActive(),0);
-//     EXPECT_EQ(testCoord->getContainsNPC(),0);
-// }
+    testActor->setXPos(5); 
+    testActor->setYPos(5); 
 
-// TEST(coordTests, colorFunctions) {
-//     coord *testCoord = new coord(); 
+    EXPECT_EQ(testActor->getXPos(),5);
+    EXPECT_EQ(testActor->getYPos(),5);
+}
 
-//     EXPECT_NO_THROW(testCoord->setCoordColor("poop"));
-//     EXPECT_EQ(testCoord->getCoordColor(),"poop"); 
-// }
+TEST(playerActorTests, movingPlayerActor) {
+    playerActor *testActor = new playerActor();
 
-// TEST(coordTests, characterFunctions) {
-//     coord *testCoord = new coord(); 
+    //UP
+    EXPECT_NO_THROW(testActor->movePlayerPosition(0));
+    EXPECT_EQ(testActor->getYPos(),5); 
 
-//     EXPECT_NO_THROW(testCoord->setCoordCharacter('#'));
-//     EXPECT_EQ(testCoord->getCoordCharacter(),'#');  
-// }
+    //RIGHT
+    EXPECT_NO_THROW(testActor->movePlayerPosition(1));
+    EXPECT_EQ(testActor->getXPos(),62); 
 
-// TEST(coordTests, walkableFunctions) {
-//     coord *testCoord = new coord(); 
+    //DOWN
+    EXPECT_NO_THROW(testActor->movePlayerPosition(2));
+    EXPECT_EQ(testActor->getYPos(),6); 
 
-//     EXPECT_NO_THROW(testCoord->toggleWalkable());
-//     EXPECT_EQ(testCoord->getWalkable(),0);  
-// }
+    //LEFT
+    EXPECT_NO_THROW(testActor->movePlayerPosition(3));
+    EXPECT_EQ(testActor->getXPos(),61); 
 
-// TEST(coordTests, playerFunctions) {
-//     coord *testCoord = new coord(); 
-
-//     EXPECT_NO_THROW(testCoord->togglePlayerActive());
-//     EXPECT_EQ(testCoord->getPlayerActive(),1); 
-// }
-
-// TEST(coordTests, npcFunctions) {
-//     coord *testCoord = new coord(); 
-
-//     EXPECT_NO_THROW(testCoord->toggleContainsNPC());
-//     EXPECT_EQ(testCoord->getContainsNPC(),1); 
-// }
+    //INPUT NOT IN RANGE
+    EXPECT_NO_THROW(testActor->movePlayerPosition(5000));
+}
