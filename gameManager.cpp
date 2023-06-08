@@ -233,7 +233,6 @@ int main()
             }
         
             if(keyboardInput==10){
-                playerManager.setPlayerType(1); // DELETE LINE: USED TO TEST BC NO CHAR CUSTOMIZATION
 
                 if (dialogueState < 4) {
                     statManager.updateStats(playerManager, InteractingNPC.getName(), InteractingNPC.getType(), selectedInteractionOption, dialogueState);
