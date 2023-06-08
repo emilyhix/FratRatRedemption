@@ -14,6 +14,10 @@
 #include "header/StatManager.hpp"
 #include "header/PlayerManager.hpp"
 #include "header/EndingManager.hpp"
+#include "header/PlayerManager.hpp"
+#include "header/playerCustomization.hpp"
+#include "src/playerCustomization.cpp"
+#include "src/PlayerManager.cpp"
 
 using namespace std;
 
@@ -66,6 +70,14 @@ void interactionOptionAdjust(int & currentOptionSelected, const int & directionI
 
 int main()
 {
+    clearTerminal(); 
+
+    //PLAYER CUSTOMIZATION
+    PlayerManager playerInfo;
+    playerCustom pc;
+    pc.createPlayer(playerInfo);
+
+
     //SETUP
     gameClock mapClock; 
     gameClock interactionClock; 
@@ -79,7 +91,7 @@ int main()
 
     bool primaryLoopFlag = 1; 
     int gameMode = 0; //-1 == off; 0 == map; 1 == interaction
-
+    
     //NPC MAP INITIALIZATION
     map.initializeMap("map.txt"); 
     map.initializePlayer(player.getXPos(),player.getYPos()); 
@@ -104,12 +116,24 @@ int main()
     char keyboardInput=0;
     int selectedInteractionOption = 0; 
 
+    //SET MAP MORALITIES HERE
+    map.setMapReputationRange(65); 
+    map.setMapMoralityRange(65); 
+
+
     //PRIMARY LOOP
     while(primaryLoopFlag){
         //map.printMap(); 
         while(gameMode == 0){ //MAP LOOP
             selectedInteractionOption = 0; 
             map.printMap(ANSI_DEFAULT_TERMINAL_COLOR);
+            cout << "\033[1m" << "\033[33m" << "Use WASD to move. Press esc to quit the game.\n" << "\033[0m";
+
+            if(((player.getXPos()==61||player.getXPos()==62||player.getXPos()==60) && player.getYPos()==3)){
+                mapClock.timerOff(); 
+                primaryLoopFlag = 0; 
+                break;
+            }
             keyboardInput = inputGetter.getUserInput(); 
             if(keyboardInput>0){
                 map.removePlayer(player.getXPos(),player.getYPos());
@@ -189,6 +213,8 @@ int main()
             }
             if (dialogueState == 4) {
                 InteractingNPC.printDialogue(dialogueState);
+                cout << "\033[1m" << "\033[33m" << "Press enter to continue.\n" << "\033[0m";
+
             }
         
             if (dialogueState < 4) {
@@ -234,8 +260,13 @@ int main()
         }
     }
 
+    cout<<ANSI_GREY;
+    map.printMap(ANSI_GREY); 
+    cout<<ANSI_DEFAULT_TERMINAL_COLOR;
+
     inputGetter.setInputMode(0); 
 
+  
     cout<<"\f\nGAME EXITED!\n\n"; 
 
     // OUTPUT ENDING
@@ -244,5 +275,6 @@ int main()
     ending.printEnding();
     
     cout << "\n";
+
     return 0; 
 }

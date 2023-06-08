@@ -1,55 +1,38 @@
 #include <gtest/gtest.h>
-#include "../src/playerActor.cpp"
+#include <string>
 
-TEST(positionTesting, initialPosition){
-    playerActor player;
+#include "../header/PlayerManager.hpp"
+#include "../header/characterCustomization.hpp"
 
-    EXPECT_TRUE(player.getXPos() == 61);
-    EXPECT_TRUE(player.getYPos() == 4);
+TEST(playerCustomization, playerNameTest){
+    PlayerManager p1;
+    p1.setPlayerName();
+    EXPECT_EQ("bip", p1.getPlayerName());
 }
 
-TEST(movementTesting, moveDown){
-    playerActor player;
-    player.movePlayerPosition(2);
 
-    EXPECT_EQ(player.getYPos(), 5);
+TEST(playerCustomization, playerType_Popular){
+    PlayerManager p1;
+    p1.setPlayerType();
+    EXPECT_EQ("Popular", p1.getPlayerType());
 }
 
-TEST(movementTesting, moveUp){
-    playerActor player;
-    player.movePlayerPosition(2);
-    player.movePlayerPosition(2);
-    player.movePlayerPosition(0);
-
-    EXPECT_EQ(player.getYPos(), 5);
+TEST(playerCustomization, playerType_Normie){
+    PlayerManager p1;
+    p1.setPlayerType();
+    EXPECT_EQ("Normie", p1.getPlayerType()); 
 }
 
-TEST(movementTesting, moveRight){
-    playerActor player;
-    player.movePlayerPosition(1);
-
-    EXPECT_EQ(player.getXPos(), 62);
+TEST(playerCustomization, playerType_Outcast){
+    PlayerManager p1;
+    p1.setPlayerType();
+    EXPECT_EQ("Outcast", p1.getPlayerType());
 }
 
-TEST(movementTesting, moveLeft){
-    playerActor player;
-    player.movePlayerPosition(3);
+TEST(createChar, fullFunctionTest){
+    PlayerManager p1;
+    characterCustom cc;
 
-    EXPECT_EQ(player.getXPos(), 60);
+    EXPECT_NO_THROW(cc.createCharacter(p1));
 }
 
-TEST(movementTesting, setX){
-    playerActor player;
-    player.setXPos(20);
-
-    EXPECT_FALSE(player.getXPos() == 61);
-    EXPECT_TRUE(player.getXPos() == 20);
-}
-
-TEST(movementTesting, setY){
-    playerActor player;
-    player.setYPos(15);
-
-    EXPECT_FALSE(player.getYPos() == 4);
-    EXPECT_TRUE(player.getYPos() == 15);
-}

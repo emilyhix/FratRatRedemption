@@ -13,7 +13,7 @@ class EndingManager {
 
     public:
         EndingManager();
-        EndingManager(const int&, const int&, const int&, const int&, const int&, string);
+        EndingManager(const int &, const int &, const int &, const int &, const int &, string);
         void printEnding();
 };
 
