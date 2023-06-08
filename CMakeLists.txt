@@ -20,7 +20,11 @@ ADD_EXECUTABLE(run
     src/playerActor.cpp
     src/userInput.cpp
     src/npc.cpp
+    src/PlayerManager.cpp
+    src/StatManager.cpp
+    src/EndingManager.cpp
+    src/playerCustomization.cpp
+    src/titlePrint.cpp
 )
 
 TARGET_LINK_LIBRARIES (npcAndDialogue gtest gtest_main)
-
