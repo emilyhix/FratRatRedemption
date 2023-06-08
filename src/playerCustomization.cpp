@@ -2,6 +2,7 @@
 #include "../header/playerCustomization.hpp"
 #include "../header/PlayerManager.hpp"
 #include <string>
+#include <stdlib.h>
 
 playerCustom::playerCustom(){
 
@@ -19,7 +20,7 @@ string playerCustom::getCustomizationLine(int num){
 
 void playerCustom::createPlayer(PlayerManager &player){
     cout << getCustomizationLine(0) << endl;
-    getCustomizationLine(1);
+    cout << getCustomizationLine(1) << endl;
 
     player.setPlayerName();
     cout << endl;
@@ -29,17 +30,21 @@ void playerCustom::createPlayer(PlayerManager &player){
     cout << "1. Popular" << endl << "2. Normie" << endl << "3. Outcast" << endl << endl;
 
     bool validType = false;
-    int chosenNum = 0;
+    char chosenNum[10] = "";
+    char *end;
+    double realNum = 0;
 
     while(validType == false){
+        chosenNum[0] = '\0';
         cin >> chosenNum;
-        if(chosenNum <= 0 || chosenNum >= 4){
+        realNum = strtod(chosenNum, &end);
+        if(realNum > 0 && realNum < 4){
+            player.setPlayerType(realNum);
+            validType = true;
+        }
+        else if(!(realNum > 0 && realNum < 4)){
             cout << "INVALID TYPE SELECTED." << endl << endl;
             validType = false;
-        }
-        else{
-            player.setPlayerType(chosenNum);
-            validType = true;
         }
     }
 
