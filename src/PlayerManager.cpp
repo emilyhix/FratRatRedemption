@@ -7,6 +7,11 @@ PlayerManager::PlayerManager() {
 
 }
 
+PlayerManager::PlayerManager(string name, string type){
+    playerName = name;
+    playerType = type;
+}
+
 void PlayerManager::setPlayerName() {
     cin >> playerName;
 }
