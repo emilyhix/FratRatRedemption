@@ -15,6 +15,8 @@
 #include "header/characterCustomization.hpp"
 #include "src/characterCustomization.cpp"
 #include "src/PlayerManager.cpp"
+#include "header/titlePrint.hpp"
+
 
 using namespace std; 
 
@@ -74,18 +76,25 @@ int main()
     characterCustom cc;
     cc.createCharacter(playerInfo);
 
+    userInput inputGetter; 
+
+    clearTerminal();
+    TitlePrint title;
+    title.initializeTitle("title.txt");
+    cout << endl << endl;
+    cout << playerInfo.getPlayerName() << ", press any key to enter the party." << endl;
+    char openingInput = inputGetter.getUserInput();
 
     //SETUP
     gameClock mapClock; 
     gameClock interactionClock; 
-    userInput inputGetter; 
     mapManager map; 
     playerActor player;
     unsigned tcnt = 0; 
 
     bool primaryLoopFlag = 1; 
     int gameMode = 0; //-1 == off; 0 == map; 1 == interaction
-    
+
     //NPC MAP INITIALIZATION
     map.initializeMap("map.txt"); 
     map.initializePlayer(player.getXPos(),player.getYPos()); 

@@ -65,7 +65,7 @@ void mapManager::printMap(const string & currentDefaultColor) const{ // WAS TOLD
     std::cout<<ANSI_CLEAR_TERMINAL;
 
     TitlePrint title;
-    title.initializeTitle("./logo.txt");
+    title.initializeTitle("./title.txt");
 
     for(int i = 0; i<23;i++){
         for(int j = 0; j <100; j++){
