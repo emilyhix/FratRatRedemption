@@ -10,8 +10,9 @@ class playerCustom{
     
     public:
         playerCustom();
+        string getCustomizationLine(int);
         void createPlayer(PlayerManager &);
-
+        
 
 };
 
