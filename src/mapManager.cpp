@@ -2,6 +2,8 @@
 #include <fstream>
 #include <string> 
 #include "../header/mapManager.hpp"
+#include "../header/titlePrint.hpp"
+using namespace std;
 
 #define ANSI_CLEAR_TERMINAL "\x1B[2J\x1B[H"
 #define ANSI_DEFAULT_TERMINAL_COLOR "\033[37m"
@@ -64,6 +66,10 @@ void mapManager::removePlayer(const int & currXPos, const int & currYPos){
 
 void mapManager::printMap(const string & currentDefaultColor) const{ // WAS TOLD BY GARRET THAT PUTTING PRINT IN HERE IS OK
     std::cout<<ANSI_CLEAR_TERMINAL;
+
+    TitlePrint title;
+    title.initializeTitle("./title.txt");
+
     for(int i = 0; i<23;i++){
         for(int j = 0; j <100; j++){
             if(!mapXY[i][j].getPlayerActive()){
