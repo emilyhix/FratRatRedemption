@@ -90,3 +90,4 @@ void PlayerManager::setOutcastRep(const int & newOutcastRep) {
 int PlayerManager::getOutcastRep() {
     return outcastReputation;
 }
+

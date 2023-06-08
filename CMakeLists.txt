@@ -8,6 +8,8 @@ ADD_SUBDIRECTORY(googletest)
 ADD_EXECUTABLE(runAllTests
     src/PlayerManager.cpp 
     src/playerCustomization.cpp
+    test/playerManagerTest.cpp
+    test/endingTest.cpp
 )
 
 ADD_EXECUTABLE(player
@@ -24,6 +26,7 @@ ADD_EXECUTABLE(run
     src/userInput.cpp
     src/npc.cpp
     src/PlayerManager.cpp
+    src/EndingManager.cpp
 )
 
 TARGET_LINK_LIBRARIES (player gtest gtest_main)
