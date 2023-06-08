@@ -110,6 +110,11 @@ int main()
     char keyboardInput=0;
     int selectedInteractionOption = 0; 
 
+    //SET MAP MORALITIES HERE
+    map.setMapReputationRange(65); 
+    map.setMapMoralityRange(65); 
+
+
     //PRIMARY LOOP
     while(primaryLoopFlag){
         //map.printMap(); 

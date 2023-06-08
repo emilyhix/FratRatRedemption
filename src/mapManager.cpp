@@ -7,7 +7,10 @@
 #define ANSI_DEFAULT_TERMINAL_COLOR "\033[37m"
 
 mapManager::mapManager(){
-
+    currMapMorality = 0; 
+    currMapReputation = 0; 
+    moralityRange = 0; 
+    reputationRange = 0; 
 }
 
 mapManager::~mapManager(){
@@ -83,3 +86,75 @@ void mapManager::printMap(const string & currentDefaultColor) const{ // WAS TOLD
         std::cout<<"\n";
     }
 }
+
+void mapManager::setMapMoralityRange(const int & newRange){
+    moralityRange = newRange; 
+}
+
+void mapManager::updateMapMorality(const int & newMorality){
+
+    currMapMorality = (85 * newMorality)/moralityRange; 
+    for(int i = 20; i >=3; i--){
+        for(int j = 79; j < 84; j++){
+            mapXY[i][j].setCoordCharacter(' '); 
+        }
+    }
+
+    if(currMapMorality<=0){
+        return;
+    } else if (currMapMorality >= 85) {
+        currMapMorality = 85; 
+    }
+
+    for(int i = 20; i >=3; i-- ){
+        if(currMapMorality<=0){
+            break; 
+        }
+        for(int j = 79; j < 84; j++){
+            if(currMapMorality<=0){
+                break; 
+            }
+            mapXY[i][j].setCoordCharacter('#'); 
+            currMapMorality--; 
+        }
+    }
+}
+
+void mapManager::setMapReputationRange(const int & newRange){
+    reputationRange = newRange; 
+}
+
+void mapManager::updateMapReputation(const int & newReputation){
+
+    currMapReputation = (85 * newReputation)/reputationRange; 
+    for(int i = 20; i >=3; i--){
+        for(int j = 89; j < 95; j++){
+            mapXY[i][j].setCoordCharacter(' '); 
+        }
+    }
+
+    if(currMapReputation<=0){
+        return;
+    } else if (currMapReputation >= 85) {
+        currMapReputation = 85; 
+    }
+
+    for(int i = 20; i >=3; i-- ){
+        if(currMapReputation<=0){
+            break; 
+        }
+        for(int j = 89; j < 94; j++){
+            if(currMapReputation<=0){
+                break; 
+            }
+            mapXY[i][j].setCoordCharacter('#'); 
+            currMapReputation--; 
+        }
+    }
+}
+
+        // void setMapMoralityRange(const int &); 
+        // void updateMapMorality(const int &); 
+
+        // void setMapReputationRange(const int &); 
+        // void updateMapReputation(const int &); 
