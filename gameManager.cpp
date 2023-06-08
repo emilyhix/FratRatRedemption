@@ -11,10 +11,10 @@
 #include "header/mapManager.hpp"
 #include "header/playerActor.hpp"
 #include "header/npc.hpp"
+#include "header/StatManager.hpp"
+#include "header/EndingManager.hpp"
 #include "header/PlayerManager.hpp"
-#include "header/characterCustomization.hpp"
-#include "src/characterCustomization.cpp"
-#include "src/PlayerManager.cpp"
+#include "header/playerCustomization.hpp"
 #include "header/titlePrint.hpp"
 
 
