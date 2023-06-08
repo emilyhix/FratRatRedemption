@@ -5,13 +5,11 @@ project(FratRatRedemption)
 ADD_SUBDIRECTORY(googletest)
 
 ADD_EXECUTABLE(runAllTests
-    test/test.cpp
     src/PlayerManager.cpp 
-    src/characterCustomization.cpp
+    src/playerCustomization.cpp
 )
 
 ADD_EXECUTABLE(player
-    test/test.cpp
     src/PlayerManager.cpp 
     src/playerCustomization.cpp
 )

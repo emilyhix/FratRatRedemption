@@ -110,6 +110,13 @@ int main()
     char keyboardInput=0;
     int selectedInteractionOption = 0; 
 
+    int testMorality = 10; 
+
+    map.setMapReputationRange(65); 
+    map.updateMapReputation(testMorality); 
+    map.setMapMoralityRange(65);
+    map.updateMapMorality(testMorality); 
+
     //PRIMARY LOOP
     while(primaryLoopFlag){
         //map.printMap(); 
@@ -150,6 +157,18 @@ int main()
                         if(map.getXYCoord(player.getXPos()+1,player.getYPos()).getWalkable()){
                             player.movePlayerPosition(MOVE_RIGHT);
                         }
+                    break;
+
+                    case '9':
+                    testMorality++; 
+                    map.updateMapMorality(testMorality); 
+                    map.updateMapReputation(testMorality); 
+                    break; 
+
+                    case '0':
+                    testMorality--; 
+                    map.updateMapMorality(testMorality); 
+                    map.updateMapReputation(testMorality); 
                     break;
 
                     default:
