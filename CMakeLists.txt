@@ -10,6 +10,7 @@ ADD_EXECUTABLE(runAllTests
     src/playerCustomization.cpp
     test/playerManagerTest.cpp
     test/endingTest.cpp
+    test/StatManagerTest.cpp
 )
 
 ADD_EXECUTABLE(player
@@ -26,9 +27,9 @@ ADD_EXECUTABLE(run
     src/userInput.cpp
     src/npc.cpp
     src/PlayerManager.cpp
+    src/StatManager.cpp
     src/EndingManager.cpp
 )
 
 TARGET_LINK_LIBRARIES (player gtest gtest_main)
 TARGET_LINK_LIBRARIES (runAllTests gtest gtest_main)
-

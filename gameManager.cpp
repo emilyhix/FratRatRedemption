@@ -11,12 +11,15 @@
 #include "header/mapManager.hpp"
 #include "header/playerActor.hpp"
 #include "header/npc.hpp"
+#include "header/StatManager.hpp"
+#include "header/PlayerManager.hpp"
+#include "header/EndingManager.hpp"
 #include "header/PlayerManager.hpp"
 #include "header/playerCustomization.hpp"
 #include "src/playerCustomization.cpp"
 #include "src/PlayerManager.cpp"
 
-using namespace std; 
+using namespace std;
 
 #define MOVE_UP 0
 #define MOVE_RIGHT 1
@@ -81,6 +84,9 @@ int main()
     userInput inputGetter; 
     mapManager map; 
     playerActor player;
+    PlayerManager playerManager;
+    StatManager statManager;
+    
     unsigned tcnt = 0; 
 
     bool primaryLoopFlag = 1; 
@@ -227,8 +233,13 @@ int main()
             }
         
             if(keyboardInput==10){
+                playerManager.setPlayerType(1); // DELETE LINE: USED TO TEST BC NO CHAR CUSTOMIZATION
+
+                if (dialogueState < 4) {
+                    statManager.updateStats(playerManager, InteractingNPC.getName(), InteractingNPC.getType(), selectedInteractionOption, dialogueState);
+                }
+
                 ++dialogueState;
-                // Affect player stats based on what selectedInteractionOption is set to
                 
                 if (dialogueState == 5) {
                     interactionClock.timerOff(); 
@@ -255,6 +266,15 @@ int main()
 
     inputGetter.setInputMode(0); 
 
-    cout<<"\f\nYou left the party!\n"; 
+  
+    cout<<"\f\nGAME EXITED!\n\n"; 
+
+    // OUTPUT ENDING
+    EndingManager ending(playerManager.getPlayerRep(), playerManager.getPlayerMor(), playerManager.getPopularRep(), playerManager.getNormieRep(), playerManager.getOutcastRep(), playerManager.getPlayerType());
+
+    ending.printEnding();
+    
+    cout << "\n";
+
     return 0; 
 }

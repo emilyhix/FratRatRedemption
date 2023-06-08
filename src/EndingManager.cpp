@@ -10,6 +10,7 @@ EndingManager::EndingManager(const int& finalReputation, const int& finalMoralit
     this->finalMorality = finalMorality;
 
     // Assigns ending text based on player's final reputation and morality stats
+
     if (finalMorality <= 12) {
         playerResultText = "Oh... Oh my god. You’re bottom of the barrel loser. How did you end up with such low\nmorality? Well, there’s no real loser to this simulator, but it really seems like you’re the first!\nQuite embarrassing honestly. Maybe you could go to a different party to change everyone’s\nminds if you want... but I doubt anyone wants to see you. Maybe Marcus, who knows?";
     }
