@@ -1,10 +1,11 @@
 CMAKE_MINIMUM_REQUIRED(VERSION 3.2)
-
 project(FratRatRedemption)
 
 ADD_SUBDIRECTORY(googletest)
 
 ADD_EXECUTABLE(runAllTests
+    test/dialogueTest.cpp
+    test/npc.cpp
     test/endingTest.cpp
     test/StatManagerTest.cpp
     test/playerManagerTest.cpp

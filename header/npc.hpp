@@ -17,6 +17,7 @@ class npc {
         string getName();
         string getType();
         void printDialogue(int);
+        string getIntroduction();
         void printIntroduction();
 };
 #endif

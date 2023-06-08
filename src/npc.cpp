@@ -7,9 +7,9 @@ npc::npc(mapManager &map, coord id) {
         npcName = "Chad & Thad";
         npcType = "Popular";
 
-        introduction = "You see two identical, muscular, blond haired men standing by the speaker. \n"
-                        "They're wearing fitted t-shirts, shorts, and flip flops. They're laughing \n"
-                        "and looking at a phone.";
+        introduction = "You walk into the master bathroom and see two identical, muscular, blond haired men facing the \n"
+                        "mirror. They quickly turn around and you see some powdery substance on the counter. They give you a \n"
+                        "sheepish smile before speaking.";
             
         dialogue[0] = "???: Hey bro, we're Chad and Thad! How are you liking the party?";
         responses[0][0] = "It's really fun! The frat seems really cool.";
@@ -363,6 +363,7 @@ npc::npc(mapManager &map, coord id) {
 
         dialogue[4] = "Isaiah: I'm Isaiah, but I'm reeaaaally busy, sooo bye!";
     }
+
 }
 
 string npc::getName() {
@@ -384,6 +385,10 @@ void npc::printDialogue(int num) {
     }
 }
 
+string npc::getIntroduction(){
+    return introduction;
+}
+
 void npc::printIntroduction() {
-    cout << introduction << endl << endl;
+    cout << getIntroduction() << endl << endl;
 }
