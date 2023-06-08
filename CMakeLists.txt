@@ -10,6 +10,7 @@ ADD_EXECUTABLE(runAllTests
     test/playerManagerTest.cpp
     test/playerCustTest.cpp
     test/clockTest.cpp
+    test/coordTest.cpp
 
     src/npc.cpp 
     src/mapManager.cpp 
