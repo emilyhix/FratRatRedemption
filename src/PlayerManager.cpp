@@ -7,11 +7,6 @@ PlayerManager::PlayerManager() {
 
 }
 
-PlayerManager::PlayerManager(string name, string type) {
-    playerName = name;
-    playerType = type;
-}
-
 void PlayerManager::setPlayerName() {
     cin >> playerName;
 }
@@ -21,28 +16,15 @@ string PlayerManager::getPlayerName() {
 }
 
 
-void PlayerManager::setPlayerType(){
-    int chosenType = 0;
-    cin >> chosenType;
-    bool valid_input = 0;
-    while(!valid_input){
-        if(chosenType == 1){
-            playerType = "Popular";
-            valid_input = true;
-        }
-        else if(chosenType == 2){
-            playerType = "Normie";
-            valid_input = true;
-        }
-        else if(chosenType == 3){
-            playerType = "Outcast";
-            valid_input = true;
-        }
-        else{
-            cout << "INVALID INPUT." << endl << endl;
-            valid_input = false;
-            cin >> chosenType;
-        }
+void PlayerManager::setPlayerType(int chosenNum){
+    if(chosenNum == 1){
+        playerType = "Popular";
+    }
+    else if(chosenNum == 2){
+        playerType = "Normie";
+    }
+    else{
+        playerType = "Outcast";
     }
 }
 
