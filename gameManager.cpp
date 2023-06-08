@@ -12,12 +12,9 @@
 #include "header/playerActor.hpp"
 #include "header/npc.hpp"
 #include "header/StatManager.hpp"
-#include "header/PlayerManager.hpp"
 #include "header/EndingManager.hpp"
 #include "header/PlayerManager.hpp"
 #include "header/playerCustomization.hpp"
-#include "src/playerCustomization.cpp"
-#include "src/PlayerManager.cpp"
 
 using namespace std;
 

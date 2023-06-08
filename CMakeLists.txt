@@ -6,16 +6,8 @@ project(FratRatRedemption)
 ADD_SUBDIRECTORY(googletest)
 
 ADD_EXECUTABLE(runAllTests
-    src/PlayerManager.cpp 
-    src/playerCustomization.cpp
-    test/playerManagerTest.cpp
     test/endingTest.cpp
     test/StatManagerTest.cpp
-)
-
-ADD_EXECUTABLE(player
-    src/PlayerManager.cpp 
-    src/playerCustomization.cpp
 )
 
 ADD_EXECUTABLE(run 
@@ -29,7 +21,7 @@ ADD_EXECUTABLE(run
     src/PlayerManager.cpp
     src/StatManager.cpp
     src/EndingManager.cpp
+    src/playerCustomization.cpp
 )
 
-TARGET_LINK_LIBRARIES (player gtest gtest_main)
 TARGET_LINK_LIBRARIES (runAllTests gtest gtest_main)
