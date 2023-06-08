@@ -24,6 +24,7 @@ ADD_EXECUTABLE(run
     src/playerActor.cpp
     src/userInput.cpp
     src/npc.cpp
+    src/titlePrint.cpp
 )
 
 TARGET_LINK_LIBRARIES (player gtest gtest_main)
