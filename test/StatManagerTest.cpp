@@ -16,7 +16,7 @@ TEST(StatManagerTests, moralityLost) {
     StatManager *stat = new StatManager();
     stat->updateStats(*player, "Harper", "Outcast", 0, 2);
 
-    EXPECT_EQ(player->getPlayerMor(), 32);
+    EXPECT_EQ(player->getPlayerMor(), 28);
 }
 
 TEST(StatManagerTests, sameType_response1) {
