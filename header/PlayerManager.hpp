@@ -2,6 +2,7 @@
 #define PLAYERMANAGER_H
  
 #include <string>
+#include <iostream>
 using namespace std;
 
 class PlayerManager {
@@ -9,7 +10,7 @@ class PlayerManager {
         string playerName = "";
         string playerType = "";
         int reputation = 0;
-        int morality = 17;
+        int morality = 32;
         int popularReputation = 0;
         int normieReputation = 0;
         int outcastReputation = 0;
@@ -21,15 +22,15 @@ class PlayerManager {
         string getPlayerName();
         void setPlayerType();
         string getPlayerType();
-        void setPlayerRep(int);
+        void setPlayerRep(const int &);
         int getPlayerRep();
-        void setPlayerMor(int);
+        void setPlayerMor(const int &);
         int getPlayerMor(); 
-        void setPopularRep(int);
+        void setPopularRep(const int &);
         int getPopularRep();      
-        void setNormieRep(int);
+        void setNormieRep(const int &);
         int getNormieRep();
-        void setOutcastRep(int);
+        void setOutcastRep(const int &);
         int getOutcastRep();
 };
 

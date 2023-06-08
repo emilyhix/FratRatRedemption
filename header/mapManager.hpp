@@ -9,6 +9,11 @@ using std::cout;
 class mapManager{
     private:
         coord mapXY[23][100];
+        int currMapMorality; 
+        int currMapReputation; 
+
+        int moralityRange; 
+        int reputationRange; 
 
     public:
         mapManager();
@@ -21,6 +26,12 @@ class mapManager{
         void initalizeNPC(const int &, const int &, const string &);
         void deactivateNPC(const int &, const int &); 
         void printMap(const string &) const; 
+
+        void setMapMoralityRange(const int &); 
+        void updateMapMorality(const int &); 
+
+        void setMapReputationRange(const int &); 
+        void updateMapReputation(const int &); 
 };
 
 #endif

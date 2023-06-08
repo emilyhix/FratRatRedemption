@@ -17,8 +17,7 @@
 #include "header/playerCustomization.hpp"
 #include "header/titlePrint.hpp"
 
-
-using namespace std; 
+using namespace std;
 
 #define MOVE_UP 0
 #define MOVE_RIGHT 1
@@ -73,8 +72,8 @@ int main()
 
     //PLAYER CUSTOMIZATION
     PlayerManager playerInfo;
-    characterCustom cc;
-    cc.createCharacter(playerInfo);
+    playerCustom pc;
+    pc.createPlayer(playerInfo);
 
     userInput inputGetter; 
 
@@ -90,6 +89,9 @@ int main()
     gameClock interactionClock; 
     mapManager map; 
     playerActor player;
+    PlayerManager playerManager;
+    StatManager statManager;
+    
     unsigned tcnt = 0; 
 
     bool primaryLoopFlag = 1; 
@@ -118,6 +120,11 @@ int main()
 
     char keyboardInput=0;
     int selectedInteractionOption = 0; 
+
+    //SET MAP MORALITIES HERE
+    map.setMapReputationRange(65); 
+    map.setMapMoralityRange(65); 
+
 
     //PRIMARY LOOP
     while(primaryLoopFlag){
@@ -231,8 +238,12 @@ int main()
             }
         
             if(keyboardInput==10){
+
+                if (dialogueState < 4) {
+                    statManager.updateStats(playerManager, InteractingNPC.getName(), InteractingNPC.getType(), selectedInteractionOption, dialogueState);
+                }
+
                 ++dialogueState;
-                // Affect player stats based on what selectedInteractionOption is set to
                 
                 if (dialogueState == 5) {
                     interactionClock.timerOff(); 
@@ -259,6 +270,15 @@ int main()
 
     inputGetter.setInputMode(0); 
 
-    cout<<"\f\nYou left the party!\n"; 
+  
+    cout<<"\f\nGAME EXITED!\n\n"; 
+
+    // OUTPUT ENDING
+    EndingManager ending(playerManager.getPlayerRep(), playerManager.getPlayerMor(), playerManager.getPopularRep(), playerManager.getNormieRep(), playerManager.getOutcastRep(), playerManager.getPlayerType());
+
+    ending.printEnding();
+    
+    cout << "\n";
+
     return 0; 
 }

@@ -1,9 +1,9 @@
 #include <iostream>
-#include "../header/characterCustomization.hpp"
+#include "../header/playerCustomization.hpp"
 #include "../header/PlayerManager.hpp"
 #include <string>
 
-characterCustom::characterCustom(){
+playerCustom::playerCustom(){
 
     customizationLines[0] = "Welcome to Frat Rat Redemption! It's your first frat party of the year, let's get you started.";
     customizationLines[1] = "First and foremost, what shall we refer to you as?";
@@ -13,7 +13,7 @@ characterCustom::characterCustom(){
 
 }
 
-void characterCustom::createCharacter(PlayerManager &player){
+void playerCustom::createPlayer(PlayerManager &player){
     cout << customizationLines[0] << endl;
     cout << customizationLines[1] << endl << endl;
 
