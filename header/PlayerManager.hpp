@@ -17,6 +17,7 @@ class PlayerManager {
     
     public:
         PlayerManager();
+        PlayerManager(string, string);
         void setPlayerName();
         string getPlayerName();
         void setPlayerType(int);
