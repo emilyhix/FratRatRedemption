@@ -122,8 +122,11 @@ int main()
     int selectedInteractionOption = 0; 
 
     //SET MAP MORALITIES HERE
-    map.setMapReputationRange(65); 
     map.setMapMoralityRange(65); 
+    map.setMapReputationRange(169); 
+
+    map.updateMapMorality(playerManager.getPlayerMor());
+    map.updateMapReputation(playerManager.getPlayerRep()+84); 
 
 
     //PRIMARY LOOP
@@ -241,6 +244,8 @@ int main()
 
                 if (dialogueState < 4) {
                     statManager.updateStats(playerManager, InteractingNPC.getName(), InteractingNPC.getType(), selectedInteractionOption, dialogueState);
+                    map.updateMapMorality(playerManager.getPlayerMor());
+                    map.updateMapReputation(playerManager.getPlayerRep()+84); 
                 }
 
                 ++dialogueState;
