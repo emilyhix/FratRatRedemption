@@ -19,6 +19,7 @@ class coord{
     public: 
         //Constructor
         coord(); 
+        bool operator==(const coord &);
 
         //Coord Control Functions
         void setCoordColor(const string &); 

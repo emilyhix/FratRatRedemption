@@ -10,6 +10,11 @@
 #include "header/userInput.hpp"
 #include "header/mapManager.hpp"
 #include "header/playerActor.hpp"
+#include "header/npc.hpp"
+#include "header/PlayerManager.hpp"
+#include "header/playerCustomization.hpp"
+#include "src/playerCustomization.cpp"
+#include "src/PlayerManager.cpp"
 
 using namespace std; 
 
@@ -62,6 +67,14 @@ void interactionOptionAdjust(int & currentOptionSelected, const int & directionI
 
 int main()
 {
+    clearTerminal(); 
+
+    //PLAYER CUSTOMIZATION
+    PlayerManager playerInfo;
+    playerCustom pc;
+    pc.createPlayer(playerInfo);
+
+
     //SETUP
     gameClock mapClock; 
     gameClock interactionClock; 
@@ -72,7 +85,7 @@ int main()
 
     bool primaryLoopFlag = 1; 
     int gameMode = 0; //-1 == off; 0 == map; 1 == interaction
-
+    
     //NPC MAP INITIALIZATION
     map.initializeMap("map.txt"); 
     map.initializePlayer(player.getXPos(),player.getYPos()); 
@@ -97,12 +110,24 @@ int main()
     char keyboardInput=0;
     int selectedInteractionOption = 0; 
 
+    //SET MAP MORALITIES HERE
+    map.setMapReputationRange(65); 
+    map.setMapMoralityRange(65); 
+
+
     //PRIMARY LOOP
     while(primaryLoopFlag){
         //map.printMap(); 
         while(gameMode == 0){ //MAP LOOP
             selectedInteractionOption = 0; 
             map.printMap(ANSI_DEFAULT_TERMINAL_COLOR);
+            cout << "\033[1m" << "\033[33m" << "Use WASD to move. Press esc to quit the game.\n" << "\033[0m";
+
+            if(((player.getXPos()==61||player.getXPos()==62||player.getXPos()==60) && player.getYPos()==3)){
+                mapClock.timerOff(); 
+                primaryLoopFlag = 0; 
+                break;
+            }
             keyboardInput = inputGetter.getUserInput(); 
             if(keyboardInput>0){
                 map.removePlayer(player.getXPos(),player.getYPos());
@@ -159,28 +184,59 @@ int main()
             mapClock.timerISR(); 
         } //END OF MAP LOOP
 
-
+        int dialogueState = 0;
         while(gameMode==1){//INTERACTION LOOP (to be edited to accommodate textManager)
             cout<<ANSI_GREY;
             map.printMap(ANSI_GREY); 
             cout<<ANSI_DEFAULT_TERMINAL_COLOR;
-            cout<<"CHOOSE OPTION:\nOPTION SELECTED: "<<selectedInteractionOption;
+
+            npc InteractingNPC (map, map.getXYCoord(player.getXPos(),player.getYPos()));
+
+            if (dialogueState == 0) {
+                InteractingNPC.printIntroduction();
+                InteractingNPC.printDialogue(dialogueState);
+            }
+            if (dialogueState == 1) {
+                InteractingNPC.printDialogue(dialogueState);
+            }
+            if (dialogueState == 2) {
+                InteractingNPC.printDialogue(dialogueState);
+            }
+            if (dialogueState == 3) {
+                InteractingNPC.printDialogue(dialogueState);
+            }
+            if (dialogueState == 4) {
+                InteractingNPC.printDialogue(dialogueState);
+                cout << "\033[1m" << "\033[33m" << "Press enter to continue.\n" << "\033[0m";
+
+            }
+        
+            if (dialogueState < 4) {
+                int optionSelect = selectedInteractionOption + 1;
+                cout<<"OPTION SELECTED: "<< optionSelect;
+            }
             keyboardInput = inputGetter.getUserInput();
             switch(keyboardInput){
                 case 'w':
                     interactionOptionAdjust(selectedInteractionOption,MOVE_UP);
-                break;
+                    break;
 
                 case 's':
                     interactionOptionAdjust(selectedInteractionOption,MOVE_DOWN);
                 break; 
             }
+        
             if(keyboardInput==10){
-                interactionClock.timerOff(); 
-                map.deactivateNPC(player.getXPos(),player.getYPos());
-                clearTerminal(); 
-                gameMode=0; 
-                break; 
+                ++dialogueState;
+                // Affect player stats based on what selectedInteractionOption is set to
+                
+                if (dialogueState == 5) {
+                    interactionClock.timerOff(); 
+                    map.deactivateNPC(player.getXPos(),player.getYPos());
+                    clearTerminal(); 
+                    gameMode=0; 
+                    break;    
+                }
             }
 
             if(keyboardInput==27){
@@ -193,8 +249,12 @@ int main()
         }
     }
 
+    cout<<ANSI_GREY;
+    map.printMap(ANSI_GREY); 
+    cout<<ANSI_DEFAULT_TERMINAL_COLOR;
+
     inputGetter.setInputMode(0); 
 
-    cout<<"\f\nGAME EXITED!\n"; 
+    cout<<"\f\nYou left the party!\n"; 
     return 0; 
 }

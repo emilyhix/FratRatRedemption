@@ -2,6 +2,7 @@
 #define PLAYERMANAGER_H
  
 #include <string>
+#include <iostream>
 using namespace std;
 
 class PlayerManager {
@@ -19,17 +20,17 @@ class PlayerManager {
         PlayerManager(string, string);
         void setPlayerName();
         string getPlayerName();
-        void setPlayerType(const int &);
+        void setPlayerType();
         string getPlayerType();
-        void setPlayerRep(int);
+        void setPlayerRep(const int &);
         int getPlayerRep();
-        void setPlayerMor(int);
+        void setPlayerMor(const int &);
         int getPlayerMor(); 
-        void setPopularRep(int);
+        void setPopularRep(const int &);
         int getPopularRep();      
-        void setNormieRep(int);
+        void setNormieRep(const int &);
         int getNormieRep();
-        void setOutcastRep(int);
+        void setOutcastRep(const int &);
         int getOutcastRep();
 };
 
