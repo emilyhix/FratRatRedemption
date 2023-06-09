@@ -55,17 +55,17 @@ npc::npc(mapManager &map, coord id) {
 
         dialogue[1] = "Bethany: You don't know who I am?! I'm Bethany! The sorority president!";
         responses[1][0] = "I've heard of you! Your beauty precedes you! I wanted to talk to you about the sorority, actually.";
-        responses[1][1] = "Ohhh, you're Bethany? I've heard of so many nice things about you. Do you have time to talk about \n the sorority?";
+        responses[1][1] = "Ohhh, you're Bethany? I've heard of so many nice things about you. Do you have time to talk about \nthe sorority?";
         responses[1][2] = "Oh... so you're Bethany? I've heard nothing but bad things about you and the sorority.";
         responses[1][3] = "I know who you are. You're that pretentious mean girl who runs the sorority that no one likes!";
 
-        dialogue[2] = "Bethany: The sorority is actually really fun! We helped the frat wit the drinks for the party. We \n made the 'punch' ourselves. Do you want any?";
+        dialogue[2] = "Bethany: The sorority is actually really fun! We helped the frat with the drinks for the party. We \nmade the 'punch' ourselves. Do you want any?";
         responses[2][0] = "Oou! I already have some, but I'll take some more!";
         responses[2][1] = "That sounds pretty good, sure.";
         responses[2][2] = "I'm good, I think I need to drink more water.";
         responses[2][3] = "Eww... That sounds gross, I'll pass.";
 
-        dialogue[3] = "Bethany: Well even though you're not that pretty, the sorority is still looking for more pledges... \n So I guess I'll extend you an invitation.";
+        dialogue[3] = "Bethany: Well even though you're not that pretty, the sorority is still looking for more pledges... \nSo I guess I'll extend you an invitation.";
         responses[3][0] = "OMG?! Really?! Thank you so much! I look forward to seeing you at the next meeting.";
         responses[3][1] = "Thank you so mjch! I'll definitely make time to go to one of the events.";
         responses[3][2] = "The sorority isn't really my style.";
@@ -125,8 +125,8 @@ npc::npc(mapManager &map, coord id) {
         responses[0][2] = "Meh. I was actually thinking about leaving soon.";
         responses[0][3] = "I hate it here. I wish I just stayed in my dorm room.";
 
-        dialogue[1] = "Denzel: Would you consider joining the frat? It's rush week this week and we're looking \n for new recruits!";
-        responses[1][0] = "I'd love to! I have been planning on joining the frat since the beginning of the school year, but \n never got around to it.";
+        dialogue[1] = "Denzel: Would you consider joining the frat? It's rush week this week and we're looking \nfor new recruits!";
+        responses[1][0] = "I'd love to! I have been planning on joining the frat since the beginning of the school year, but \nnever got around to it.";
         responses[1][1] = "I'll definitely think about it. I don't know if Greek life is what I want to commit myself to.";
         responses[1][2] = "Nah. That's not my style. I'm more interested in other extracurriculars.";
         responses[1][3] = "Nope. I truly despise the frat. Most of you seem like horrible people.";
@@ -318,7 +318,7 @@ npc::npc(mapManager &map, coord id) {
         responses[2][2] = "No thanks. I'm not into that.";
         responses[2][3] = "Everything makes sense now! You're being a pain because of the gummies! Yeah, no, I'll pass.";
 
-        dialogue[3] = "Harper: Hm… Do you know the conspiracy about Walt Disney being frozen and one day they're going to bring him back when technology has advanced that far? And to cover up this conspiracy, Disney released the movie Frozen? So if you search Walt Disney Frozen, the movie pops up!";
+        dialogue[3] = "Harper: Hm… Do you know the conspiracy about Walt Disney being frozen and one day they're going to \nbring him back when technology has advanced that far? And to cover up this conspiracy, Disney \nreleased the movie Frozen? So if you search Walt Disney Frozen, the movie pops up!";
         responses[3][0] = "Oh, that's actually really interesting. Tell me more about it. It seems like you're really \npassionate about this topic.";
         responses[3][1] = "I've never heard of this theory before. It's riveting, but I doubt it actually happened.";
         responses[3][2] = "What a silly story! Who told you that?";
