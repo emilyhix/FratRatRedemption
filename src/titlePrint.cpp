@@ -10,7 +10,9 @@ void TitlePrint::initializeTitle(const string & titleFile) {
     string read;
     while (inFS) {
         getline(inFS, read);
-        cout << "\033[34m" << read << "\033[0m" << endl;
+        cout << "\033[34m"; 
+        cout << read;
+        cout << "\033[0m" << endl;
     }
 
     inFS.close();

@@ -69,7 +69,8 @@ void mapManager::printMap(const string & currentDefaultColor) const{ // WAS TOLD
 
     TitlePrint title;
     title.initializeTitle("./title.txt");
-
+    cout << currentDefaultColor;
+    
     for(int i = 0; i<23;i++){
         for(int j = 0; j <100; j++){
             if(!mapXY[i][j].getPlayerActive()){
