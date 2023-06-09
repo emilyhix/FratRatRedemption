@@ -79,16 +79,22 @@ At the end of the game, whether that be if the player presses 'esc' to end the g
 
 ### Updated Class Diagram Notes
 
-We reworked the whole class diagram to accommodate for the SOLID principles.
+We reworked the relationships that most classes had with each other, removed some classes that we did not end up implementing, and created new classes for responsibilities that were crowding other classes.
 
-The game class was completely restructured and renamed “gameManager.” Rather than the class handling the clock, keyboard inputs, and printing all at once, the class now creates objects of classes which each individually and independently handle those responsibilities (these new classes are listed below). In doing this, the purpose of the gameManager, which can exist independently of all other classes, is to simply run the game by calling object member functions, thus appealing to the Single Responsibility Principle. 
+The game class was completely restructured and renamed “gameManager.” Rather than the class handling the clock, keyboard inputs, and printing all at once, the class now creates objects of classes which each individually and independently handle those responsibilities (these new classes are listed below). In doing this, the purpose of the gameManager, which can exist independently of all other classes, is to simply run the game by calling object member functions, thus appealing to the Single Responsibility Principle. We changed the relationships between gameManager and the other classes from aggregation to implementation because all the class functions and data members we used from other classes were called in the main() function.
 
-The responsibilities stated above were moved to different classes that have an aggregation relationship to "gameManager". These classes are gameClock, userInput, mapManager, playerManager, and textManager. This separation also follows the Single Responsibility Principle. The separation was necessary because it allows all of us to work on more of the project simultaneously, rather than having to wait on eachother and/or have people work on the same class at once (which could potentially cause major issues regarding time and overwriting code). Additionally, the game can now be pieced together like bricks to form a complete product.
-All the classes we named previously were also written and are being developed to abide by the Open-Closed Principle. We can now add to the classes without having to modify what has already been written. This saves us a lot of time in the future when we'll most likely have to implement/develop more.
+The responsibilities stated above were moved to different classes are implemented by "gameManager". These classes are gameClock, userInput, mapManager, playerManager, textManager, TitlePrint, playerActor, playerCustom, EndingManager, StartManager, npc, and coord. This separation also follows the Single Responsibility Principle.
+
+We removed the interaction class and integrated the interactions into main() with loops and flags. We also removed TextManager and textPrinter, mainly based off our own judgement. MapPrinter was also taken out and mapManager handles those responsibilities since they're all related to the map; this still abides by the SRP. 
+
+A StatManager and EndingManager were implemented. They both do many calculations based of user responses during the interactions. The statManager and EndingManager (and other classes, this is just a simple example), communicate to each other through the gameManager within main(). All the classes were also written and are being developed to abide by the Open-Closed Principle. We can now add to the classes without having to modify what has already been written. This saves us a lot of time in the future when we'll most likely have to implement/develop more.
 
 The previous class diagram had the NPC class be inherited from a characters class that had an abstract class with a pure virtual function move(). We realized that the NPCs in the game will not be using the move() function so we changed the relation between the NPC class and the rest of the game from an inheritance to a simple association. We did this to abide by the Interface Segregation Principle. This helped us remove unnecessary functions that we are not going to use.
 
 We also changed the interaction, ending, and player customizer classes into stand alone entities that will implement the information from the manager classes, gameClock, and userInput. This was done so that we would abide by the Dependency Inversion Principle. This will allow us to use the entities wherever and whenever we deem fit.
+
+Lastly, characterCustom was renamed "playerCustom" to better fit what the class actually does, since the user cannot design every single character, just themselves.
+
  
 
  > ## Final deliverable
