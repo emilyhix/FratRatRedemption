@@ -99,7 +99,23 @@ We also changed the interaction, ending, and player customizer classes into stan
  > * Make sure your README file and Project board are up-to-date reflecting the current status of your project (e.g. any changes that you have made during the project such as changes to your class diagram). Previous versions should still be visible through your commit history. 
  
  ## Screenshots
- > Screenshots of the input/output after running your application
+ 
+| ![customizationScreen](https://github.com/cs100/final-project-ehix001-sphim001-gmapa002-eclar022/assets/114962480/93b1c28f-d270-4c10-bf5c-755fe91aa4ef) | 
+|:--:| 
+| The player must choose what type of person they want to be - this choice affects the result of dialogue options with non-player characters. |
+
+| ![mainMap](https://github.com/cs100/final-project-ehix001-sphim001-gmapa002-eclar022/assets/114962480/101239f6-fd9f-44ac-ad05-c9da0491e56b) | 
+|:--:| 
+| The player is free to explore the map with live character input using WASD. |
+
+| ![dialogueScreen](https://github.com/cs100/final-project-ehix001-sphim001-gmapa002-eclar022/assets/114962480/9fa85544-129a-4ab9-b48c-470cbef84326) | 
+|:--:| 
+| Converse with 10 distinct non-player characters with unique personalities. |
+
+| ![endingScreen](https://github.com/cs100/final-project-ehix001-sphim001-gmapa002-eclar022/assets/114962480/fe41f64a-33c8-4b52-9221-abebf445e2dd) | 
+|:--:| 
+| The ending of the game is determined by the player's morality and reputation attributes, which are affected by choice of player type and conversations with npc partygoers. |
+
  ## Installation/Usage
  **To play Frat Rat Redemption:**
  1. Clone the repository using `git clone https://github.com/cs100/final-project-ehix001-sphim001-gmapa002-eclar022.git`
