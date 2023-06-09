@@ -56,12 +56,11 @@ This diagram is a state machine of the different screens that the user will be a
 
 
 ### Screen Layouts
+![player cust screen](https://github.com/cs100/final-project-ehix001-sphim001-gmapa002-eclar022/assets/129914502/ef04aafa-058f-4b39-87ad-827d14ddae23)
+This is the first screen the player will go through.
 
-<img width="400" alt="screen1" src="https://github.com/cs100/final-project-ehix001-sphim001-gmapa002-eclar022/assets/130163307/a4d014a2-adc1-4aec-8b5c-49905c034c1c"> <img width="400" alt="screen2" src="https://github.com/cs100/final-project-ehix001-sphim001-gmapa002-eclar022/assets/130163307/29b968f9-38f4-4339-962b-adfda7c540a5">
- 
-<img width="400" alt="screen3" src="https://github.com/cs100/final-project-ehix001-sphim001-gmapa002-eclar022/assets/130163307/fe0fd9f2-c77c-4bb0-a707-cfeda5a51bfe"> <img width="400" alt="screen4" src="https://github.com/cs100/final-project-ehix001-sphim001-gmapa002-eclar022/assets/130163307/68557473-b95f-4028-b67c-94d3020a054c">
-
-These are the different sections that will be present on the screen when being played. The map and the interaction portions will pivot to an "inactive" state while the other is active so as not to mess with the input of either. This is because WASD is being used for movement.
+![in game screen layout](https://github.com/cs100/final-project-ehix001-sphim001-gmapa002-eclar022/assets/129914502/0ae4ca34-816e-43fc-9703-9fd74ca931e0)
+As stated, this is the general screen that will be shown! Other modes of this screen are shown below under the Screenshots section.
 
 ## Class Diagram
 ![cs100 uml diagram](https://github.com/cs100/final-project-ehix001-sphim001-gmapa002-eclar022/assets/129914502/cdf32f99-a58b-4ae4-bd67-5f307d8c387c)
@@ -95,14 +94,7 @@ We also changed the interaction, ending, and player customizer classes into stan
 
 Lastly, characterCustom was renamed "playerCustom" to better fit what the class actually does, since the user cannot design every single character, just themselves.
 
- 
 
- > ## Final deliverable
- > All group members will give a demo to the reader during lab time. ou should schedule your demo on Calendly with the same reader who took your second scrum meeting. The reader will check the demo and the project GitHub repository and ask a few questions to all the team members. 
- > Before the demo, you should do the following:
- > * Complete the sections below (i.e. Screenshots, Installation/Usage, Testing)
- > * Plan one more sprint (that you will not necessarily complete before the end of the quarter). Your In-progress and In-testing columns should be empty (you are not doing more work currently) but your TODO column should have a full sprint plan in it as you have done before. This should include any known bugs (there should be some) or new features you would like to add. These should appear as issues/cards on your Project board.
- > * Make sure your README file and Project board are up-to-date reflecting the current status of your project (e.g. any changes that you have made during the project such as changes to your class diagram). Previous versions should still be visible through your commit history. 
  
  ## Screenshots
  
