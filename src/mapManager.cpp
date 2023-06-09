@@ -161,9 +161,3 @@ void mapManager::updateMapReputation(const int & newReputation){
         }
     }
 }
-
-        // void setMapMoralityRange(const int &); 
-        // void updateMapMorality(const int &); 
-
-        // void setMapReputationRange(const int &); 
-        // void updateMapReputation(const int &); 

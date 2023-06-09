@@ -17,7 +17,7 @@ TEST(playerCustomization, customizationLines_0){
 TEST(playerCustomization, customizationLines_1){
     playerCustom pc;
     
-    EXPECT_EQ(pc.getCustomizationLine(1), "First and foremost, what shall we refer to you as?");
+    EXPECT_EQ(pc.getCustomizationLine(1), "First and foremost, how shall we refer to you?");
 }
 
 TEST(playerCustomization, customizationLines_2){

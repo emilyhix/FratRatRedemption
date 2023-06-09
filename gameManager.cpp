@@ -1,9 +1,4 @@
 #include <iostream>
-// #include <termios.h>
-// #include <fcntl.h>
-// #include <unistd.h>
-// #include <chrono>
-// #include <thread> 
 #include <cstdlib>
 
 #include "header/gameClock.hpp"
