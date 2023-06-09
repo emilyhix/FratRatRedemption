@@ -101,7 +101,12 @@ We also changed the interaction, ending, and player customizer classes into stan
  ## Screenshots
  > Screenshots of the input/output after running your application
  ## Installation/Usage
- > Instructions on installing and running your application
+ **To play Frat Rat Redemption:**
+ 1. Clone the repository using `git clone https://github.com/cs100/final-project-ehix001-sphim001-gmapa002-eclar022.git`
+ 2. Run `cmake .` and `make` for this repository
+ 3. Run the `./run` executable
+ 4. Follow the in-game instructions and have fun!
+ 
  ## Testing
  > How was your project tested/validated? If you used CI, you should have a "build passing" badge in this README.
  
