@@ -109,4 +109,6 @@ We also changed the interaction, ending, and player customizer classes into stan
  
  ## Testing
  > How was your project tested/validated? If you used CI, you should have a "build passing" badge in this README.
+
+Our project was tested using the Googletest framework. For each class implemented into the project, a separate test file was created and unit tests were developed to test all non-I/O code. The executable ./runAllTests was added to CMakeLists.txt to run every test at once.
  
