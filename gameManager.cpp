@@ -273,10 +273,7 @@ int main()
     map.printMap(ANSI_GREY); 
     cout<<ANSI_DEFAULT_TERMINAL_COLOR;
 
-    inputGetter.setInputMode(0); 
-
-  
-    cout<<"\f\nGAME EXITED!\n\n"; 
+    inputGetter.setInputMode(0);  
 
     // OUTPUT ENDING
     EndingManager ending(playerManager.getPlayerRep(), playerManager.getPlayerMor(), playerManager.getPopularRep(), playerManager.getNormieRep(), playerManager.getOutcastRep(), playerManager.getPlayerType());

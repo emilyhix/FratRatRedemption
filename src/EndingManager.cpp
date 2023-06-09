@@ -12,10 +12,10 @@ EndingManager::EndingManager(const int& finalReputation, const int& finalMoralit
     // Assigns ending text based on player's final reputation and morality stats
 
     if (finalMorality <= 12) {
-        playerResultText = "Oh... Oh my god. You’re bottom of the barrel loser. How did you end up with such low\nmorality? Well, there’s no real loser to this simulator, but it really seems like you’re the first!\nQuite embarrassing honestly. Maybe you could go to a different party to change everyone’s\nminds if you want... but I doubt anyone wants to see you. Maybe Marcus, who knows?";
+        playerResultText = "Oh... Oh my god. You’re a bottom of the barrel loser. How did you end up with such low\nmorality? Well, there’s no real loser to this simulator, but it really seems like you’re the first!\nQuite embarrassing honestly. Maybe you could go to a different party to change everyone’s\nminds... but I doubt anyone wants to see you. Maybe Marcus, who knows?";
     }
     else if ((finalPopularRep <= 0) && (finalNormieRep <= 0) && (finalOutcastRep <= 0)) {
-        playerResultText = "Oh wow... You left the party and absolutely no one likes you, not even the incel How did you\nend up doing that? Seems as though you’re a loner, kudos to you. Enjoy your free time since\nyou won’t be hanging out with anyone any time soon. Haha... Well, maybe you’ll make some\nmore friends next time. Good luck, champ.";
+        playerResultText = "Oh wow... You left the party and absolutely no one likes you, not even the incel! How did you\nend up doing that? Seems as though you’re a loner, kudos to you. Enjoy your free time since\nyou won’t be hanging out with anyone any time soon. Haha... Well, maybe you’ll make some\nmore friends next time. Good luck, champ.";
     }
     else if (finalPopularRep > finalNormieRep && finalPopularRep > finalOutcastRep) {
         if (playerType == "Popular") { 
@@ -25,7 +25,7 @@ EndingManager::EndingManager(const int& finalReputation, const int& finalMoralit
             playerResultText = "You’ve actually done it! You’ve enchanted the most popular people at college with your...\nseverely average personality? Nevertheless, you’ve done it! You’re quite full of surprises.\nHopefully, Bethany and Isaiah don’t feel too threatened by you. As long as you don’t step on\ntheir toes, you’re sure to fit in and be able to live with these people as your friends.";
         }
         else {
-            playerResultText = "You’ve done the unthinkable! You walked into the frat house as an outcast, reject, loser and\nyou ended up hitting it off with all the people you’ve admired for so long! You’re one of them\nnow! Wait a minute... Did you lie to them or something..? What happened... Anyway, the\ngirlies invited you to get brunch with them tomorrow and the frat bros asked if you wanted to\nplay beach volleyball with them. Seems like fun! Though, all your old friends miss you already.";
+            playerResultText = "You’ve done the unthinkable! You walked into the frat house as an outcast, reject, a loser, and\nyou ended up hitting it off with all the people you’ve admired for so long! You’re one of them\nnow! Wait a minute... Did you lie to them or something..? What happened... Anyway, the\ngirlies invited you to get brunch with them tomorrow and the frat bros asked if you wanted to\nplay beach volleyball with them. Seems like fun! Though, all your old friends miss you already.";
         }
     }
     else if (finalNormieRep > finalOutcastRep) {
@@ -56,7 +56,7 @@ EndingManager::EndingManager(const int& finalReputation, const int& finalMoralit
 void EndingManager::printEnding() {
 
     // Print player's end results to terminal
-    cout << "PARTY OVER!!!\n\n";
+    cout << "You left the party!\n\n";
 
     cout << playerResultText << endl;
 
