@@ -7,7 +7,7 @@
 playerCustom::playerCustom(){
 
     customizationLines[0] = "Welcome to Frat Rat Redemption! It's your first frat party of the year, let's get you started.";
-    customizationLines[1] = "First and foremost, what shall we refer to you as?";
+    customizationLines[1] = "First and foremost, how shall we refer to you?";
     customizationLines[2] = "What a lovely name. What type of person do you think you are?\nAre you popular? Perhaps a normie? Or how about an Outcast?\n(Choose 1-3)";
     customizationLines[3] = "Prepare for your runthrough of Frat Rat Redemption!";
     customizationLines[4] = "TW/CW: Misogyny/Misogynistic characters, very clique-y characters, rude interactions, etc.";

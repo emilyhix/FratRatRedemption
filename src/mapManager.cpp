@@ -120,7 +120,8 @@ void mapManager::updateMapMorality(const int & newMorality){
             if(currMapMorality<=0){
                 break; 
             }
-            mapXY[i][j].setCoordCharacter('#'); 
+            mapXY[i][j].setCoordCharacter('#');
+            mapXY[i][j].setCoordColor("\033[34m"); 
             currMapMorality--; 
         }
     }
@@ -153,7 +154,8 @@ void mapManager::updateMapReputation(const int & newReputation){
             if(currMapReputation<=0){
                 break; 
             }
-            mapXY[i][j].setCoordCharacter('#'); 
+            mapXY[i][j].setCoordCharacter('#');
+            mapXY[i][j].setCoordColor("\033[34m"); 
             currMapReputation--; 
         }
     }
