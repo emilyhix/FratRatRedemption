@@ -56,12 +56,11 @@ This diagram is a state machine of the different screens that the user will be a
 
 
 ### Screen Layouts
+![player cust screen](https://github.com/cs100/final-project-ehix001-sphim001-gmapa002-eclar022/assets/129914502/ef04aafa-058f-4b39-87ad-827d14ddae23)
+This is the first screen the player will go through.
 
-<img width="400" alt="screen1" src="https://github.com/cs100/final-project-ehix001-sphim001-gmapa002-eclar022/assets/130163307/a4d014a2-adc1-4aec-8b5c-49905c034c1c"> <img width="400" alt="screen2" src="https://github.com/cs100/final-project-ehix001-sphim001-gmapa002-eclar022/assets/130163307/29b968f9-38f4-4339-962b-adfda7c540a5">
- 
-<img width="400" alt="screen3" src="https://github.com/cs100/final-project-ehix001-sphim001-gmapa002-eclar022/assets/130163307/fe0fd9f2-c77c-4bb0-a707-cfeda5a51bfe"> <img width="400" alt="screen4" src="https://github.com/cs100/final-project-ehix001-sphim001-gmapa002-eclar022/assets/130163307/68557473-b95f-4028-b67c-94d3020a054c">
-
-These are the different sections that will be present on the screen when being played. The map and the interaction portions will pivot to an "inactive" state while the other is active so as not to mess with the input of either. This is because WASD is being used for movement.
+![in game screen layout](https://github.com/cs100/final-project-ehix001-sphim001-gmapa002-eclar022/assets/129914502/0ae4ca34-816e-43fc-9703-9fd74ca931e0)
+As stated, this is the general screen that will be shown! Other modes of this screen are shown below under the Screenshots section.
 
 ## Class Diagram
 ![cs100 uml diagram](https://github.com/cs100/final-project-ehix001-sphim001-gmapa002-eclar022/assets/129914502/cdf32f99-a58b-4ae4-bd67-5f307d8c387c)
