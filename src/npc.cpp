@@ -155,29 +155,29 @@ npc::npc(mapManager &map, coord id) {
                         "but there is quite literally 5 feet between him and any person around him. It's a little embarassing honestly. \n"
                         "You feel bad, so you go talk to him.";
 
-        dialogue[0] = "???: Oh hey. Can't believe there are so many girls here. They should be in their homes, cleaning \n like good women should be.";
+        dialogue[0] = "???: Oh hey. Can't believe there are so many girls here. They should be in their homes, cleaning \nlike good women should be.";
         responses[0][0] = "I know right! Can't believe it. Women, am I right?";
         responses[0][1] = "Haha. Yeah, I guess so.";
         responses[0][2] = "Uhm… That's a weird thing to say.";
         responses[0][3] = "You're being a prick. Stop talking, weirdo.";
 
-        dialogue[1] = "Marcus: Well… women these days don't do what they're meant to. They have this thing called “free \n will” or something.";
+        dialogue[1] = "Marcus: Well… women these days don't do what they're meant to. They have this thing called “free \nwill” or something.";
         responses[1][0] = "They definitely shouldn't have free will.";
         responses[1][1] = "Ehh… women are whatever. Bros before hos!";
         responses[1][2] = "Don't talk about women like that! You've no idea the amount of struggle they go through.";
         responses[1][3] = "You are a small, weak person. Don't even try to call yourself a man, you rat.";
 
-        dialogue[2] = "Marcus: Hey, so I know this is sudden, but… I feel like I can trust you. I'll let you in on a little \n secret… I have an incredibly small… sense of self-worth.";
+        dialogue[2] = "Marcus: Hey, so I know this is sudden, but… I feel like I can trust you. I'll let you in on a little \nsecret… I have an incredibly small… sense of self-worth.";
         responses[2][0] = "I hope you get the help you need…";
         responses[2][1] = "Oh… I'm sorry about that.";
         responses[2][2] = "Okay… And I'm supposed to do what with that information?";
         responses[2][3] = "YEAH NO KIDDING!!! I hope you rot in hell. You don't even deserve redemption.";
 
-        dialogue[3] = "Marcus: I'm really sorry about what I said earlier. I'm a little inebriated and I'm not myself right \n now. I'm just insecure because no girls like me.";
+        dialogue[3] = "Marcus: I'm really sorry about what I said earlier. I'm a little inebriated and I'm not myself right \nnow. I'm just insecure because no girls like me.";
         responses[3][0] = "Oh, don't worry about it! I was actually agreeing with you.";
         responses[3][1] = "Ahh, it's okay. I hope you feel better soon.";
-        responses[3][2] = "You were being a misogynist before, and you think I'm just going to accept your apology and \n pity you?";
-        responses[3][3] = "You really are a piece of work. First you were a misogynist, now you're being a pick me. I don't \n feel sorry for you.";
+        responses[3][2] = "You were being a misogynist before, and you think I'm just going to accept your apology and \npity you?";
+        responses[3][3] = "You really are a piece of work. First you were a misogynist, now you're being a pick me. I don't \nfeel sorry for you.";
 
         dialogue[4] = "Marcus: I'm just gonna go now. Thanks for talking for a bit.";
     }
@@ -198,7 +198,7 @@ npc::npc(mapManager &map, coord id) {
         responses[0][2] = "I'm doing okay, could be better I guess.";
         responses[0][3] = "What kind of name is Cloud?? How peculiar.";
 
-        dialogue[1] = "Cloud: Are you having fun? I personally wish they had more snacks. I'll have to have a word \n with Denzel.";
+        dialogue[1] = "Cloud: Are you having fun? I personally wish they had more snacks. I'll have to have a word \nwith Denzel.";
         responses[1][0] = "I am having fun! I agree, I wish there were more GoldFish.";
         responses[1][1] = "The party's been alright, I guess. I'm a little tired.";
         responses[1][2] = "Meh. The party's kinda boring.";
@@ -210,7 +210,7 @@ npc::npc(mapManager &map, coord id) {
         responses[2][2] = "I've no idea.";
         responses[2][3] = "This is stupid.";
 
-        dialogue[3] = "Cloud: A CLOUD!!! LIKE MY NAME. Hahaha. Yeah, anyway, have you heard of the LGBTQIA+ club on campus? \n I'm the club president and we're looking for more members.";
+        dialogue[3] = "Cloud: A CLOUD!!! LIKE MY NAME. Hahaha. Yeah, anyway, have you heard of the LGBTQIA+ club on campus? \nI'm the club president and we're looking for more members.";
         responses[3][0] = "I was actually thinking of joining! The club seems really fun.";
         responses[3][1] = "I've heard of it. I think I saw one of the events you guys did earlier this week.";
         responses[3][2] = "Ohh… I'm not really sure about joining. Not really my crowd.";
@@ -234,14 +234,14 @@ npc::npc(mapManager &map, coord id) {
         responses[0][2] = "You're excused.";
         responses[0][3] = "Try keeping your eyes up, and maybe you'll see when people are near you.";
 
-        dialogue[1] = "Christina: Oh wow! You're actually talking to me? No one talks to me… The only reason I'm here is \n because Denzel is my brother and he forced me to come.";
+        dialogue[1] = "Christina: Oh wow! You're actually talking to me? No one talks to me… The only reason I'm here is \nbecause Denzel is my brother and he forced me to come.";
         responses[1][0] = "Of course I'm talking to you! I'm glad you're here too. I was hoping to get to know you better.";
         responses[1][1] = "Well, you seemed interesting so I came over here to talk with you.";
         responses[1][2] = "I can see why people don't talk to you, but you should have more confidence!";
         responses[1][3] = "Yeah, you're kinda lame. But, I'm here now, so I guess I'll talk more with you.";
 
-        dialogue[2] = "Christina: Well… I like Captain of the Bracelets. My favorite character is Bodo Fraggins. Have you \n read or watched it?";
-        responses[2][0] = "I've read the books! They were really fun and the plot was really good. I really liked the Hobbit \n as well.";
+        dialogue[2] = "Christina: Well… I like Captain of the Bracelets. My favorite character is Bodo Fraggins. Have you \nread or watched it?";
+        responses[2][0] = "I've read the books! They were really fun and the plot was really good. I really liked the Hobbit \nas well.";
         responses[2][1] = "I've only seen the movies. They were really cool! I don't really like reading, though.";
         responses[2][2] = "I've never read or seen them. They seem boring. I'm more interested in things like… Not as nerdy.";
         responses[2][3] = "Woooow. So you really are nerdy. I just thought it was an aesthetic you were following or something.";
@@ -252,7 +252,7 @@ npc::npc(mapManager &map, coord id) {
         responses[3][2] = "Rock music..? I don't listen to rock music. I'm more of a pop music person.";
         responses[3][3] = "Oh woooow, you think you're soooo different because you listen to old school rock? Lame.";
 
-        dialogue[4] = "Christina: Oh, someone is calling me, I'm gonna take this. This was an interesting exchange. Uhm… \n Kay, bye.";
+        dialogue[4] = "Christina: Oh, someone is calling me, I'm gonna take this. This was an interesting exchange. Uhm… \nKay, bye.";
     }
     
     // Trevor
@@ -270,13 +270,13 @@ npc::npc(mapManager &map, coord id) {
         responses[0][2] = "What's with the getup?";
         responses[0][3] = "What are you wearing?? Is that a track uniform? Why are you wearing that here...";
 
-        dialogue[1] = "Trevor: Nice to meet you! Yeah, I'm on the track team. Made it to top 7 runners as a freshman! Isn't \n that sick?!";
+        dialogue[1] = "Trevor: Nice to meet you! Yeah, I'm on the track team. Made it to top 7 runners as a freshman! Isn't \nthat sick?!";
         responses[1][0] = "Wow! Good job! You must really be popular with everyone.";
         responses[1][1] = "That's cool! I bet you have tons of friends.";
         responses[1][2] = "Oh wow… No need to brag.";
         responses[1][3] = "HAHAHA. You run track? That's lame.";
 
-        dialogue[2] = "Trevor: I mean, I'm not too popular. I'm still just a pledge for the frat, so I get hazed a lot. \n Most of the upperclassmen just treat me like an errand boy.";
+        dialogue[2] = "Trevor: I mean, I'm not too popular. I'm still just a pledge for the frat, so I get hazed a lot. \nMost of the upperclassmen just treat me like an errand boy.";
         responses[2][0] = "Ohh, I'm sorry about that. I'll be your friend! And I'm sure you'll be a real frat guy soon.";
         responses[2][1] = "Oh dang, that sucks. Hopefully the guys will treat you better.";
         responses[2][2] = "I wouldn't expect anything less from a frat.";
@@ -306,20 +306,20 @@ npc::npc(mapManager &map, coord id) {
         responses[0][2] = "Wow, forward are we?";
         responses[0][3] = "Oh, hmm, thanks I guess.";
 
-        dialogue[1] = "Harper: Do you have any snacks? I've got the munchies and I can't bring myself to walk over to the \n kitchen.";
+        dialogue[1] = "Harper: Do you have any snacks? I've got the munchies and I can't bring myself to walk over to the \nkitchen.";
         responses[1][0] = "Yeah, here, have some chips! How long have you been here?";
         responses[1][1] = "Uhh, sure… I can spare a few chips. What have you been up to?";
         responses[1][2] = "I don't have any snacks right now, dude.";
         responses[1][3] = "I'm not sharing my snacks. I'm hungry too!";
 
-        dialogue[2] = "Harper: Snacks… Wait did you ask me something..? I forgot. Anyway, do you want any gummies? I have a \n lot extra.";
+        dialogue[2] = "Harper: Snacks… Wait did you ask me something..? I forgot. Anyway, do you want any gummies? I have a \nlot extra.";
         responses[2][0] = "Oou yes please! I haven't had gummies in a while.";
         responses[2][1] = "Oh, it all makes sense now. Yeah, I'll take some!";
         responses[2][2] = "No thanks. I'm not into that.";
         responses[2][3] = "Everything makes sense now! You're being a pain because of the gummies! Yeah, no, I'll pass.";
 
         dialogue[3] = "Harper: Hm… Do you know the conspiracy about Walt Disney being frozen and one day they're going to bring him back when technology has advanced that far? And to cover up this conspiracy, Disney released the movie Frozen? So if you search Walt Disney Frozen, the movie pops up!";
-        responses[3][0] = "Oh, that's actually really interesting. Tell me more about it. It seems like you're really \n passionate about this topic.";
+        responses[3][0] = "Oh, that's actually really interesting. Tell me more about it. It seems like you're really \npassionate about this topic.";
         responses[3][1] = "I've never heard of this theory before. It's riveting, but I doubt it actually happened.";
         responses[3][2] = "What a silly story! Who told you that?";
         responses[3][3] = "That's literally the dumbest thing I've ever heard. I'm pretty sure Walt Disney isn't frozen.";
