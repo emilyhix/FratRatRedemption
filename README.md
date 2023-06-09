@@ -64,7 +64,7 @@ This diagram is a state machine of the different screens that the user will be a
 These are the different sections that will be present on the screen when being played. The map and the interaction portions will pivot to an "inactive" state while the other is active so as not to mess with the input of either. This is because WASD is being used for movement.
 
 ## Class Diagram
-![CS100 PROJECT UML DIAGRAM VERSION 2](https://github.com/cs100/final-project-ehix001-sphim001-gmapa002-eclar022/assets/129914502/28310c16-e813-488d-8018-c8a99a065e1d)
+![cs100 uml diagram](https://github.com/cs100/final-project-ehix001-sphim001-gmapa002-eclar022/assets/129914502/cdf32f99-a58b-4ae4-bd67-5f307d8c387c)
 
 
 Above is the UML class diagram for the FRAT RAT REDEMPTION program. The functionality of the program is largely based on time. That is because this program is heavily dependent on a top-down visual of the in-game environment in which the user can control a "character" which is able to move around and interact with the characters in the generated environment. To create the illusion of visible movement in this in-game environment, it is essential for time to be a primary feature.In gameManager, we will create a gameClock object and use its member functions in a while loop to have the game infinitely repeat until exited (timerISR and timerOn).  This function starts a loop which will execute with a frequency of 10 ticks per second. This function will always run until the timerOff() function is called. During each tick, the class will detect which key is being pressed and store it in the "keyboardInput" char. This will allow for seamless key inputs without requiring the user to press "enter" between each input.
@@ -109,4 +109,6 @@ We also changed the interaction, ending, and player customizer classes into stan
  
  ## Testing
  > How was your project tested/validated? If you used CI, you should have a "build passing" badge in this README.
+
+Our project was tested using the Googletest framework. For each class implemented into the project, a separate test file was created and unit tests were developed to test all non-I/O code. The executable ./runAllTests was added to CMakeLists.txt to run every test at once.
  
