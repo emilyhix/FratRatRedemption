@@ -21,9 +21,9 @@ This project is important for our group because we all enjoy a good laugh. This 
 
 **Languages/Tools/Techonologies:**
 
-Languages - primarily C++
+Languages - C++
 
-Tools - _story boards_ to help us organize our thoughts/ideas/aspects we want to consider for the RPG, _written/typed documents_ to keep track of storyline and major events
+Tools - _story boards_ to help us organize our thoughts/ideas/aspects we want to consider for the RPG, _written/typed documents_ to keep track of storyline and major events, discord to communicate with each other when we cannot see each other in person
 
 Technologies - _Visiual Studio Code_ to write and test our code, _Github_ version control system to allow for collaborative program development and a project board to keep track of product backlog and task progress, _Git_, _CMake_ to compile C++ our code, _Google Test Framework_ tools to help test our code
 
@@ -37,15 +37,15 @@ Outputs - First, the user will be put on a character customization screen in whi
 
 Live Character Inputs Without Waiting For “Enter” Press - The game will take keyboard inputs without waiting for the user to press “Enter.” That means that movement throughout the different character customization, ascii-based level, and dialogue screens will happen without needing the user to press “Enter” in between inputs
 
-Character select/customization screen - Have user input name and choose the type of frat boy that they want. Different frat boy types have different attributes which gives the user different advantages/disadvantages in the game.
+Character select/customization screen - Have user input name and choose the type of party goer that they want. Different person types have different attributes which gives the user different advantages/disadvantages in the game.
 
 Ascii-based Level - The user will be able to navigate through an ascii level populated with NPCs and non-passable walls. 
 
-NPC Interactions - When the user “bumps” into an NPC (which will each be represented by an ascii character), the interaction portion of the screen will be accessible. In this part of the screen, the user will be prompted with a description and dialogue from the NPC. The user will then be prompted with four different responses that they must choose from, for a set amount of lines per NPC interaction. Each response will affect the player's reputation and/or morality with the NPCs and their overarching group. 
+NPC Interactions - When the user “bumps” into an NPC (which will each be represented by an ascii character), the interaction portion of the screen will be accessible and the map will "gray out" and cannot be modified here. In this part of the screen, the user will be prompted with a description and dialogue from the NPC. The user will then be prompted with four different responses that they must choose from, for a set amount of lines per NPC interaction. Each response will affect the player's reputation and/or morality with the NPCs and their overarching group. 
 
 Morality/Reputation system - Morality starts at a middle point and you lose one morality for every "negatively" influenced response you give. The user will try their hardest to keep morality above 0; if the score reaches 0, the ending of the game will drastically change.  Reputation starts at 0 and it represents your character’s standing with the different groups of people at the frat party. You get reputation by interacting "positively" with NPCs (dependent on what type of person the NPC is). Reputation will be updated with every response that is chosen, whereas there will be specific interactions with certain NPCs that will affect morality.
 
-Ending screen - there will be an exit door in the ascii-based level which the user can leave through at any time. Depending on your morality and reputation stats when you leave, there will be different endings which will be output based on developer-discussed ratios. 
+Ending screen - there will be an exit door in the ascii-based level which the user can leave through at any time. Depending on your morality and reputation stats when you leave, there will be different endings which will be output based on developer-discussed ratios, as well as the player's stats!
  
 ## User Interface Specification
 
