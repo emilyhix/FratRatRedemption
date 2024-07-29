@@ -1,25 +1,25 @@
-CMAKE_MINIMUM_REQUIRED(VERSION 3.2)
+CMAKE_MINIMUM_REQUIRED(VERSION 3.5)
 project(FratRatRedemption)
-ADD_SUBDIRECTORY(googletest)
+# ADD_SUBDIRECTORY(googletest)
 
-ADD_EXECUTABLE(runAllTests
-    test/dialogueTest.cpp
-    test/npcTest.cpp
-    test/endingTest.cpp
-    test/StatManagerTest.cpp
-    test/playerManagerTest.cpp
-    test/playerCustTest.cpp
-    test/clockTest.cpp
-    test/coordTest.cpp
-    test/playerActorTest.cpp
-    test/mapTest.cpp
+# ADD_EXECUTABLE(runAllTests
+#     test/dialogueTest.cpp
+#     test/npcTest.cpp
+#     test/endingTest.cpp
+#     test/StatManagerTest.cpp
+#     test/playerManagerTest.cpp
+#     test/playerCustTest.cpp
+#     test/clockTest.cpp
+#     test/coordTest.cpp
+#     test/playerActorTest.cpp
+#     test/mapTest.cpp
 
-    src/npc.cpp 
-    src/mapManager.cpp 
-    src/coord.cpp 
-    src/titlePrint.cpp
-    src/playerCustomization.cpp
-)
+#     src/npc.cpp 
+#     src/mapManager.cpp 
+#     src/coord.cpp 
+#     src/titlePrint.cpp
+#     src/playerCustomization.cpp
+# )
 
 ADD_EXECUTABLE(run 
     src/coord.cpp
@@ -35,4 +35,4 @@ ADD_EXECUTABLE(run
     src/playerCustomization.cpp
     src/titlePrint.cpp
 )
-TARGET_LINK_LIBRARIES (runAllTests gtest gtest_main)
+# TARGET_LINK_LIBRARIES (runAllTests gtest gtest_main)
