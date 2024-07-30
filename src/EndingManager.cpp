@@ -15,7 +15,7 @@ EndingManager::EndingManager(const int& finalReputation, const int& finalMoralit
         playerResultText = "Oh... Oh my god. You’re a bottom of the barrel loser. How did you end up with such low\nmorality? Well, there’s no real loser to this simulator, but it really seems like you’re the first!\nQuite embarrassing honestly. Maybe you could go to a different party to change everyone’s\nminds... but I doubt anyone wants to see you. Maybe Marcus, who knows?";
     }
     else if ((finalPopularRep <= 0) && (finalNormieRep <= 0) && (finalOutcastRep <= 0)) {
-        playerResultText = "Oh wow... You left the party and absolutely no one likes you, not even the incel! How did you\nend up doing that? Seems as though you’re a loner, kudos to you. Enjoy your free time since\nyou won’t be hanging out with anyone any time soon. Haha... Well, maybe you’ll make some\nmore friends next time. Good luck, champ.";
+        playerResultText = "Oh wow... You left the party and absolutely no one likes you! How did you\nend up doing that? Seems as though you’re a loner, kudos to you. Enjoy your free time since\nyou won’t be hanging out with anyone any time soon. Haha... Well, maybe you’ll make some\nmore friends next time. Good luck, champ.";
     }
     else if (finalPopularRep > finalNormieRep && finalPopularRep > finalOutcastRep) {
         if (playerType == "Popular") { 
