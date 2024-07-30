@@ -8,7 +8,7 @@ Frat Rat Redemption is a terminal-based RPG that puts you in the shoes of a part
 
  ## What I Learned
 - Use of POSIX operating system API and terminal I/O interfaces and structures to configure terminal attributes for GUI
-- Object Oriented Programming ([Design Documentation])
+- Object Oriented Programming ([Design Documentation](https://github.com/emilyhix/FratRatRedemption/wiki/Design-Documentation))
 - SSH Remote Development
 - Agile Development Methodologies (Scrum)
   
