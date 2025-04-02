@@ -1,6 +1,5 @@
 # Frat Rat Redemption
- 
-Authors: [Glider Mapalad](https://github.com/gmapa002), [Emily Hix](https://github.com/emilyhix), [Emily Clark](https://github.com/emii331), [Sabaipon Phimmala](https://github.com/bphimmala)
+ > Authors: [Glider Mapalad](https://github.com/gmapa002), [Emily Hix](https://github.com/emilyhix), [Emily Clark](https://github.com/emii331), [Sabaipon Phimmala](https://github.com/bphimmala)
 
 _You did it! You bore through the first week of school and made it to the most popular fraternity's first rager of the year! Are you going to fit in?! Or will everyone shun you forever?! Find out in **Frat Rat Redemption**, the "try to desperately fit in with everyone" RPG simulator game!_
 
